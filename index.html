@@ -4,6 +4,7 @@
 	<title>iamtravis</title>
 	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 	<link rel="stylesheet" href="lib/morphext/dist/morphext.css">
+	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -158,7 +159,6 @@
 </section>
 <section id="groceryapp" class="project blurWhite">
 		<div id="groceryapp-background" class="half-block project-logo-container">
-			<img class="project-logo" src="assets/img/logo_groceryapp.png" width="80%" />
 		</div>
 		<div class="half-block description-container container-black">
 				<div class="description-block">
@@ -187,11 +187,14 @@
 		<label id="message-label" for="message_field" class="label">Message</label>
 		<textarea id="message" name="message" class="text-area input-field"></textarea>
 		<input type="text" name="_gotcha" style="display:none" />
-		<input id="submit" class="input-submit" type="submit" value="Send Mail" />
+		<button id="submit" class="input-submit">Send Message</button>
+		<i class="fa fa-thumbs-down thumbdown" aria-hidden="true"></i>
+		<i class="fa fa-thumbs-up thumbup" aria-hidden="true"></i>
 	</form>
+
 	<div id="github-plug">
 		<span class="github-plug-text">Check me out on Github.</span>
-		<a href="https://github.com/Travisaurus-Rex" target="__blank" class="ghost-button github">Github</a>
+		<a href="https://github.com/Travisaurus-Rex" target="__blank" class="ghost-button github">Github <i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
 	</div>
 </section>
 <footer>

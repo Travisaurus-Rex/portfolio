@@ -861,29 +861,34 @@ section#about-me-section {
 }
 
 .ghost-button {
-  padding: 12px 16px;
+  padding: 6px 24px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
-  color: black;
+  color: white;
   border: 1px solid white;
   text-decoration: none;
   margin-left: 24px;
-  background-color: white;
+  background-color: transparent;
 }
 
-.ghost-button:after {
-  content: url('assets/img/github.ico');
-  background-size: 50px 50px;
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 3px;
-  left: 5px;
+.contact-form .fa {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+}
+
+.contact-form .thumbdown {
+  left: -50px;
+}
+
+.contact-form .thumbup {
+  right: -50px;
 }
 
 .contact-form {
+  position: relative;
   display: block;
   padding: 0;
   max-width: 600px;
@@ -940,6 +945,33 @@ section#about-me-section {
   padding: 12px 16px;
   position: relative;
   left: 0;
+  transition: all 150ms ease-out;
+}
+
+.input-submit:after {
+  content:'';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-left: none;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: 22px;
+  top: 15px;
+  font-size: 1em;
+  opacity: 0;
+  transition: all 250ms ease-out;
+}
+
+.input-submit:hover {
+  padding-right: 36px;
+}
+
+.input-submit:hover:after {
+  right: 20px;
+  opacity: 1;
 }
 
 .label {
