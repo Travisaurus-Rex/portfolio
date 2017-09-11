@@ -397,7 +397,14 @@ $(document).ready(function() {
                 break;
         }
         if (validateForm()) {
+            if ($('#submit').hasClass('submit-not-ready')) {
+                $('#submit').removeClass('submit-not-ready').addClass('submit-ready');
+            }
             submit.classList.add('submit-ready');
+        } else {
+            if ($('#submit').hasClass('submit-ready')) {
+                $('#submit').removeClass('submit-ready').addClass('submit-not-ready');
+            }
         }
     }
 
@@ -462,6 +469,8 @@ $(document).ready(function() {
         messageLabel = document.querySelector('#message-label'),
         messageValid = false;
 
+    var form = document.querySelector('#contact-form');
+
     var submit = document.querySelector('#submit');
 
     name.addEventListener('keyup', checkForm);
@@ -490,7 +499,16 @@ $(document).ready(function() {
     submit.addEventListener('click', function(e) { 
         e.preventDefault();
         if (validateForm()) {
-            var form = document.querySelector('#contact-form');
+            console.log('Form is gud');
+            $('.contact-h1').addClass('fadeOut');
+            $('#contact-form').addClass('fadeOut');
+            setTimeout(function() {
+                $('.contact-h1').css('z-index', '-25');
+                $('#contact-form').css('z-index', '-25');
+                $('.spinner').css('display', 'block');
+                $('.spinner').addClass('fadeIn');
+            }, 150);
+            /*
 
             $.ajax({
                 url: "https://formspree.io/baolongrex@gmail.com",
@@ -501,16 +519,20 @@ $(document).ready(function() {
                     //$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
                 },
                 success: function(data) {
-                    //$contactForm.find('.alert--loading').hide();
-                    //$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-                    console.log('it worked!!!!');
+
                 },
                 error: function(err) {
-                    //$contactForm.find('.alert--loading').hide();
-                    //$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-                    console.log('you failed, fucknuts');
+
                 }
             });
-        } 
+
+            */
+        } else {
+            $('.input-submit').addClass('impatient');
+            setTimeout(function() {
+                $('.input-submit').removeClass('impatient');
+            }, 3000);
+            console.log('Form is not gud');
+        }
     });
 })

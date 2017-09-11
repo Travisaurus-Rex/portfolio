@@ -178,23 +178,25 @@
 </section>
 <section id="contact-section">
 	<canvas class="granim-el2"></canvas>
+	<div class="form-container">
 	<h1 class="contact-h1">Got something on your mind? Send me a message.</h1>
-	<form id="contact-form" class="contact-form">
-		<label id="name-label" for="name_field" class="label">Name</label>
-		<input id="name" name="name" class="input-field" type="text" />
-		<label id="email-label" for="email_field" class="label">Email</label>
-		<input id="email" name="_replyto" class="input-field" type="email" />
-		<label id="message-label" for="message_field" class="label">Message</label>
-		<textarea id="message" name="message" class="text-area input-field"></textarea>
-		<input type="text" name="_gotcha" style="display:none" />
-		<button id="submit" class="input-submit">Send Message</button>
-		<i class="fa fa-thumbs-down thumbdown" aria-hidden="true"></i>
-		<i class="fa fa-thumbs-up thumbup" aria-hidden="true"></i>
-	</form>
-
+		<form id="contact-form" class="contact-form">
+			<label id="name-label" for="name_field" class="label">Name</label>
+			<input id="name" name="name" class="input-field" type="text" />
+			<label id="email-label" for="email_field" class="label">Email</label>
+			<input id="email" name="_replyto" class="input-field" type="email" />
+			<label id="message-label" for="message_field" class="label">Message</label>
+			<textarea id="message" name="message" class="text-area input-field"></textarea>
+			<input type="text" name="_gotcha" style="display:none" />
+			<button id="submit" class="input-submit">Send Message</button>
+		</form>
+		<div class="loader-container">
+		<div class="spinner spinner-1"></div>
+		</div>
+	</div>
 	<div id="github-plug">
 		<span class="github-plug-text">Check me out on Github.</span>
-		<a href="https://github.com/Travisaurus-Rex" target="__blank" class="ghost-button github">Github <i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+		<a href="https://github.com/Travisaurus-Rex" target="__blank" class="ghost-button github">Github <i class="fa fa-github-alt" aria-hidden="true"></i></a>
 	</div>
 </section>
 <footer>

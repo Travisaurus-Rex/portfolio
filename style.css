@@ -851,7 +851,7 @@ section#about-me-section {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 24px;
   border-top: 1px dotted white;
   text-align: center;
 }
@@ -868,9 +868,14 @@ section#about-me-section {
   font-size: 14px;
   color: white;
   border: 1px solid white;
+  border-radius: 25px;
   text-decoration: none;
-  margin-left: 24px;
+  margin-left: 12px;
   background-color: transparent;
+}
+
+.fa-github-alt {
+  margin-left: 6px;
 }
 
 .contact-form .fa {
@@ -894,7 +899,7 @@ section#about-me-section {
   max-width: 600px;
   z-index: 100;
   margin: 0 auto;
-  margin-bottom: 64px;
+  margin-bottom: 100px;
 }
 
 .input-field {
@@ -915,15 +920,11 @@ section#about-me-section {
   transition: all 150ms ease-out;
 }
 
-.input-field:focus {
-  color: black;
-  background-color: white;
-  transition: all 150ms ease-out 150ms;
-}
 
 .input-valid {
   color: black;
   background-color: white;
+  transition: all 150ms ease-out;
 }
 
 .text-area {
@@ -943,9 +944,48 @@ section#about-me-section {
   font-weight: 100;
   text-transform: uppercase;
   padding: 12px 16px;
-  position: relative;
-  left: 0;
+  position: absolute;
+  right: 470px;
   transition: all 150ms ease-out;
+}
+
+.impatient:before {
+  animation: impatient 3s linear forwards;
+}
+
+.impatient:before {
+  content: 'You have to fill out the form before sending it, genius.';
+  text-transform: none;
+  display: block;
+  width: 400px;
+  position: absolute;
+  top: 12px;
+  left: 120px;
+  color: white;
+  opacity: 0;
+}
+
+@keyframes impatient {
+  0% {
+    opacity: 0;
+    top: 18px;
+  }
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 2px;
+    opacity: 0;
+  }
 }
 
 .input-submit:after {
@@ -958,18 +998,14 @@ section#about-me-section {
   border-left: none;
   transform: rotateZ(45deg);
   position: absolute;
-  right: 22px;
+  right: 30px;
   top: 15px;
   font-size: 1em;
   opacity: 0;
   transition: all 250ms ease-out;
 }
 
-.input-submit:hover {
-  padding-right: 36px;
-}
-
-.input-submit:hover:after {
+.submit-ready:hover:after {
   right: 20px;
   opacity: 1;
 }
@@ -1036,16 +1072,21 @@ footer span {
 }
 
 .submit-ready {
-  animation: submit-ready 400ms cubic-bezier(.62,-0.29,.64,1.44) forwards;
+  animation: submit-ready 250ms ease-in-out forwards;
   cursor: pointer;
   background-color: transparent;
   color: white;
   transition: all 200ms ease;
 }
 
+.submit-not-ready {
+  animation: submit-not-ready 250ms ease-in-out forwards;
+  background-color: transparent;
+  color: white;
+}
+
 .submit-ready:hover {
-  background-color: white;
-  color: black;
+  padding-right: 36px;
 }
 
 @keyframes label-slide-up {
@@ -1078,10 +1119,81 @@ footer span {
 
 @keyframes submit-ready {
   0% {
-    left: 0px;
+    right: 470px;
   }
 
   100% {
-    left: 500px;
+    right: 0px;
+  }
+}
+
+@keyframes submit-not-ready {
+  0% {
+    right: 0px;
+  }
+
+  100% {
+    right: 470px;
+  }
+}
+
+.form-container {
+  height: 550px;
+  position: relative;
+}
+
+.loader-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+
+.spinner {
+  color: white;
+  width: 125px;
+  height: 125px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  opacity: 0;
+}
+.spinner:after, .spinner:before {
+  content: '';
+  display: block;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.spinner-1:after {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 5px solid transparent;
+  border-top-color: white;
+  border-bottom-color: white;
+  animation: spinny 2s linear infinite;
+}
+
+@keyframes spinny {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    border: 5px solid rgba(255,255,255,0.6);
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+  
+  100% {
+    transform: rotateZ(720deg);
   }
 }
