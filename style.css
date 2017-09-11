@@ -437,8 +437,8 @@ section#about-me-section {
   }
 }
 
-.skills {
-
+.skills .skill {
+  white-space: nowrap;
 }
 
 .third-block {
@@ -492,7 +492,7 @@ span.preferred:after {
 .preferred:after {
   content: 'preferred';
   display: inline;
-  color: white;
+  color: whiteF;
   font-size: 10px;
   position: absolute;
   top: 3px;
@@ -889,12 +889,65 @@ span.preferred:after {
   text-align: center;
 }
 
-.contact-h1 {
+.contact-h1-container {
   text-align: center;
+}
+
+.contact-h1 {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.error-message:before, .error-message:after {
+  content: '';
+  display: block;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  opacity: 0;
+}
+
+.error-message:before {
+  animation: error-message-left 300ms ease-in-out forwards 340ms;
+  left: -50px;
+  transform: rotateZ(45deg);
+}
+
+.error-message:after {
+  animation: error-message-right 300ms ease-in-out forwards 340ms;
+  right: -50px;
+  transform: rotateZ(-135deg);
+}
+
+@keyframes error-message-left {
+  0% {
+    left: -150px;
+    opacity: 0;
+  }
+
+  100% {
+    left: -50px;
+    opacity: 1;
+  }
+}
+
+@keyframes error-message-right {
+  0% {
+    right: -150px;
+    opacity: 0;
+  }
+
+  100% {
+    right: -50px;
+    opacity: 1;
+  }
 }
 
 .granim-el2 {
@@ -1011,10 +1064,6 @@ span.preferred:after {
 }
 
 .impatient:before {
-  animation: impatient 3s linear forwards;
-}
-
-.impatient:before {
   content: 'You have to fill out the form before sending it, genius.';
   text-transform: none;
   display: block;
@@ -1024,6 +1073,7 @@ span.preferred:after {
   left: 120px;
   color: white;
   opacity: 0;
+  animation: impatient 3s linear forwards;
 }
 
 @keyframes impatient {

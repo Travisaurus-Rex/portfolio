@@ -115,7 +115,8 @@ $(document).ready(function() {
             fontSize: '50px',
             opacity: 1
         }, 200);
-        console.log('running');
+
+        console.log('animateHeaderTextIn');
     }
 
     function animateHeaderTextOut() {
@@ -132,7 +133,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $('#name-top-logo').css('display', 'none');
         }, 250);
-        console.log('running');
+        console.log('animateHeaderTextOut');
     }
 
     function animateLogoIn() {
@@ -151,9 +152,6 @@ $(document).ready(function() {
     }
 
     $('.button').click(function() {
-        setTimeout(function() {
-            animateHeaderTextIn();
-        }, 500);
         Animation.Scroller.scrollTo("about-me-section");
     })
 
@@ -495,6 +493,7 @@ $(document).ready(function() {
         e.preventDefault();
         if (validateForm()) {
 
+
             $('.contact-h1').addClass('fadeOut');
             $('#contact-form').addClass('fadeOut');
 
@@ -506,9 +505,9 @@ $(document).ready(function() {
                 $('.spinner').addClass('fadeIn');
             }, 150);
 
-            var rand = Math.random();
+            //var rand = Math.random();
             
-            if (rand < 0.5) {
+            if (/*rand < 0.5*/ false) {
                 setTimeout(function() {
                     $('.spinner').removeClass('fadeIn');
                     $('.spinner').addClass('fadeOut');
@@ -528,6 +527,7 @@ $(document).ready(function() {
                     $('.contact-h1').removeClass('fadeOut');
                     $('#contact-form').removeClass('fadeOut');
                     $('.contact-h1').addClass('fadeIn');
+                    $('.contact-h1').addClass('error-message');
                     $('#contact-form').addClass('fadeIn');
                     setTimeout(function() {
                         $('.spinner').css('display', 'block');
