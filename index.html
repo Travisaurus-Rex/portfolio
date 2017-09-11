@@ -35,46 +35,62 @@
 	</div>
 </div>
 <section id="about-me-section">
-	<div class="width-container"><div class="half-block my-pic">
+	<div class="width-container">
+		<div class="my-pic">
 			<div class="my-pic-container">
 				<img id="my-ugly-pic" src="assets/img/portrait.jpg" alt="Hideous web developer/pirate" />
 			</div>
-		</div><div class="half-block about-me-data">
+		</div>
+		<div class="half-block about-me-data">
 			<h1>Hello, world... I'm Travis!</h1>
 
 			<p>I'm a web developer who's been writing code for about 5 years. I excel in crafting clean interfaces and enjoyable user experiences using modern frontend technologies. My skills also include backend API development using the JavaScript stack.</p>
 			<p>As of May 2017, I have completed a bachelor's of science degree. My major was Media Arts and Science, courtesy of IUPUI's School of Informatics and Computing.</p>
+		</div><div class="half-block">
+			<div class="skills">
+				<div class="third-block">
+					<h3 class="skill-title">Front End</h3>
+					<li class="skill">User Interface development</li>
+					<li class="skill">Rapid prototyping</li>
+					<li class="skill">Web animation</li>
+					<li class="skill">Responsive design</li>
+					<li class="skill">API design and development</li>
+					<li class="skill">Browser Performance</li>	
+				</div><div class="third-block">
+					<h3 class="skill-title">Back End</h3>
+					<li class="skill">API design and development</li>
+					<li class="skill">REST architecture</li>
+					<li class="skill">Relational and NoSQL databases</li>
+				</div>
+			</div>
+			<div class="third-block">
+				<h3 class="skill-title">Technologies</h3>
+				<ul class="skill-list">
+					<li class="skill">HTML5</li>
+					<li class="skill">CSS3</li>
+					<li class="skill">JavaScript / <span class="preferred">ES2015</span></li>
+					<li class="skill">PHP</li>
+				</ul>
+			</div><div class="third-block">
+				<h3 class="skill-title">Frameworks</h3>
+				<ul class="skill-list">
+					<li class="skill preferred">React</li>
+					<li class="skill">Angular 2/4</li>
+					<li class="skill">Ionic 2</li>
+					<li class="skill">NodeJS & Express</li>
+					<li class="skill">WordPress</li>
+				</ul>
+			</div><div class="third-block">
+				<h3 class="skill-title">Build Tools</h3>
+				<ul class="skill-list">
+					<li class="skill">Gulp</li>
+					<li class="skill">Sass</li>
+					<li class="skill">Git</li>
+				</ul>
+			</div>
 		</div>
-		<!--
-		<div class="third-block">
-			<h3 class="skill-title">Technologies</h3>
-			<ul class="skill-list">
-				<li class="skill">HTML5</li>
-				<li class="skill">CSS3</li>
-				<li class="skill">JavaScript / ES6</li>
-				<li class="skill">PHP</li>
-			</ul>
-		</div>
-		<div class="third-block">
-			<h3 class="skill-title">Frameworks</h3>
-			<ul class="skill-list">
-				<li class="skill">React</li>
-				<li class="skill">Angular 2/4</li>
-				<li class="skill">Ionic 2</li>
-				<li class="skill">NodeJS & Express</li>
-				<li class="skill">WordPress</li>
-			</ul>
-		</div>
-		<div class="third-block">
-			<h3 class="skill-title">Build Tools</h3>
-			<ul class="skill-list">
-				<li class="skill">Gulp</li>
-				<li class="skill">Sass</li>
-				<li class="skill">Git</li>
-			</ul>
-		</div>
+		<img src="https://giphy.com/gifs/11eVHR0KqaWWRO/html5" />
 	</div>
-	-->
 </section>
 <span id="work-section"></span>
 <section id="irrday" class="project blurWhite">
@@ -84,7 +100,7 @@
 		<div class="half-block description-container container-black">
 				<div class="description-block">
 				<h1 class="project-title">Irrecoverable Daydreamer</h1>
-				<p class="project-description">Crappy wordpress blog whose author doesn't write shit (in over 2 years) because she's a total punk.</p>
+				<p class="project-description">Handcrafted custom WordPress theme.</p>
 				<p class="project-tech-used">Built with WordPress, jQuery</p>
 				<a href="https://irrecoverabledaydreamer.com" target="__blank" class="link-to-project irrday-link">
 					<span class="project-link-text">visit this site</span>
@@ -179,7 +195,7 @@
 <section id="contact-section">
 	<canvas class="granim-el2"></canvas>
 	<div class="form-container">
-	<h1 class="contact-h1">Got something on your mind? Send me a message.</h1>
+		<h1 class="contact-h1">Got something on your mind? Send me a message.</h1>
 		<form id="contact-form" class="contact-form">
 			<label id="name-label" for="name_field" class="label">Name</label>
 			<input id="name" name="name" class="input-field" type="text" />
@@ -191,7 +207,10 @@
 			<button id="submit" class="input-submit">Send Message</button>
 		</form>
 		<div class="loader-container">
-		<div class="spinner spinner-1"></div>
+			<div class="spinner spinner-1"></div>
+		</div>
+		<div class="success-message">
+			<h1>Thanks for your message!</h1>
 		</div>
 	</div>
 	<div id="github-plug">

@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     var granimInstance1 = new Granim({
         element: '.granim-el1',
         name: 'granim',
@@ -12,8 +11,8 @@ $(document).ready(function() {
         states : {
             "default-state": {
                 gradients: [
-                    ['#FF1C6F', '#FFD51C'],
-                    ['#FFD51C', '#28FA71'],
+                    ['#FF1C6F', '#FFCF4A'],
+                    ['#FFCF4A', '#28FA71'],
                     ['#28FA71', '#28D7FA'],
                     ['#28D7FA', '#8D28FA'],
                     ['#8D28FA', '#FF1C6F']
@@ -422,8 +421,6 @@ $(document).ready(function() {
     function slideUpLabel(e) {
         var id = e.target.id;
 
-        console.log(id);
-
         if (id == 'name') {
             nameLabel.classList.add('label-slide-up');
             nameLabel.classList.remove('label-slide-down');
@@ -438,8 +435,6 @@ $(document).ready(function() {
 
     function slideDownLabel(e) {
         var id = e.target.id;
-
-        console.log(id);
 
         if (id == 'name' && e.target.value.length === 0) {
             nameLabel.classList.remove('label-slide-up');
@@ -499,15 +494,46 @@ $(document).ready(function() {
     submit.addEventListener('click', function(e) { 
         e.preventDefault();
         if (validateForm()) {
-            console.log('Form is gud');
+
             $('.contact-h1').addClass('fadeOut');
             $('#contact-form').addClass('fadeOut');
+
             setTimeout(function() {
                 $('.contact-h1').css('z-index', '-25');
                 $('#contact-form').css('z-index', '-25');
                 $('.spinner').css('display', 'block');
+                $('.spinner').removeClass('fadeOut');
                 $('.spinner').addClass('fadeIn');
             }, 150);
+
+            var rand = Math.random();
+            
+            if (rand < 0.5) {
+                setTimeout(function() {
+                    $('.spinner').removeClass('fadeIn');
+                    $('.spinner').addClass('fadeOut');
+                    $('.success-message').css('display', 'block');
+                    $('.success-message').addClass('fadeIn');
+                    setTimeout(function() {
+                        $('.spinner').css('display', 'block');
+                    }, 150);
+                }, 3000);
+            } else {
+                setTimeout(function() {
+                    $('.spinner').removeClass('fadeIn');
+                    $('.spinner').addClass('fadeOut');
+                    $('.contact-h1').html('Something went wrong. Why don\'t you try again?');
+                    $('.contact-h1').css('z-index', '25');
+                    $('#contact-form').css('z-index', '25');
+                    $('.contact-h1').removeClass('fadeOut');
+                    $('#contact-form').removeClass('fadeOut');
+                    $('.contact-h1').addClass('fadeIn');
+                    $('#contact-form').addClass('fadeIn');
+                    setTimeout(function() {
+                        $('.spinner').css('display', 'block');
+                    }, 150);
+                }, 3000);
+            }
             /*
 
             $.ajax({
@@ -532,7 +558,6 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('.input-submit').removeClass('impatient');
             }, 3000);
-            console.log('Form is not gud');
         }
     });
 })

@@ -322,7 +322,6 @@ header nav {
 section#about-me-section {
   position: relative;
   padding: 100px 0;
-  height: 100%;
 }
 
 .width-container {
@@ -335,6 +334,11 @@ section#about-me-section {
   box-sizing: border-box;
   width: 50%;
   vertical-align: top;
+  padding: 0 25px;
+}
+
+.my-pic {
+  margin-bottom: 100px;
 }
 
 .my-pic-container {
@@ -433,20 +437,23 @@ section#about-me-section {
   }
 }
 
+.skills {
+
+}
+
 .third-block {
   display: inline-block;
-  vertical-align: top;
   box-sizing: border-box;
-  border: 1px solid black;
   width: 33%;
-  height: 300px;
-  padding: 0 25px;
+  vertical-align: top;
+  margin-bottom: 24px;
 }
 
 .skill-title {
-  font-size: 30px;
-  text-decoration: underline;
-  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 7px;
 }
 
 .skill-list {
@@ -455,7 +462,41 @@ section#about-me-section {
 }
 
 .skill {
+  font-size: 12px;
   list-style: none;
+  max-width: 90%;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+
+span.preferred {
+  width: 100%;
+  left: 0;
+}
+
+span.preferred:after {
+  content: '';
+  display: none;
+}
+
+.preferred {
+  position: relative;
+  left: -6px;
+  border: 1px solid #FF1C6F;
+  border-radius: 15px;
+  padding: 2px 6px;
+  background-color: #FF1C6F;
+  color: white;
+}
+
+.preferred:after {
+  content: 'preferred';
+  display: inline;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 3px;
+  right: 10px;
 }
 
 .project {
@@ -826,6 +867,26 @@ section#about-me-section {
   width: 100%;
   background-color: rgba(0,0,0,0.9);
   z-index: -5;
+}
+
+.success-message {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+}
+
+.success-message h1 {
+  color: white;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  display: block;
+  text-align: center;
 }
 
 .contact-h1 {
