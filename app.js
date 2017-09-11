@@ -537,20 +537,21 @@ $(window).on('load', function() {
                 },
                 error: function(err) {
                     setTimeout(function() {
-                    $('.spinner').removeClass('fadeIn');
-                    $('.spinner').addClass('fadeOut');
-                    $('.contact-h1').html('Something went wrong. Why don\'t you try again?');
-                    $('.contact-h1').css('z-index', '25');
-                    $('#contact-form').css('z-index', '25');
-                    $('.contact-h1').removeClass('fadeOut');
-                    $('#contact-form').removeClass('fadeOut');
-                    $('.contact-h1').addClass('fadeIn');
-                    $('.contact-h1').addClass('error-message');
-                    $('#contact-form').addClass('fadeIn');
-                    setTimeout(function() {
-                        $('.spinner').css('display', 'block');
-                    }, 150);
-                }, 3000);
+                        $('.spinner').removeClass('fadeIn');
+                        $('.spinner').addClass('fadeOut');
+                        $('.contact-h1').html('Something went wrong. Why don\'t you try again?');
+                        $('.contact-h1').css('z-index', '25');
+                        $('#contact-form').css('z-index', '25');
+                        $('.contact-h1').removeClass('fadeOut');
+                        $('#contact-form').removeClass('fadeOut');
+                        $('.contact-h1').addClass('fadeIn');
+                        $('.contact-h1').addClass('error-message');
+                        $('#contact-form').addClass('fadeIn');
+                        setTimeout(function() {
+                            $('.spinner').css('display', 'block');
+                        }, 150);
+                    }, 3000);
+                    console.log(err);
                 }
             });
         } else {
