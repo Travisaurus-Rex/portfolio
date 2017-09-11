@@ -1,4 +1,18 @@
-$(document).ready(function() {
+var width = 100, // width of a progress bar in percentage
+    perfData = window.performance.timing, // The PerformanceTiming interface
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart), // Calculated Estimated Time of Page Load which returns negative value.
+    time = parseInt((EstimatedTime/1000)%60)*100;
+
+$('.shrinker').animate({
+    width: '0%'
+}, time, 'linear', function() {
+    $('#progress-bar-div').addClass('fadeOut');
+    setTimeout(function() {
+        $('#progress-bar-div').css('display', 'none');
+    }, 300);
+});
+
+$(window).on('load', function() {
 
     var granimInstance1 = new Granim({
         element: '.granim-el1',
