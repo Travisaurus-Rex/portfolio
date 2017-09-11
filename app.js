@@ -507,22 +507,25 @@ $(window).on('load', function() {
         e.preventDefault();
         if (validateForm()) {
 
+            $.ajax({
+                url: "https://formspree.io/baolongrex@gmail.com",
+                method: 'POST',
+                data: $(form).serialize(),
+                dataType: 'json',
+                beforeSend: function() {
+                    $('.contact-h1').addClass('fadeOut');
+                    $('#contact-form').addClass('fadeOut');
 
-            $('.contact-h1').addClass('fadeOut');
-            $('#contact-form').addClass('fadeOut');
-
-            setTimeout(function() {
-                $('.contact-h1').css('z-index', '-25');
-                $('#contact-form').css('z-index', '-25');
-                $('.spinner').css('display', 'block');
-                $('.spinner').removeClass('fadeOut');
-                $('.spinner').addClass('fadeIn');
-            }, 150);
-
-            //var rand = Math.random();
-            
-            if (/*rand < 0.5*/ false) {
-                setTimeout(function() {
+                    setTimeout(function() {
+                        $('.contact-h1').css('z-index', '-25');
+                        $('#contact-form').css('z-index', '-25');
+                        $('.spinner').css('display', 'block');
+                        $('.spinner').removeClass('fadeOut');
+                        $('.spinner').addClass('fadeIn');
+                    }, 150);
+                },
+                success: function(data) {
+                    setTimeout(function() {
                     $('.spinner').removeClass('fadeIn');
                     $('.spinner').addClass('fadeOut');
                     $('.success-message').css('display', 'block');
@@ -531,8 +534,9 @@ $(window).on('load', function() {
                         $('.spinner').css('display', 'block');
                     }, 150);
                 }, 3000);
-            } else {
-                setTimeout(function() {
+                },
+                error: function(err) {
+                    setTimeout(function() {
                     $('.spinner').removeClass('fadeIn');
                     $('.spinner').addClass('fadeOut');
                     $('.contact-h1').html('Something went wrong. Why don\'t you try again?');
@@ -547,26 +551,8 @@ $(window).on('load', function() {
                         $('.spinner').css('display', 'block');
                     }, 150);
                 }, 3000);
-            }
-            /*
-
-            $.ajax({
-                url: "https://formspree.io/baolongrex@gmail.com",
-                method: 'POST',
-                data: $(form).serialize(),
-                dataType: 'json',
-                beforeSend: function() {
-                    //$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-                },
-                success: function(data) {
-
-                },
-                error: function(err) {
-
                 }
             });
-
-            */
         } else {
             $('.input-submit').addClass('impatient');
             setTimeout(function() {
