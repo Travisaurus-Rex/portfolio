@@ -404,27 +404,26 @@ $(window).on('load', function() {
     });
 
     var FormClass = {
-            that: this,
             Validation: {
                 FormClasscheckForm: function (e) {
                     var id = e.target.id;
                     switch(id) {
                         case 'name':
-                            nameValid = FormClass.Validation.checkValidity(e.target.value);
-                            if (nameValid) {
-                                name.classList.add('input-valid');
+                            FormClass.nameValid = FormClass.Validation.checkValidity(e.target.value);
+                            if (FormClass.nameValid) {
+                                FormClass.name.classList.add('input-valid');
                             }
                             break;
                         case 'email':
-                            emailValid = FormClass.Validation.checkValidity(e.target.value);
-                            if (emailValid) {
-                                email.classList.add('input-valid');
+                            FormClass.emailValid = FormClass.Validation.checkValidity(e.target.value);
+                            if (FormClass.emailValid) {
+                                FormClass.email.classList.add('input-valid');
                             }
                             break;
                         case 'message':
-                            messageValid = FormClass.Validation.checkValidity(e.target.value);
-                            if (messageValid) {
-                                message.classList.add('input-valid');
+                            FormClass.messageValid = FormClass.Validation.checkValidity(e.target.value);
+                            if (FormClass.messageValid) {
+                                FormClass.message.classList.add('input-valid');
                             }
                         default:
                             // nothing to do here
