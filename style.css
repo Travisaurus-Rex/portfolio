@@ -613,6 +613,11 @@ span.preferred:after {
 
 .project-logo {
   display: inline-block;
+  max-width: 80%
+}
+
+.view-more {
+  display: none;
 }
 
 .project-title {
@@ -1388,6 +1393,97 @@ footer span {
     width: 100%;
   }
 
+  .third-block:first-of-type {
+    width: 66%;
+  }
+
+  .skill-title {
+    font-size: 28px;
+  }
+
+  .skill {
+    font-size: 16px;
+  }
+
+  .preferred:after {
+    top: 5px;
+  }
+
+  .project {
+    position: relative;
+    margin-bottom: 1px;
+  }
+
+  .project .half-block {
+    display: block;
+    height: 300px;
+  }
+
+  .description-container {
+    width: 100%;
+    display: block;
+    padding: 0;
+    opacity: 0;
+    z-index: -10;
+  }
+
+  .description-block {
+    width: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .project-logo-container {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .project-logo-container:nth-child(even) {
+    position: absolute;
+    top: 0;
+  }
+
+  .view-more {
+    display: block;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .container-black {
+    color: white;
+    position: absolute;
+    top: 0;
+  }
+
+  .container-white {
+    color: black;
+  }
+
+  .link-to-project {
+    opacity: 1;
+  }
+
+  .container-black .link-to-project {
+    color: white;
+  }
+
+  .container-white .link-to-project {
+    color: black;
+  }
+
   #contact-section {
     padding: 20px 0;
   }
@@ -1430,6 +1526,10 @@ footer span {
     border-top: none;
   }
 
+  .third-block:first-of-type {
+    width: 100%;
+  }
+
   .third-block {
     display: block;
     width: 100%;
@@ -1441,7 +1541,7 @@ footer span {
   }
 
   .skill-list {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
   }
 

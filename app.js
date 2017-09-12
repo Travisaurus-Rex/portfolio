@@ -378,6 +378,12 @@ $(window).on('load', function() {
             }
         } else {
 
+            irrday.classList.remove('blurWhite');
+            spotter.classList.remove('blurBlack');
+            nocover.classList.remove('blurWhite');
+            getmusic.classList.remove('blurBlack');
+            groceryapp.classList.remove('blurWhite');
+
             if (window.scrollY >= ((window.innerHeight / 2) - 150)) {
                 if (LogoVisible) {
                     Animation.Header.animateLogoOut();
@@ -523,6 +529,46 @@ $(window).on('load', function() {
         $('.button').click(function() {
             Animation.Scroller.scrollTo("about-me-section");
         })
+
+        $('#irrday_button').click(function(e) {
+            console.log(e.target.id);
+            $("#irrday .description-container").animate({
+                zIndex: 15,
+                opacity: 1
+            }, 250);
+        });
+
+        $('#spotter_button').click(function(e) {
+            console.log(e.target.id);
+            $("#spotter .description-container").animate({
+                zIndex: 15,
+                opacity: 1
+            }, 250);
+        });
+
+        $('#notbythecover_button').click(function(e) {
+            console.log(e.target.id);
+            $("#notbythecover .description-container").animate({
+                zIndex: 15,
+                opacity: 1
+            }, 250);
+        });
+
+        $('#getmusic_button').click(function(e) {
+            console.log(e.target.id);
+            $("#getmusic .description-container").animate({
+                zIndex: 15,
+                opacity: 1
+            }, 250);
+        });
+
+        $('#groceryapp_button').click(function(e) {
+            console.log(e.target.id);
+            $("#groceryapp .description-container").animate({
+                zIndex: 15,
+                opacity: 1
+            }, 250);
+        });
 
         $('#home').click(Animation.Scroller.scrollToSection);
         $('#about-me').click(Animation.Scroller.scrollToSection);
