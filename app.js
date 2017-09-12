@@ -23,7 +23,7 @@ $(window).on('load', function() {
         elToSetClassOn: 'body',
         direction: 'diagonal',
         isPausedWhenNotInView: true,
-        opacity: [0.9, 0.9],
+        opacity: [1, 1],
         stateTransitionSpeed: 1000,
         states : {
             "default-state": {
@@ -152,7 +152,6 @@ $(window).on('load', function() {
                     $('#about-me').addClass('about-me-after');
                     $('#work').addClass('work-after');
                     $('#contact').addClass('contact-after');
-                    $('header').css('box-shadow', '0 0 6px rgba(0,0,0,0.1)');
                 } else {
                     color = 'white';
                     background = 'transparent'
@@ -211,7 +210,6 @@ $(window).on('load', function() {
                 }, 250);
                 $('#name-top-logo').css('color', 'black');
                 $('header').css('background-color', 'white');
-                $('header').css('box-shadow', '0 0 6px rgba(0,0,0,0.1)');
             },
 
         },
@@ -532,40 +530,37 @@ $(window).on('load', function() {
 
         $('#irrday_button').click(function(e) {
             console.log(e.target.id);
+            $('#irrday .description-container').css('z-index', 15);
             $("#irrday .description-container").animate({
-                zIndex: 15,
                 opacity: 1
             }, 250);
         });
 
         $('#spotter_button').click(function(e) {
             console.log(e.target.id);
+            $('#spotter .description-container').css('z-index', 15);
             $("#spotter .description-container").animate({
-                zIndex: 15,
                 opacity: 1
             }, 250);
         });
 
         $('#notbythecover_button').click(function(e) {
-            console.log(e.target.id);
+            $("#notbythecover .description-container").css('z-index', 15);
             $("#notbythecover .description-container").animate({
-                zIndex: 15,
                 opacity: 1
             }, 250);
         });
 
         $('#getmusic_button').click(function(e) {
-            console.log(e.target.id);
+            $("#getmusic .description-container").css('z-index', 15);
             $("#getmusic .description-container").animate({
-                zIndex: 15,
                 opacity: 1
             }, 250);
         });
 
         $('#groceryapp_button').click(function(e) {
-            console.log(e.target.id);
+            $("#groceryapp .description-container").css('z-index', 15);
             $("#groceryapp .description-container").animate({
-                zIndex: 15,
                 opacity: 1
             }, 250);
         });

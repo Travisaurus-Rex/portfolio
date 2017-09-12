@@ -61,11 +61,7 @@ html, body, .granim-el1, #home-section {
 }
 
 #home-section {
-  background-image: url('assets/img/land.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+
 }
 
 header{
@@ -414,6 +410,8 @@ section#about-me-section {
 
 .about-me-data h1 {
   margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -485,20 +483,18 @@ section#about-me-section {
   }
 }
 
+.skill-block {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
 .skills .skill {
   white-space: nowrap;
 }
 
-.third-block {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 33%;
-  vertical-align: top;
-  margin-bottom: 24px;
-}
-
 .skill-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 7px;
@@ -510,29 +506,19 @@ section#about-me-section {
 }
 
 .skill {
-  font-size: 12px;
+  font-size: 18px;
   list-style: none;
   max-width: 90%;
   box-sizing: border-box;
   margin-bottom: 6px;
 }
 
-span.preferred {
-  width: 100%;
-  left: 0;
-}
-
-span.preferred:after {
-  content: '';
-  display: none;
-}
-
 .preferred {
   position: relative;
-  left: -6px;
+  left: -9px;
   border: 1px solid #FF1C6F;
   border-radius: 15px;
-  padding: 2px 6px;
+  padding: 4px 8px;
   color: #FF1C6F;
 }
 
@@ -542,7 +528,7 @@ span.preferred:after {
   color: #FF1C6F;
   font-size: 10px;
   position: absolute;
-  top: 3px;
+  top: 8px;
   right: 10px;
 }
 
@@ -1393,10 +1379,6 @@ footer span {
     width: 100%;
   }
 
-  .third-block:first-of-type {
-    width: 66%;
-  }
-
   .skill-title {
     font-size: 28px;
   }
@@ -1406,7 +1388,7 @@ footer span {
   }
 
   .preferred:after {
-    top: 5px;
+    top: 6px;
   }
 
   .project {
@@ -1452,24 +1434,28 @@ footer span {
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     padding: 16px 24px;
+    border-radius: 24px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
+    outline: none;
   }
 
   .container-black {
     color: white;
     position: absolute;
     top: 0;
+    text-shadow: none;
   }
 
   .container-white {
     color: black;
+    text-shadow: none;
   }
 
   .link-to-project {
@@ -1504,6 +1490,7 @@ footer span {
 
   .input-submit {
     left: 0;
+    right: 0;
     font-weight: 400;
   }
 
@@ -1526,14 +1513,10 @@ footer span {
     border-top: none;
   }
 
-  .third-block:first-of-type {
-    width: 100%;
-  }
-
-  .third-block {
+  .skill-block {
     display: block;
     width: 100%;
-    text-align: center;
+    margin-bottom: 24px;
   }
 
   .skill-title {
@@ -1541,7 +1524,7 @@ footer span {
   }
 
   .skill-list {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1551,12 +1534,11 @@ footer span {
   }
 
   .preferred {
-    left: 0;
     padding-left: 6px;
   }
 
   .preferred:after {
-    top: 3px;
-    font-size: 14px;
+    top: 7px;
+    font-size: 12px;
   }
 }
