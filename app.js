@@ -454,7 +454,7 @@ $(window).on('load', function() {
 
                 validateForm: function () {
                     var bool = false;
-                    if (nameValid && emailValid && messageValid) {
+                    if (FormClass.nameValid && FormClass.emailValid && FormClass.messageValid) {
                         bool = true;
                     } else {
                         bool = false;
