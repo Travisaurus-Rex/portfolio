@@ -548,7 +548,7 @@ $(window).on('load', function() {
                 $.ajax({
                     url: "https://formspree.io/baolongrex@gmail.com",
                     method: 'POST',
-                    data: $(form).serialize(),
+                    data: $(FormClass.form).serialize(),
                     dataType: 'json',
                     beforeSend: function() {
                         $('.contact-h1').addClass('fadeOut');
