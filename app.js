@@ -405,7 +405,7 @@ $(window).on('load', function() {
 
     var FormClass = {
             Validation: {
-                FormClasscheckForm: function (e) {
+                checkForm: function (e) {
                     var id = e.target.id;
                     switch(id) {
                         case 'name':
@@ -529,9 +529,9 @@ $(window).on('load', function() {
         $('#work').click(Animation.Scroller.scrollToSection);
         $('#contact').click(Animation.Scroller.scrollToSection);
 
-        FormClass.name.addEventListener('keyup', FormClass.checkForm);
-        FormClass.email.addEventListener('keyup', FormClass.checkForm);
-        FormClass.message.addEventListener('keyup', FormClass.checkForm);
+        FormClass.name.addEventListener('keyup', FormClass.Validation.checkForm);
+        FormClass.email.addEventListener('keyup', FormClass.Validation.checkForm);
+        FormClass.message.addEventListener('keyup', FormClass.Validation.checkForm);
 
         FormClass.name.addEventListener('focus', FormClass.Animation.slideUpLabel);
         FormClass.email.addEventListener('focus', FormClass.Animation.slideUpLabel);
