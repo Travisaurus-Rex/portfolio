@@ -103,7 +103,7 @@ export function Skills() {
               Technology evolves quickly, and I stay committed to learning tools and patterns that solve real problems. Lately, I&apos;ve been focused on improving my system design skills, exploring modern backend architectures, and deepening my understanding of cloud platforms and scalable API design.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              {['Ruby on Rails', 'Web3', 'Python', 'GraphQL', 'AWS'].map((tech) => (
+              {['Go', 'Web3', 'Python', 'GraphQL', 'AWS'].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 rounded-full bg-neon-purple/20 text-neon-purple border border-neon-purple/30 text-sm"
