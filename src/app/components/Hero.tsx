@@ -27,6 +27,15 @@ export function Hero() {
     }
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Travis_Adams_Resume.pdf";
+    link.download = "travis_adams_awesome_resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">
       <div className="absolute top-20 left-10 w-4 h-4 bg-neon-cyan rounded-full animate-pulse-glow"></div>
@@ -65,6 +74,12 @@ export function Hero() {
               className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300"
             >
               Get In Touch
+            </button>
+            <button 
+              onClick={handleDownload}
+              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300"
+            >
+              Download My Resume
             </button>
           </div>
         </div>
