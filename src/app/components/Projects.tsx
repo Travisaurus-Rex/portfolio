@@ -2,20 +2,21 @@ import { ExternalLink, Github, Code } from 'lucide-react';
 import Image from 'next/image';
 
 export function Projects() {
+  const displayAdditonalProjects = false;
   const projects = [
     {
       title: 'Not by the Cover',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and real-time inventory management.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop',
-      tags: ['React', 'Node.js', 'PostgreSQL'],
+      description: 'A book discovery app that helps readers find new titles based on substance, not appearance. Instead of displaying cover art upfront, the app introduces books through their genres and a one-sentence summary, encouraging more thoughtful, unbiased exploration. Users can browse, reveal, and learn more about books only after engaging with the core details that matter most.',
+      image: '',
+      tags: ['React', 'Node.js', 'GraphQL'],
       github: 'https://github.com/Travisaurus-Rex/not-by-the-cover',
       live: '',
       featured: true
     },
     {
-      title: 'React Native App (Working Title)',
-      description: 'Real-time chat application with AI integration using OpenAI API. Built with Next.js, Socket.io, and MongoDB for message persistence.',
-      image: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=500&h=300&fit=crop',
+      title: 'ListMate',
+      description: 'A real-time, shareable list-making app designed for seamless collaboration and simplicity. Users can create multiple lists, add or remove items, mark them as completed, and share lists with others for real-time updates via web sockets. The UI is clean and responsive, with support for both light and dark mode. The app uses Supabase for authentication and data storage, and React Native for a cross-platform mobile experience. Features include swipe-to-delete, state-aware loading indicators, and row-level security for user data protection.',
+      image: '',
       tags: ['React Native', 'Expo', 'Socket.io', 'Supabase'],
       github: 'https://github.com/Travisaurus-Rex/shopping-list',
       live: '',
@@ -122,54 +123,58 @@ export function Projects() {
         </div>
 
         {/* Other Projects */}
-        <div className="mb-8">
-          <h3 className="text-2xl mb-8 text-center">
-            <span className="text-neon-pink">Other</span> <span className="text-neon-yellow">Projects</span>
-          </h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherProjects.map((project, index) => (
-            <div
-              key={index}
-              className="neon-border border-neon-pink/30 rounded-lg p-6 bg-card/20 backdrop-blur-sm hover:border-neon-pink transition-all duration-300 group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <Code className="w-8 h-8 text-neon-pink group-hover:text-neon-cyan transition-colors" />
-                <div className="flex space-x-3">
-                  <a
-                    href={project.github}
-                    className="text-neon-cyan hover:text-neon-pink transition-colors"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href={project.live}
-                    className="text-neon-green hover:text-neon-yellow transition-colors"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
-              </div>
-              
-              <h4 className="mb-3 text-neon-cyan">{project.title}</h4>
-              <p className="text-foreground/70 text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2">
-                {project.tags.slice(0, 3).map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 text-xs rounded bg-neon-yellow/20 text-neon-yellow"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+        { displayAdditonalProjects &&
+          <>
+            <div className="mb-8">
+              <h3 className="text-2xl mb-8 text-center">
+                <span className="text-neon-pink">Other</span> <span className="text-neon-yellow">Projects</span>
+              </h3>
             </div>
-          ))}
-        </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherProjects.map((project, index) => (
+                <div
+                  key={index}
+                  className="neon-border border-neon-pink/30 rounded-lg p-6 bg-card/20 backdrop-blur-sm hover:border-neon-pink transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <Code className="w-8 h-8 text-neon-pink group-hover:text-neon-cyan transition-colors" />
+                    <div className="flex space-x-3">
+                      <a
+                        href={project.github}
+                        className="text-neon-cyan hover:text-neon-pink transition-colors"
+                      >
+                        <Github size={20} />
+                      </a>
+                      <a
+                        href={project.live}
+                        className="text-neon-green hover:text-neon-yellow transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <h4 className="mb-3 text-neon-cyan">{project.title}</h4>
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs rounded bg-neon-yellow/20 text-neon-yellow"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+        </>
+      }
       </div>
     </section>
   );

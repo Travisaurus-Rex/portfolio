@@ -100,11 +100,10 @@ export function Skills() {
           <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm max-w-4xl mx-auto">
             <h3 className="text-2xl mb-4 text-neon-cyan">Always Learning</h3>
             <p className="text-foreground/80 leading-relaxed">
-              Technology evolves rapidly, and I&apos;m committed to staying current with the latest trends and best practices. 
-              Currently exploring AI/ML integration, Web3 technologies, and advanced cloud architecture patterns.
+              Technology evolves quickly, and I stay committed to learning tools and patterns that solve real problems. Lately, I&apos;ve been focused on improving my system design skills, exploring modern backend architectures, and deepening my understanding of cloud platforms and scalable API design.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              {['AI/ML', 'Web3', 'Rust', 'GraphQL', 'Kubernetes'].map((tech) => (
+              {['Ruby on Rails', 'Web3', 'Python', 'GraphQL', 'AWS'].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 rounded-full bg-neon-purple/20 text-neon-purple border border-neon-purple/30 text-sm"
