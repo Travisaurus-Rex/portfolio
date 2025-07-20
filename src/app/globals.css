@@ -222,16 +222,10 @@ html {
     border: 1px solid;
     box-shadow: 0 0 10px currentColor, inset 0 0 10px rgba(255, 255, 255, 0.1);
   }
-  
-  .cyber-grid {
-    background-image: 
-      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-  
+
   .glitch-text {
     position: relative;
+    z-index: 1000;
   }
   
   .glitch-text::before,
@@ -243,18 +237,29 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: 999;
   }
   
   .glitch-text::before {
-    animation: glitch-1 2s infinite;
+    animation: glitch-1 3s infinite;
     color: #ff006e;
     z-index: -1;
+    opacity: 0.4;
+    text-shadow: 
+      0 0 1.5px #ff006e, 
+      0 0 3px #ff006e, 
+      0 0 4.5px #ff006e;
   }
   
   .glitch-text::after {
-    animation: glitch-2 2s infinite;
+    animation: glitch-2 3s infinite;
     color: #00ffff;
     z-index: -2;
+    opacity: 0.4;
+    text-shadow: 
+      0 0 1.5px #00ffff, 
+      0 0 3px #00ffff, 
+      0 0 4.5px #00ffff;
   }
 }
 
@@ -303,6 +308,130 @@ html {
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse 2s ease-in-out infinite;
+@keyframes data-stream {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+    opacity: 0;
+  }
+}
+
+@keyframes terrain-wave {
+  0%, 100% {
+    transform: translateY(0px) perspective(800px) rotateX(75deg);
+  }
+  50% {
+    transform: translateY(-5px) perspective(800px) rotateX(75deg);
+  }
+}
+
+@keyframes city-glow {
+  0%, 100% {
+    border-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    border-color: rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 16px rgba(0, 255, 255, 0.5);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+    opacity: 0;
+  }
+}
+
+@keyframes horizon-shift {
+  0%, 100% {
+    transform: perspective(1000px) rotateX(85deg) translateZ(0px);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(85deg) translateZ(10px);
+  }
+}
+
+.animate-terrain-wave {
+  animation: terrain-wave 6s ease-in-out infinite;
+}
+
+.animate-city-glow {
+  animation: city-glow 4s ease-in-out infinite;
+}
+
+.animate-data-stream {
+  animation: data-stream 10s linear infinite;
+}
+
+.animate-horizon-shift {
+  animation: horizon-shift 12s ease-in-out infinite;
+}
+
+/* Delay variations */
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+.delay-3000 {
+  animation-delay: 3s;
+}
+
+.delay-4000 {
+  animation-delay: 4s;
+}
+
+.delay-5000 {
+  animation-delay: 5s;
+}
+
+/* 3D Perspective utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+/* Wireframe specific utilities */
+.wireframe-mountain {
+  transform-origin: bottom center;
+}
+
+.wireframe-building {
+  transform-origin: bottom center;
+}
+
+.wireframe-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
 }

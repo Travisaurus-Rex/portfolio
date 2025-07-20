@@ -37,7 +37,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid bg-gradient-to-br from-neon-cyan/5 via-transparent to-neon-pink/5">
       <div className="absolute top-20 left-10 w-4 h-4 bg-neon-cyan rounded-full animate-pulse-glow"></div>
       <div className="absolute top-40 right-20 w-2 h-2 bg-neon-pink rounded-full animate-pulse-glow"></div>
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-neon-purple rounded-full animate-pulse-glow"></div>
@@ -62,7 +62,7 @@ export function Hero() {
             Specializing in React, Node.js, and cloud architecture.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center z-1">
             <button 
               onClick={() => scrollToSection('projects')}
               className="neon-border text-neon-cyan border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/10 transition-all duration-300 neon-glow"
