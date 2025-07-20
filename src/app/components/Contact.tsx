@@ -1,30 +1,40 @@
 'use client';
 
-import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { FormEvent, useRef, useState } from 'react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, LoaderCircle } from 'lucide-react';
+import { send } from '@emailjs/browser';
+import { motion, AnimatePresence, easeOut, easeIn } from "framer-motion";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+    console.log(formRef);
+    if (!formRef.current) return;
+    setStatus('loading');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+    const data = Object.fromEntries(new FormData(formRef.current)) as Record<string, string>;
+
+    try {
+      await send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+      setStatus('sent');
+      formRef.current.reset();
+    } catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
+  }
 
   const contactInfo = [
     {
@@ -62,6 +72,20 @@ export function Contact() {
     }
   ];
 
+  const fadeZoom = {
+    initial: { opacity: 0, scale: 0.98 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.18, ease: easeOut },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.9,
+      transition: { duration: 0.15, ease: easeIn },
+    },
+  };
+
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -76,80 +100,87 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm">
-            <h3 className="text-2xl mb-6 text-neon-cyan neon-glow">Send a Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm mb-2 text-foreground">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm mb-2 text-foreground">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm mb-2 text-foreground">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm mb-2 text-foreground">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full neon-border border-neon-pink text-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/10 transition-all duration-300 flex items-center justify-center space-x-2 neon-glow"
-              >
-                <Send size={18} />
-                <span>Send Message</span>
-              </button>
-            </form>
+            <AnimatePresence mode="wait">
+              {status !== "sent" ? (
+                <motion.div
+                  key="form"
+                  variants={fadeZoom}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <h3 className="text-2xl mb-6 text-neon-cyan neon-glow">Send a Message</h3>
+                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <label htmlFor="name" className="block text-sm mb-2 text-foreground">
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-sm mb-2 text-foreground">
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="message" className="block text-sm mb-2 text-foreground">
+                          Message
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          required
+                          rows={5}
+                          className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
+                        ></textarea>
+                      </div>
+                      
+                      <button
+                        type="submit"
+                        className="w-full neon-border border-neon-pink text-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/10 transition-all duration-300 flex items-center justify-center space-x-2 neon-glow"
+                      >
+                        { status == 'idle' &&
+                          <Send size={18} />
+                        }
+                        { status == 'loading' &&
+                          <LoaderCircle size={18} className="animate-spin" />
+                        }
+                        <span>Send Message</span>
+                      </button>
+                    </form>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="success"
+                  variants={fadeZoom}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="flex h-full justify-center flex-col items-center"
+                >
+                  <h2 className="text-4xl text-neon-cyan neon-glow">Email Sent</h2>
+                  <h3 className="text-2xl">Thank you for your message!</h3>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
           </div>
 
           {/* Contact Info */}
