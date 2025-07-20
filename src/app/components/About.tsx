@@ -37,7 +37,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/50 backdrop-blur-sm">
-              <h3 className="text-2xl mb-4 text-neon-green">Hello, I'm Travis Adams</h3>
+              <h3 className="text-2xl mb-4 text-neon-green">Hello, I&apos;m Travis Adams</h3>
               <p className="text-foreground/80 leading-relaxed mb-4">
                 A passionate full stack developer with over 5 years of experience creating 
                 digital solutions that bridge the gap between design and functionality. 
@@ -45,7 +45,7 @@ export function About() {
                 through clean, efficient code.
               </p>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
+                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing 
                 to open source projects, or sharing knowledge with the developer community. 
                 I believe in writing code that not only works but is also maintainable and scalable.
               </p>

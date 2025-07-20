@@ -1,7 +1,7 @@
 'use client';
 
 import { FormEvent, useRef, useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, LoaderCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, LoaderCircle } from 'lucide-react';
 import { send } from '@emailjs/browser';
 import { motion, AnimatePresence, easeOut, easeIn } from "framer-motion";
 
@@ -95,7 +95,7 @@ export function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-pink mx-auto"></div>
           <p className="text-foreground/80 mt-6 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+            Ready to bring your ideas to life? Let&apos;s collaborate and create something amazing together.
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export function Contact() {
               </div>
               
               <p className="text-foreground/70 mt-6 leading-relaxed">
-                Let's connect on social media and stay updated with the latest in tech and development.
+                Let&apos;s connect on social media and stay updated with the latest in tech and development.
               </p>
             </div>
           </div>

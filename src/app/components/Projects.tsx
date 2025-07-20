@@ -1,5 +1,5 @@
 import { ExternalLink, Github, Code } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import Image from 'next/image';
 
 export function Projects() {
   const projects = [
@@ -72,7 +72,7 @@ export function Projects() {
             >
               { project.image &&
                 <div className="relative overflow-hidden">
-                  <ImageWithFallback
+                  <Image
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"

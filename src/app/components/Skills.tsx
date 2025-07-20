@@ -100,7 +100,7 @@ export function Skills() {
           <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm max-w-4xl mx-auto">
             <h3 className="text-2xl mb-4 text-neon-cyan">Always Learning</h3>
             <p className="text-foreground/80 leading-relaxed">
-              Technology evolves rapidly, and I'm committed to staying current with the latest trends and best practices. 
+              Technology evolves rapidly, and I&apos;m committed to staying current with the latest trends and best practices. 
               Currently exploring AI/ML integration, Web3 technologies, and advanced cloud architecture patterns.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
