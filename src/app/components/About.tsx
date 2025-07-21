@@ -39,16 +39,19 @@ export function About() {
             <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/50 backdrop-blur-sm">
               <h3 className="text-2xl mb-4 text-neon-green">Hello, I&apos;m Travis Adams</h3>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                A passionate full stack developer with over 5 years of experience creating 
-                digital solutions that bridge the gap between design and functionality. 
-                I specialize in modern web technologies and love bringing ideas to life 
-                through clean, efficient code.
+                A full stack software engineer with a passion for building practical, user-focused digital solutions. Over the past several years, I&apos;ve honed my skills crafting scalable web and mobile apps using technologies like Angular, React, .NET, and Node.js, always aiming to bridge the gap between solid architecture and seamless user experiences.
               </p>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing 
-                to open source projects, or sharing knowledge with the developer community. 
-                I believe in writing code that not only works but is also maintainable and scalable.
+                I currently live abroad in Indonesia while working remotely with American teams. This experience has strengthened my skills in clear communication, collaboration, and adapting to different time zones — all essential for delivering projects reliably and on schedule, no matter where I&apos;m based.
               </p>
+              <h3 className="mt-4 mb-2">Key Remote Worker Details:</h3>
+              <ul className="list-disc list-inside pl-2 space-y-2 text-foreground/80 leading-relaxed mb-4">
+                <li>U.S. citizen with a permanent U.S. mailing address</li>
+                <li>Experienced working fully remote with U.S.-based companies</li>
+                <li>Available during core U.S. business hours to ensure seamless collaboration</li>
+                <li>Equipped with a reliable remote work setup and strong communication skills</li>
+              </ul>
+
               <div className="flex items-center space-x-4">
                 <div className="w-3 h-3 bg-neon-green rounded-full animate-pulse-glow"></div>
                 <span className="text-neon-green">Available for new opportunities</span>

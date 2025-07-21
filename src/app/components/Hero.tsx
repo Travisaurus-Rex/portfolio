@@ -58,8 +58,7 @@ export function Hero() {
           </div>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Crafting digital experiences with cutting-edge technology.
-            Specializing in React, Node.js, and cloud architecture.
+            Bringing ideas to life with a focus on quality, scalability, and user experience. Experienced in full stack delivery and eager to embrace evolving tech landscapes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center z-1">
