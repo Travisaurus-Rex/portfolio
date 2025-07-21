@@ -154,7 +154,7 @@ export function Contact() {
                       
                       <button
                         type="submit"
-                        className="w-full neon-border border-neon-pink text-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/10 transition-all duration-300 flex items-center justify-center space-x-2 neon-glow"
+                        className="w-full neon-border border-neon-pink text-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/10 transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
                       >
                         { status == 'idle' &&
                           <Send size={18} />

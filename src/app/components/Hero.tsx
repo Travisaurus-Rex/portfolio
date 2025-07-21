@@ -65,19 +65,19 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center z-1">
             <button 
               onClick={() => scrollToSection('projects')}
-              className="neon-border text-neon-cyan border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/10 transition-all duration-300 neon-glow"
+              className="neon-border text-neon-cyan border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/10 transition-all duration-300 neon-glow cursor-pointer"
             >
               View Projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300"
+              className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300 cursor-pointer"
             >
               Get In Touch
             </button>
             <button 
               onClick={handleDownload}
-              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300"
+              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer"
             >
               Download My Resume
             </button>
@@ -86,7 +86,7 @@ export function Hero() {
         
         <button
           onClick={() => scrollToSection('about')}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-neon-cyan animate-bounce"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-neon-cyan animate-bounce cursor-pointer"
         >
           <ChevronDown size={32} />
         </button>

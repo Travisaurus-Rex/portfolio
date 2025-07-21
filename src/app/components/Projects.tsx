@@ -100,15 +100,15 @@ export function Projects() {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <a
+                  <a target='_blank'
                     href={project.github}
-                    className="flex items-center space-x-2 text-neon-cyan hover:text-neon-pink transition-colors"
+                    className="neon-border bg-neon-cyan/20 px-3 py-2 rounded-md mt-4 flex items-center space-x-2 text-neon-cyan hover:text-neon-pink hover:bg-neon-pink/20 transition-colors"
                   >
                     <Github size={18} />
                     <span>Code</span>
                   </a>
                   { project.live &&
-                    <a
+                    <a target='_blank'
                       href={project.live}
                       className="flex items-center space-x-2 text-neon-green hover:text-neon-yellow transition-colors"
                     >
@@ -140,18 +140,20 @@ export function Projects() {
                   <div className="flex items-center justify-between mb-4">
                     <Code className="w-8 h-8 text-neon-pink group-hover:text-neon-cyan transition-colors" />
                     <div className="flex space-x-3">
-                      <a
+                      <a target='_blank'
                         href={project.github}
                         className="text-neon-cyan hover:text-neon-pink transition-colors"
                       >
                         <Github size={20} />
                       </a>
-                      <a
-                        href={project.live}
-                        className="text-neon-green hover:text-neon-yellow transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
+                      { project.live &&
+                        <a target='_blank'
+                          href={project.live}
+                          className="text-neon-green hover:text-neon-yellow transition-colors"
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                      }
                     </div>
                   </div>
                   
