@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Github, ExternalLink } from 'lucide-react';
 
 type ProjectHeroProps = {
   image: string;

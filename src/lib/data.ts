@@ -107,6 +107,8 @@ export const projects = [
       slug: 'meyer-online',
       github: '',
       live: 'https://online.meyerdistributing.com/',
+      android: 'https://play.google.com/store/apps/details?id=com.meyerdistributing.online&hl=en',
+      ios: 'https://apps.apple.com/us/app/meyer-online/id1487143055',
       featured: false
     }
   ];

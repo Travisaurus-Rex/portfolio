@@ -41,10 +41,35 @@ export default function ProjectPage() {
           <h2 className="text-3xl font-medium mb-4 text-neon-pink">Key Features</h2>
           <ul className="list-disc list-inside text-foreground/80 space-y-2">
             { project.description.keyFeatures.map((para, index) => {
-              return <li key={`${index}_${project.slug}`}>{para}</li>
+              return <li key={index}>{para}</li>
               })
             }
           </ul>
+        </div>
+
+        <div className="mt-6 space-x-4">
+          <a target='_blank'
+            href={project.live}
+            className="bg-neon-cyan/20 text-neon-cyan border border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/30 transition-all duration-300 cursor-pointer"
+          >
+            Visit Site
+          </a>
+          { project.android && 
+            <a target='_blank'
+              href={project.android}
+              className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300 cursor-pointer"
+            >
+              Play Store
+            </a>
+          }
+          { project.ios && 
+            <a target='_blank'
+              href={project.ios}
+              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer"
+            >
+              Apple Store
+            </a>
+          }
         </div>
       </section>
     </>
