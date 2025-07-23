@@ -1,6 +1,7 @@
 import { ExternalLink, Github, Code } from 'lucide-react';
 import Image from 'next/image';
-import { projects } from '../../lib/data';
+import { projects } from '@/lib/data';
+import Link from 'next/link';
 
 export function Projects() {
   const displayAdditonalProjects = true;
@@ -38,7 +39,7 @@ export function Projects() {
               <div className="p-6">
                 <h3 className="text-xl mb-3 text-neon-cyan">{project.title}</h3>
                 <p className="text-foreground/80 leading-relaxed mb-4">
-                  {project.description}
+                  {project.description.short}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -116,7 +117,7 @@ export function Projects() {
                   
                   <h4 className="mb-3 text-neon-cyan">{project.title}</h4>
                   <p className="text-foreground/70 text-sm leading-relaxed mb-4">
-                    {project.description}
+                    {project.description.short}
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
@@ -129,6 +130,11 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
+                  <Link href={`/projects/${project.slug}`}>
+                    <button className="cursor-pointer neon-border bg-neon-cyan/20 px-3 py-2 rounded-md mt-4 flex items-center space-x-2 text-neon-cyan hover:text-neon-pink hover:bg-neon-pink/20 transition-colors">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
