@@ -1,9 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ChevronLeft, Menu, X } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-export function Header() {
+type HeaderProps = {
+  hideLinks?: boolean
+}
+
+export function Header({hideLinks = false}: HeaderProps) {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -22,27 +28,39 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item)}
-              className="relative group text-foreground hover:text-neon-cyan transition-colors duration-300"
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-cyan group-hover:w-full transition-all duration-300"></span>
-            </button>
-          ))}
-        </div>
+        { !hideLinks && 
+          <div className="hidden md:flex space-x-8">
+            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="relative group text-foreground hover:text-neon-cyan transition-colors duration-300 cursor-pointer"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-cyan group-hover:w-full transition-all duration-300"></span>
+              </button>
+            ))}
+          </div>
+        }
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-neon-cyan hover:text-neon-pink transition-colors"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
+        { !hideLinks &&
+          <button
+            className="md:hidden text-neon-cyan hover:text-neon-pink transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        }
+        { hideLinks &&
+          <button
+            className="flex cursor-pointer text-neon-cyan hover:text-neon-pink transition-colors"
+            onClick={router.back}
+          >
+            <ChevronLeft />
+            <span>Back</span>
+          </button>
+        }
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-neon-cyan/30 md:hidden">

@@ -1,5 +1,6 @@
 'use client';
 
+import { Header } from '@/components/Header';
 import { ProjectHeader } from '@/components/ProjectHeader';
 import { projects } from '@/lib/data';
 import { useParams } from 'next/navigation';
@@ -13,6 +14,7 @@ export default function ProjectPage() {
 
     return (
     <>
+      <Header hideLinks={true} />
       <ProjectHeader image={project.image} />
       <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
         <h1 className="text-8xl font-medium mb-4 mb-24">
