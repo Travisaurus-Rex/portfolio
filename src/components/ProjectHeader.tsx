@@ -16,7 +16,7 @@ export function ProjectHeader({ desktopImg, mobileImg, alt }: ProjectHeroProps) 
         "relative flex items-center justify-center overflow-hidden rounded-lg border border-border p-6 sm:p-4",
         theme == 'dark'
           ? "bg-gradient-to-br from-black via-neutral-900 to-background"
-          : "bg-gradient-to-br from-neon-cyan/50 via-neon-green to-neon-pink/50"
+          : "bg-gradient-to-br from-neon-cyan/50 via-neon-purple to-neon-pink/50"
       )}>
 
       <div className="flex justify-center w-full py-10 px-4">
@@ -25,14 +25,16 @@ export function ProjectHeader({ desktopImg, mobileImg, alt }: ProjectHeroProps) 
           <Image width="800" height="400"
             src={desktopImg}
             alt={alt || 'Desktop Screenshot'}
-            className="w-full rounded-xl shadow-2xl"
+            className="w-full rounded-xl shadow-dark-lg border-2 border-cyan"
+            style={{ boxShadow: '0 10px 15px rgba(0,0,0,0.5)' }}
           />
 
           {/* Mobile Screenshot */}
           <Image width="800" height="400"
             src={mobileImg}
             alt={ alt || 'Mobile Screenshot'}
-            className="absolute w-1/4 bottom-[-2rem] right-[-2rem] rounded-xl shadow-lg z-10"
+            className="absolute w-1/4 bottom-[-2rem] right-[-2rem] rounded-xl shadow-dark-lg z-10 border-2 border-cyan"
+            style={{ boxShadow: '0 10px 15px rgba(0,0,0,0.5)' }}
           />
         </div>
       </div>
