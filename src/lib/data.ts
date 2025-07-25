@@ -49,8 +49,8 @@ export const projects = [
         ]
       },
       images: { 
-        mainDesktop: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=1200&h=800&fit=crop', 
-        mainMobile: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&h=1000&fit=crop', 
+        mainDesktop: '/projects/omnioutdoorliving.com_.jpg', 
+        mainMobile: '/projects/omnioutdoorliving.com_mobile.jpg', 
         gallery: [] 
       },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],

@@ -23,15 +23,15 @@ export function ProjectHeader({ desktopImg, mobileImg, alt }: ProjectHeroProps) 
         <div className="relative max-w-4xl w-full">
           {/* Desktop Screenshot */}
           <Image width="800" height="400"
-            src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=1200&h=800&fit=crop"
-            alt="Desktop Screenshot"
+            src={desktopImg}
+            alt={alt || 'Desktop Screenshot'}
             className="w-full rounded-xl shadow-2xl"
           />
 
           {/* Mobile Screenshot */}
           <Image width="800" height="400"
-            src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&h=1000&fit=crop"
-            alt="Mobile Screenshot"
+            src={mobileImg}
+            alt={ alt || 'Mobile Screenshot'}
             className="absolute w-1/4 bottom-[-2rem] right-[-2rem] rounded-xl shadow-lg z-10"
           />
         </div>

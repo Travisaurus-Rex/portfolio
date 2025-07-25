@@ -24,9 +24,9 @@ export default function ProjectPage() {
         </h1>
         {/* About the Project */}
         <div>
-          <h2 className="text-3xl font-medium mb-4 text-neon-cyan">About the Project</h2>
+          <h2 className="text-3xl font-medium mb-4 text-neon-cyan ">About the Project</h2>
           { project.description.about.map((para, index) => {
-              return <p key={index} className="text-foreground/80 leading-relaxed mb-6">{para}</p>
+              return <p key={index} className="text-xl text-foreground/80 leading-relaxed mb-6">{para}</p>
             })
           }
         </div>
@@ -35,7 +35,7 @@ export default function ProjectPage() {
         <div>
           <h2 className="text-3xl font-medium mb-4 text-neon-green">How It Was Built</h2>
             { project.description.howItWasBuilt.map((para, index) => {
-                return <p key={index} className="text-foreground/80 leading-relaxed mb-6">{para}</p>
+                return <p key={index} className="text-xl text-foreground/80 leading-relaxed mb-6">{para}</p>
               })
             }
         </div>
@@ -43,7 +43,7 @@ export default function ProjectPage() {
         {/* Features */}
         <div>
           <h2 className="text-3xl font-medium mb-4 text-neon-pink">Key Features</h2>
-          <ul className="list-disc list-inside text-foreground/80 space-y-2">
+          <ul className="text-xl list-disc list-inside text-foreground/80 space-y-2">
             { project.description.keyFeatures.map((para, index) => {
               return <li key={index}>{para}</li>
               })
