@@ -2,8 +2,61 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
   --font-size: 14px;
+  
+  /* Light mode variables */
+  --background: #f8f9ff;
+  --foreground: #1a1a2e;
+  --card: #ffffff;
+  --card-foreground: #1a1a2e;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a2e;
+  --primary: #0066cc;
+  --primary-foreground: #ffffff;
+  --secondary: #e6e9ff;
+  --secondary-foreground: #1a1a2e;
+  --muted: #f0f2ff;
+  --muted-foreground: #666699;
+  --accent: #cc0055;
+  --accent-foreground: #ffffff;
+  --destructive: #cc1a4d;
+  --destructive-foreground: #ffffff;
+  --border: #d1d5ff;
+  --input: #e6e9ff;
+  --input-background: #f0f2ff;
+  --switch-background: #e6e9ff;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #0066cc;
+  --chart-1: #0066cc;
+  --chart-2: #cc0055;
+  --chart-3: #6644cc;
+  --chart-4: #00aa66;
+  --chart-5: #cc8800;
+  --radius: 0.5rem;
+  --sidebar: #f8f9ff;
+  --sidebar-foreground: #1a1a2e;
+  --sidebar-primary: #0066cc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e6e9ff;
+  --sidebar-accent-foreground: #1a1a2e;
+  --sidebar-border: #d1d5ff;
+  --sidebar-ring: #0066cc;
+  
+  /* Light mode cyberpunk colors */
+  --neon-cyan: #0066cc;
+  --neon-pink: #cc0055;
+  --neon-purple: #6644cc;
+  --neon-green: #00aa66;
+  --neon-yellow: #cc8800;
+  --light-bg: #f8f9ff;
+  --lighter-bg: #ffffff;
+  --card-bg: #ffffff;
+}
+
+:root.dark {
   --background: #0a0a0f;
   --foreground: #e0e0ff;
   --card: #111118;
@@ -22,17 +75,14 @@
   --destructive-foreground: #ffffff;
   --border: #00ffff33;
   --input: #1a1a2e;
-  --input-background: #16213e;
-  --switch-background: #1a1a2e;
+  --ring: #00ffff;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #00ffff;
   --chart-1: #00ffff;
   --chart-2: #ff006e;
   --chart-3: #8b5cf6;
   --chart-4: #06ffa5;
   --chart-5: #ffbe0b;
-  --radius: 0.5rem;
   --sidebar: #0a0a0f;
   --sidebar-foreground: #e0e0ff;
   --sidebar-primary: #00ffff;
@@ -42,52 +92,15 @@
   --sidebar-border: #00ffff33;
   --sidebar-ring: #00ffff;
   
-  /* Cyberpunk specific variables */
+  /* Dark mode cyberpunk colors */
   --neon-cyan: #00ffff;
   --neon-pink: #ff006e;
   --neon-purple: #8b5cf6;
   --neon-green: #06ffa5;
   --neon-yellow: #ffbe0b;
-  --dark-bg: #0a0a0f;
-  --darker-bg: #050508;
+  --light-bg: #0a0a0f;
+  --lighter-bg: #050508;
   --card-bg: #111118;
-}
-
-.dark {
-  --background: #0a0a0f;
-  --foreground: #e0e0ff;
-  --card: #111118;
-  --card-foreground: #e0e0ff;
-  --popover: #111118;
-  --popover-foreground: #e0e0ff;
-  --primary: #00ffff;
-  --primary-foreground: #000011;
-  --secondary: #1a1a2e;
-  --secondary-foreground: #e0e0ff;
-  --muted: #16213e;
-  --muted-foreground: #9d9dff;
-  --accent: #ff006e;
-  --accent-foreground: #ffffff;
-  --destructive: #ff3366;
-  --destructive-foreground: #ffffff;
-  --border: #00ffff33;
-  --input: #1a1a2e;
-  --ring: #00ffff;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: #00ffff;
-  --chart-2: #ff006e;
-  --chart-3: #8b5cf6;
-  --chart-4: #06ffa5;
-  --chart-5: #ffbe0b;
-  --sidebar: #0a0a0f;
-  --sidebar-foreground: #e0e0ff;
-  --sidebar-primary: #00ffff;
-  --sidebar-primary-foreground: #000011;
-  --sidebar-accent: #1a1a2e;
-  --sidebar-accent-foreground: #e0e0ff;
-  --sidebar-border: #00ffff33;
-  --sidebar-ring: #00ffff;
 }
 
 @theme inline {
@@ -130,14 +143,14 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Cyberpunk colors */
+  /* Theme-aware cyberpunk colors */
   --color-neon-cyan: var(--neon-cyan);
   --color-neon-pink: var(--neon-pink);
   --color-neon-purple: var(--neon-purple);
   --color-neon-green: var(--neon-green);
   --color-neon-yellow: var(--neon-yellow);
-  --color-dark-bg: var(--dark-bg);
-  --color-darker-bg: var(--darker-bg);
+  --color-light-bg: var(--light-bg);
+  --color-lighter-bg: var(--lighter-bg);
   --color-card-bg: var(--card-bg);
 }
 
@@ -146,10 +159,21 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
+  html, body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--lighter-bg) 100%);
     min-height: 100vh;
+    perspective: 1000px;
+    /* Smooth transitions for theme switching */
+    transition: 
+      background 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -212,24 +236,65 @@ html {
   font-size: var(--font-size);
 }
 
-/* Cyberpunk Effects */
+/* Enhanced Cyberpunk Effects - Theme Aware */
 @layer utilities {
   .neon-glow {
-    text-shadow: 0 0 3px currentColor, 0 0 8px currentColor, 0 0 10px currentColor;
+    text-shadow: 
+      0 0 2.5px currentColor, 
+      0 0 5px currentColor, 
+      0 0 7.5px currentColor,
+      0 0 10px currentColor;
+  }
+  
+  .dark .neon-glow {
+    text-shadow: 
+      0 0 2.5px currentColor, 
+      0 0 5px currentColor, 
+      0 0 7.5px currentColor,
+      0 0 10px currentColor;
+  }
+  
+  .neon-glow:not(.dark *) {
+    text-shadow: 
+      0 0 1px currentColor, 
+      0 0 2px currentColor, 
+      0 0 4px currentColor;
+    filter: brightness(1.2) contrast(1.1);
+  }
+  
+  .neon-glow-subtle {
+    text-shadow: 0 0 2px currentColor;
+  }
+  
+  .neon-glow-subtle:not(.dark *) {
+    text-shadow: 0 0 1px currentColor;
+    filter: brightness(1.1);
   }
   
   .neon-border {
     border: 1px solid;
-    box-shadow: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.05);
   }
-
-  .neon-border:hover {
-    box-shadow: 0 0 10px currentColor, inset 0 0 10px rgba(255, 255, 255, 0.1);
+  
+  .dark .neon-border {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.05);
   }
-
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 102, 204, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 102, 204, 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  
+  .dark .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+  }
+  
   .glitch-text {
     position: relative;
-    z-index:10;
   }
   
   .glitch-text::before,
@@ -241,13 +306,32 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 999;
   }
   
   .glitch-text::before {
     animation: glitch-1 3s infinite;
-    color: #ff006e;
+    color: #cc0055;
     z-index: -1;
+    opacity: 0.3;
+    text-shadow: 
+      0 0 1px #cc0055, 
+      0 0 2px #cc0055, 
+      0 0 3px #cc0055;
+  }
+  
+  .glitch-text::after {
+    animation: glitch-2 3s infinite;
+    color: #0066cc;
+    z-index: -2;
+    opacity: 0.3;
+    text-shadow: 
+      0 0 1px #0066cc, 
+      0 0 2px #0066cc, 
+      0 0 3px #0066cc;
+  }
+  
+  .dark .glitch-text::before {
+    color: #ff006e;
     opacity: 0.4;
     text-shadow: 
       0 0 1.5px #ff006e, 
@@ -255,10 +339,8 @@ html {
       0 0 4.5px #ff006e;
   }
   
-  .glitch-text::after {
-    animation: glitch-2 3s infinite;
+  .dark .glitch-text::after {
     color: #00ffff;
-    z-index: -2;
     opacity: 0.4;
     text-shadow: 
       0 0 1.5px #00ffff, 
@@ -305,30 +387,18 @@ html {
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 1;
+    opacity: 0.8;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 }
 
-@keyframes data-stream {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(calc(100vw + 100px));
-    opacity: 0;
-  }
+.animate-pulse-glow {
+  animation: pulse 3s ease-in-out infinite;
 }
 
+/* Wireframe Landscape Animations */
 @keyframes terrain-wave {
   0%, 100% {
     transform: translateY(0px) perspective(800px) rotateX(75deg);
@@ -339,6 +409,21 @@ html {
 }
 
 @keyframes city-glow {
+  0%, 100% {
+    border-color: rgba(0, 102, 204, 0.6);
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
+  }
+  50% {
+    border-color: rgba(0, 102, 204, 1);
+    box-shadow: 0 0 16px rgba(0, 102, 204, 0.7);
+  }
+}
+
+.dark .animate-city-glow {
+  animation-name: city-glow-dark;
+}
+
+@keyframes city-glow-dark {
   0%, 100% {
     border-color: rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
@@ -436,6 +521,78 @@ html {
 
 .wireframe-grid {
   background-image: 
+    linear-gradient(rgba(0, 102, 204, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 204, 0.2) 1px, transparent 1px);
+}
+
+.dark .wireframe-grid {
+  background-image: 
     linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+/* Light mode specific effects */
+.light-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.light-border-glow {
+  border: 2px solid;
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.dark .light-border-glow {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Light mode card styling */
+.light-mode-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 102, 204, 0.2);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.dark .light-mode-card {
+  background: rgba(17, 17, 24, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Enhanced hover effects for light mode */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 8px 15px rgba(0, 255, 255, 0.1);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Animation duration exception for keyframe animations */
+.animate-terrain-wave,
+.animate-city-glow,
+.animate-data-stream,
+.animate-horizon-shift,
+.glitch-text::before,
+.glitch-text::after {
+  transition: none;
 }
