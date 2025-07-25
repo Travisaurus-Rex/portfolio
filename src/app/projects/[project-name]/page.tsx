@@ -9,13 +9,15 @@ export default function ProjectPage() {
     const params = useParams();
     const _slug = params['project-name'];
     const project = projects.find(p => p.slug == _slug);
-
+    
     if (!project) return <div>Not found</div>;
 
     return (
     <>
       <Header hideLinks={true} />
-      <ProjectHeader desktopImg={project.images.mainDesktop} mobileImg={project.images.mainMobile} alt="project"/>
+      <div className="pt-16">
+        <ProjectHeader desktopImg={project.images.mainDesktop} mobileImg={project.images.mainMobile} alt="project"/>
+      </div>
       <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
         <h1 className="text-8xl font-medium mb-4 mb-24">
           {project.title}

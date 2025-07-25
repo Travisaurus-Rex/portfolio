@@ -1,18 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronLeft, Menu, X, Sun, Moon  } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { Menu, X, Sun, Moon  } from 'lucide-react';
 import { Button } from './Button';
+import { useTheme } from '@/context/theme-context';
 
 type HeaderProps = {
   hideLinks?: boolean
-  darkMode?: boolean;
-  onThemeToggle?: () => void;
 }
 
-export function Header({darkMode, onThemeToggle, hideLinks = false}: HeaderProps) {
-  const router = useRouter();
+export function Header({ hideLinks = false}: HeaderProps) {
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -44,20 +42,18 @@ export function Header({darkMode, onThemeToggle, hideLinks = false}: HeaderProps
               </button>
             ))}
 
-            {onThemeToggle && (
-              <Button
-                onClick={onThemeToggle}
-                variant="outline"
-                size="icon"
-                className="neon-border bg-card/80 hover:bg-card/90 light-shadow"
-              >
-                {darkMode ? (
-                  <Sun className="h-4 w-4 text-neon-yellow" />
-                ) : (
-                  <Moon className="h-4 w-4 text-neon-purple" />
-                )}
-              </Button>
-            )}
+            <Button
+              onClick={toggleTheme}
+              variant="outline"
+              size="icon"
+              className="neon-border bg-card/80 hover:bg-card/90 light-shadow"
+            >
+              {theme == 'dark' ? (
+                <Sun className="h-4 w-4 text-neon-yellow" />
+              ) : (
+                <Moon className="h-4 w-4 text-neon-purple" />
+              )}
+            </Button>
           </div>
         }
       
@@ -70,15 +66,22 @@ export function Header({darkMode, onThemeToggle, hideLinks = false}: HeaderProps
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         }
-        { hideLinks &&
-          <button
-            className="flex cursor-pointer text-neon-cyan hover:text-neon-pink transition-colors"
-            onClick={router.back}
+        
+        { hideLinks && (
+          <Button
+            onClick={toggleTheme}
+            variant="outline"
+            size="icon"
+            className="neon-border bg-card/80 hover:bg-card/90 light-shadow"
           >
-            <ChevronLeft />
-            <span>Back</span>
-          </button>
-        }
+            {theme == 'dark' ? (
+              <Sun className="h-4 w-4 text-neon-yellow" />
+            ) : (
+              <Moon className="h-4 w-4 text-neon-purple" />
+            )}
+          </Button>
+        )}
+        
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-neon-cyan/30 md:hidden">
