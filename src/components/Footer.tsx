@@ -15,25 +15,13 @@ export function Footer() {
             <span>by Travis Adams</span>
           </div>
           
-          <div className="glitch-text text-neon-cyan" data-text="&lt;/DEV&gt;">
-            &lt;/DEV&gt;
+          <div className="glitch-text text-neon-cyan" data-text="&lt;/Travis&gt;">
+            &lt;/Travis&gt;
           </div>
           
           <p className="text-foreground/60 text-sm">
             © {currentYear} Travis Adams. All rights reserved. Built with React & TypeScript.
           </p>
-          
-          <div className="flex justify-center space-x-6 text-sm">
-            <a href="#" className="text-foreground/60 hover:text-neon-cyan transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-foreground/60 hover:text-neon-cyan transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-foreground/60 hover:text-neon-cyan transition-colors">
-              Sitemap
-            </a>
-          </div>
         </div>
       </div>
     </footer>
