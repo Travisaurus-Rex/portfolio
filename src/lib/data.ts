@@ -78,7 +78,11 @@ export const projects = [
           'Shared architecture with Omni Outdoor Living, enabling faster development cycles and easier maintenance across projects'
         ]
       },
-      images: { mainDesktop: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=300&fit=crop', mainMobile: '', gallery: [] },
+      images: { 
+        mainDesktop: '/projects/omnigarage.com_.jpg', 
+        mainMobile: '/projects/omnigarage.com_mobile1.jpg', 
+        gallery: [] 
+      },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],
       slug: 'omni-garage',
       github: '',
@@ -106,7 +110,11 @@ export const projects = [
           'Shared codebase between desktop and mobile using Ionic for consistent UX and faster releases'
         ]
       },
-      images: { mainDesktop: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop', mainMobile: '', gallery: [] },
+      images: { 
+        mainDesktop: '/projects/meyeronline_1.jpg', 
+        mainMobile: '/projects/meyeronline_mobile1.png', 
+        gallery: [] 
+      },
       tags: ['Angular', 'Ionic', 'C#', '.NET', 'SQL Server', 'Entity Framework'],
       slug: 'meyer-online',
       github: '',
