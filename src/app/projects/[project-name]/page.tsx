@@ -15,7 +15,7 @@ export default function ProjectPage() {
     return (
     <>
       <Header hideLinks={true} />
-      <ProjectHeader image={project.image} />
+      <ProjectHeader desktopImg={project.images.mainDesktop} mobileImg={project.images.mainMobile} alt="project"/>
       <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
         <h1 className="text-8xl font-medium mb-4 mb-24">
           {project.title}

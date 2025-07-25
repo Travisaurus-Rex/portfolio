@@ -7,7 +7,7 @@ export const projects = [
         howItWasBuilt: [''],
         keyFeatures: ['First paragraph', 'second paragraph']
       },
-      image: '',
+      images: { mainDesktop: '', mainMobile: '', gallery: [] },
       tags: ['React', 'Node.js', 'GraphQL'],
       github: 'https://github.com/Travisaurus-Rex/not-by-the-cover',
       slug: '',
@@ -22,7 +22,7 @@ export const projects = [
         howItWasBuilt: [''],
         keyFeatures: ['First paragraph', 'second paragraph'],
       },
-      image: '',
+      images: { mainDesktop: '', mainMobile: '', gallery: [] },
       tags: ['React Native', 'Expo', 'Socket.io', 'Supabase'],
       github: 'https://github.com/Travisaurus-Rex/shopping-list',
       slug: '',
@@ -48,7 +48,11 @@ export const projects = [
           'Secure checkout experience with Stripe payment integration and customer-friendly cart functionality'
         ]
       },
-      image: '/omni_outdoors.png',
+      images: { 
+        mainDesktop: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=1200&h=800&fit=crop', 
+        mainMobile: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&h=1000&fit=crop', 
+        gallery: [] 
+      },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],
       slug: 'omni-outdoor-living',
       github: '',
@@ -74,7 +78,7 @@ export const projects = [
           'Shared architecture with Omni Outdoor Living, enabling faster development cycles and easier maintenance across projects'
         ]
       },
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=300&fit=crop',
+      images: { mainDesktop: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=300&fit=crop', mainMobile: '', gallery: [] },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],
       slug: 'omni-garage',
       github: '',
@@ -102,7 +106,7 @@ export const projects = [
           'Shared codebase between desktop and mobile using Ionic for consistent UX and faster releases'
         ]
       },
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      images: { mainDesktop: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop', mainMobile: '', gallery: [] },
       tags: ['Angular', 'Ionic', 'C#', '.NET', 'SQL Server', 'Entity Framework'],
       slug: 'meyer-online',
       github: '',
