@@ -162,9 +162,6 @@
   html, body {
     @apply bg-background text-foreground;
     background: linear-gradient(135deg, var(--light-bg) 0%, var(--lighter-bg) 100%);
-    min-height: 100vh;
-    perspective: 1000px;
-    /* Smooth transitions for theme switching */
     transition: 
       background 0.3s ease,
       background-color 0.3s ease,
