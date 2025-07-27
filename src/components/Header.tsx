@@ -95,6 +95,22 @@ export function Header({ hideLinks = false}: HeaderProps) {
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
               ))}
+              <button
+                onClick={toggleTheme}
+                className="text-left text-foreground hover:text-neon-cyan transition-colors duration-300 flex items-center gap-2"
+              >
+                {theme == 'dark' ? (
+                  <>
+                    <span>Light Mode</span>
+                    <Sun className="h-4 w-4 text-neon-yellow" />
+                  </>
+                ) : (
+                  <>
+                    <span>Dark Mode</span>
+                    <Moon className="h-4 w-4 text-neon-purple" />
+                  </>
+                )}
+              </button>
             </div>
           </div>
         )}
