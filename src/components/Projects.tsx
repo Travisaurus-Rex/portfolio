@@ -25,6 +25,7 @@ export function Projects() {
               key={index}
               className="neon-border border-neon-cyan/30 rounded-lg overflow-hidden bg-card/20 backdrop-blur-sm hover:border-neon-cyan transition-all duration-300 group"
             >
+              {/*
               { project.image &&
                 <div className="relative overflow-hidden">
                   <Image
@@ -35,6 +36,7 @@ export function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               }
+              */}
               
               <div className="p-6">
                 <h3 className="text-xl mb-3 text-neon-cyan">{project.title}</h3>
