@@ -37,7 +37,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid bg-gradient-to-br from-neon-cyan/5 via-transparent to-neon-pink/5">
+    <section id="home" className="min-h-screen cyber-grid flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neon-cyan/25 via-neon-green/25 to-neon-pink/25">
       <div className="absolute top-20 left-10 w-4 h-4 bg-neon-cyan rounded-full animate-pulse-glow"></div>
       <div className="absolute top-40 right-20 w-2 h-2 bg-neon-pink rounded-full animate-pulse-glow"></div>
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-neon-purple rounded-full animate-pulse-glow"></div>

@@ -277,19 +277,6 @@ html {
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.05);
   }
   
-  .cyber-grid {
-    background-image: 
-      linear-gradient(rgba(0, 102, 204, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 102, 204, 0.15) 1px, transparent 1px);
-    background-size: 30px 30px;
-  }
-  
-  .dark .cyber-grid {
-    background-image: 
-      linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-  }
-  
   .glitch-text {
     position: relative;
     z-index:10;
