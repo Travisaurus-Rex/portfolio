@@ -64,19 +64,19 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center z-1">
             <button 
               onClick={() => scrollToSection('projects')}
-              className="neon-border text-neon-cyan border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/10 transition-all duration-300 neon-glow cursor-pointer"
+              className="neon-border text-neon-cyan border-neon-cyan px-8 py-3 rounded-lg hover:bg-neon-cyan/10 transition-all duration-300 neon-glow cursor-pointer w-full sm:w-auto"
             >
               View Projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300 cursor-pointer"
+              className="bg-neon-pink/20 text-neon-pink border border-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/30 transition-all duration-300 cursor-pointer w-full sm:w-auto"
             >
               Get In Touch
             </button>
             <button 
               onClick={handleDownload}
-              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer"
+              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer w-full sm:w-auto"
             >
               Download My Resume
             </button>
