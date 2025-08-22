@@ -42,13 +42,13 @@ export function About() {
                 A full stack software engineer with a passion for building practical, user-focused digital solutions. Over the past several years, I&apos;ve honed my skills crafting scalable web and mobile apps using technologies like Angular, React, .NET, and Node.js, always aiming to bridge the gap between solid architecture and seamless user experiences.
               </p>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                I currently live abroad in Indonesia while working remotely with American teams. This experience has strengthened my skills in clear communication, collaboration, and adapting to different time zones — all essential for delivering projects reliably and on schedule, no matter where I&apos;m based.
+                I bring extensive experience working with distributed teams, where I&apos;ve developed strong communication habits and the ability to deliver reliably in fully remote environments. With a proven track record of collaborating across time zones and shipping complex projects, I&apos;m equipped with the tools and mindset to succeed in modern, flexible workplaces.
               </p>
               <h3 className="mt-4 mb-2">Key Remote Worker Details:</h3>
               <ul className="list-disc list-inside pl-2 space-y-2 text-foreground/80 leading-relaxed mb-4">
                 <li>U.S. citizen with a permanent U.S. mailing address</li>
-                <li>Experienced working fully remote with U.S.-based companies</li>
-                <li>Available during core U.S. business hours to ensure seamless collaboration</li>
+                <li>Experienced working fully remote with distributed teams</li>
+                <li>Available during flexible business hours to ensure seamless collaboration</li>
                 <li>Equipped with a reliable remote work setup and strong communication skills</li>
               </ul>
 
