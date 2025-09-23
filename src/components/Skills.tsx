@@ -12,8 +12,8 @@ export function Skills() {
       skills: [
         { name: 'Angular', level: 95 },
         { name: 'TypeScript', level: 90 },
-        { name: 'React/Next.js', level: 86 },
-        { name: 'Tailwind CSS', level: 80 },
+        { name: 'Vue.js', level: 85 },
+        { name: 'React/Next.js', level: 80 },
       ]
     },
     {
@@ -21,9 +21,9 @@ export function Skills() {
       color: 'neon-pink',
       skills: [
         { name: 'C#/.NET', level: 94 },
-        { name: 'Node.js', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'GoLang', level: 65 }
+        { name: 'Node.js', level: 92 },
+        { name: 'GoLang', level: 85 },
+        { name: 'PostgreSQL', level: 80 }
       ]
     },
     {
@@ -31,8 +31,9 @@ export function Skills() {
       color: 'neon-green',
       skills: [
         { name: 'Git/GitHub', level: 95 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'AWS/Azure', level: 78 },
+        { name: 'CI/CD', level: 85 },
+        { name: 'AWS/Azure', level: 83 },
+        { name: 'Docker', level: 80 }
       ]
     }
   ];

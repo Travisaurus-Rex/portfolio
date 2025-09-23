@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Github } from 'lucide-react';
 
 export function Hero() {
   const [text, setText] = useState('');
@@ -27,14 +27,9 @@ export function Hero() {
     }
   };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Travis_Adams_Resume.pdf";
-    link.download = "travis_adams_awesome_resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-  };
+  const openGithub = () => {
+    window.open('https://github.com/Travisaurus-Rex', '_blank');
+  }
 
   return (
     <section id="home" className="min-h-screen cyber-grid flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neon-cyan/25 via-neon-green/25 to-neon-pink/25">
@@ -74,11 +69,12 @@ export function Hero() {
             >
               Get In Touch
             </button>
+            
             <button 
-              onClick={handleDownload}
-              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer w-full sm:w-auto"
+              onClick={() => openGithub()}
+              className="bg-neon-green/20 text-neon-green border border-neon-green px-8 py-3 rounded-lg hover:bg-neon-green/30 transition-all duration-300 cursor-pointer w-full flex items-center justify-center gap-2 sm:w-auto"
             >
-              Download My Resume
+              View my Github <Github size="18" />
             </button>
           </div>
         </div>
