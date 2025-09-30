@@ -10,10 +10,9 @@ export function Skills() {
       title: 'Frontend',
       color: 'neon-cyan',
       skills: [
+        { name: 'JavaScript/TypeScript', level: 98 },
         { name: 'Angular', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Vue.js', level: 85 },
-        { name: 'React/Next.js', level: 80 },
+        { name: 'React/Next.js', level: 89 },
       ]
     },
     {
@@ -32,7 +31,7 @@ export function Skills() {
       skills: [
         { name: 'Git/GitHub', level: 95 },
         { name: 'CI/CD', level: 85 },
-        { name: 'AWS/Azure', level: 83 },
+        { name: 'AWS', level: 83 },
         { name: 'Docker', level: 80 }
       ]
     }
@@ -103,7 +102,7 @@ export function Skills() {
               Technology evolves quickly, and I stay committed to learning tools and patterns that solve real problems. Lately, I&apos;ve been focused on improving my system design skills, exploring modern backend architectures, and deepening my understanding of cloud platforms and scalable API design.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              {['GoLang', 'Web3', 'NextJS', 'GraphQL', 'Azure'].map((tech) => (
+              {['GoLang', 'NextJS', 'GraphQL', 'AWS', 'Python'].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 rounded-full bg-neon-purple/20 text-neon-purple border border-neon-purple/30 text-sm"
