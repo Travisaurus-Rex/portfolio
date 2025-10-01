@@ -87,7 +87,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative">
+    <div className="relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">
@@ -99,8 +99,8 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm">
+        <div className="flex flex-col">
+          <div className="border border-secondary p-8 rounded-lg bg-card/20 backdrop-blur-sm">
             <AnimatePresence mode="wait">
               {status !== "sent" ? (
                 <motion.div
@@ -230,6 +230,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

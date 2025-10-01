@@ -2,9 +2,10 @@
 
 /* Define your custom theme */
 @theme {
-  --color-dark-bg: #0A0A0F;
-  --color-neon-blue: #6EE7F9;
-  --color-neon-pink: #F472B6;
+  --color-dark-bg: #1b263b;
+  --color-primary: #fca311;
+  --color-secondary: #fb8500;
+  --color-tertiary: #8ecae6;
   --color-text: #E5E7EB;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -18,7 +19,7 @@ html, body {
 
 /* Links */
 a {
-  @apply text-neon-blue hover:text-neon-pink transition-colors;
+  @apply text-primary hover:text-secondary transition-colors;
 }
 
 /* Utilities for sections */

@@ -52,14 +52,14 @@ export default function Work() {
       <h2 className="text-2xl font-bold mb-12">Work Experience</h2>
       <div className="space-y-12">
         {jobs.map((job, idx) => (
-          <div key={idx} className="grid grid-cols-5 gap-6">
+          <div key={idx} className="grid grid-cols-6 gap-6">
             {/* Date */}
             <div className="col-span-2 text-sm text-gray-400 font-mono uppercase tracking-wide">
               {job.range}
             </div>
 
             {/* Job Content */}
-            <div className="col-span-3 space-y-4">
+            <div className="col-span-4 space-y-4">
               <h3 className="font-semibold text-lg">
                 {job.title} ·{" "}
                 {job.link ? (
@@ -67,7 +67,7 @@ export default function Work() {
                     href={job.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-400 hover:underline"
+                    className="text-primary hover:underline"
                   >
                     {job.company}
                   </a>

@@ -1,24 +1,35 @@
+"use client";
+
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
+import { useState } from 'react';
+ 
 export default function Sidebar() {
+  const [active, setActive] = useState('');
+
+  const updateActive = (e: any) => {
+    console.log(e.target.id);
+  }
+
   return (
     <>
       {/* Desktop / large screens: fixed left column */}
-      <aside className="hidden lg:flex w-1/3 max-w-xs sticky top-0 h-screen flex-col justify-between p-8 border-r border-neutral-800">
+      <aside className="hidden lg:flex w-1/3 max-w-xl sticky top-0 h-screen flex-col justify-between p-12 py-20 border-r border-neutral-800">
         <div>
-          <h1 className="text-2xl font-bold text-white">Travis Adams</h1>
-          <p className="text-sm text-neutral-400 mt-2">Fullstack Software Engineer</p>
-          <p className="mt-4 text-sm text-neutral-400">
+          <h1 className="text-6xl font-bold text-white">Travis Adams</h1>
+          <p className="text-3xl text-neutral-200 mt-2">Fullstack Software Engineer</p>
+          <p className="mt-4 text-sm text-neutral-200">
             Building modern, scalable web apps
           </p>
+        </div>
 
-          <nav className="mt-10 space-y-3">
-            <a href="#about" className="block hover:text-[var(--color-neon-blue)]">About</a>
-            <a href="#work" className="block hover:text-[var(--color-neon-blue)]">Work</a>
-            <a href="#skills" className="block hover:text-[var(--color-neon-blue)]">Skills</a>
-            <a href="#projects" className="block hover:text-[var(--color-neon-blue)]">Projects</a>
-            <a href="#contact" className="block hover:text-[var(--color-neon-blue)]">Contact</a>
+        <div>
+          <nav className="space-y-5">
+            <a href="#about" onClick={updateActive} className="block hover:text-[var(--color-neon-blue)]">About</a>
+            <a href="#work" onClick={updateActive} className="block hover:text-[var(--color-neon-blue)]">Work</a>
+            <a href="#skills" onClick={updateActive} className="block hover:text-[var(--color-neon-blue)]">Skills</a>
+            <a href="#projects" onClick={updateActive} className="block hover:text-[var(--color-neon-blue)]">Projects</a>
+            <a href="#contact" onClick={updateActive} className="block hover:text-[var(--color-neon-blue)]">Contact</a>
           </nav>
         </div>
 
