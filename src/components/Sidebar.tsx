@@ -1,4 +1,6 @@
-// src/components/Sidebar.tsx
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export default function Sidebar() {
   return (
     <>
@@ -8,11 +10,12 @@ export default function Sidebar() {
           <h1 className="text-2xl font-bold text-white">Travis Adams</h1>
           <p className="text-sm text-neutral-400 mt-2">Fullstack Software Engineer</p>
           <p className="mt-4 text-sm text-neutral-400">
-            Building clean, scalable web apps and modernizing legacy systems.
+            Building modern, scalable web apps
           </p>
 
           <nav className="mt-10 space-y-3">
             <a href="#about" className="block hover:text-[var(--color-neon-blue)]">About</a>
+            <a href="#work" className="block hover:text-[var(--color-neon-blue)]">Work</a>
             <a href="#skills" className="block hover:text-[var(--color-neon-blue)]">Skills</a>
             <a href="#projects" className="block hover:text-[var(--color-neon-blue)]">Projects</a>
             <a href="#contact" className="block hover:text-[var(--color-neon-blue)]">Contact</a>
@@ -20,9 +23,9 @@ export default function Sidebar() {
         </div>
 
         <div className="flex items-center space-x-4 text-neutral-400">
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:youremail@example.com">Email</a>
+          <a href="https://github.com/Travisaurus-Rex" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+          <a href="mailto:tadamsdeveloper@gmail.com"><MdEmail /></a>
         </div>
       </aside>
 

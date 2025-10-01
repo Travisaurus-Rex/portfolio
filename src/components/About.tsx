@@ -5,14 +5,6 @@ export default function About() {
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
 
-        {/* gradient underline (uses CSS variables set in globals.css) */}
-        <div
-          className="w-24 h-1 rounded mb-8"
-          style={{
-            background: "linear-gradient(90deg, var(--color-neon-blue), var(--color-neon-pink))",
-          }}
-        />
-
         <div className="space-y-6 text-lg text-neutral-300 leading-relaxed">
           <p>
             I’m Travis Adams, a full stack software engineer with over six years
