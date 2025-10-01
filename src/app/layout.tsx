@@ -12,10 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-dark-bg text-white min-h-screen">
         <div className="flex">
-          {/* Sidebar is rendered once here */}
           <Sidebar />
-
-          {/* Main scrollable content */}
           <main className="flex-1 overflow-y-auto">
             {children}
           </main>

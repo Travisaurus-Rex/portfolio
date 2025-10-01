@@ -19,10 +19,10 @@ html, body {
 
 /* Links */
 a {
-  @apply text-primary hover:text-secondary transition-colors;
+  @apply text-primary hover:text-tertiary transition-colors;
 }
 
 /* Utilities for sections */
 .section {
-  @apply max-w-3xl mx-auto px-6 py-16;
+  @apply max-w-3xl mx-auto px-1 py-12;
 }

@@ -182,52 +182,6 @@ export default function Contact() {
             </AnimatePresence>
 
           </div>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="neon-border border-neon-purple/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm">
-              <h3 className="text-2xl mb-6 text-neon-purple neon-glow">Contact Info</h3>
-              
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.href}
-                    className="flex items-center space-x-4 group hover:text-neon-cyan transition-colors"
-                  >
-                    <div className="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors">
-                      <info.icon className="w-6 h-6 text-neon-purple group-hover:text-neon-cyan transition-colors" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-foreground/60">{info.label}</p>
-                      <p className="text-foreground">{info.value}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="neon-border border-neon-green/30 p-8 rounded-lg bg-card/20 backdrop-blur-sm">
-              <h3 className="text-2xl mb-6 text-neon-green neon-glow">Follow Me</h3>
-              
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a target="_blank"
-                    key={index}
-                    href={social.href}
-                    className={`w-12 h-12 rounded-lg border border-current flex items-center justify-center hover:bg-current/10 transition-all duration-300 text-${social.color}`}
-                    style={{ color: `var(--color-${social.color})` }}
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
-              
-              <p className="text-foreground/70 mt-6 leading-relaxed">
-                Let&apos;s connect on social media and stay updated with the latest in tech and development.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

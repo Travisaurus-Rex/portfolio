@@ -7,8 +7,9 @@ export default function Hero() {
   const [text, setText] = useState('');
   const fullText = 'Full Stack Software Engineer';
   
-  useEffect(() => {
-    let i = 0;
+ useEffect(() => {
+  let i = 0;
+  const startTimer = setTimeout(() => {
     const timer = setInterval(() => {
       setText(fullText.slice(0, i));
       i++;
@@ -16,9 +17,15 @@ export default function Hero() {
         clearInterval(timer);
       }
     }, 100);
-    
-    return () => clearInterval(timer);
+
+    // Cleanup interval if component unmounts
+      return () => clearInterval(timer);
+    }, 1000); // initial 500ms delay
+
+    // Cleanup timeout if component unmounts before delay
+    return () => clearTimeout(startTimer);
   }, []);
+
 
   const scrollToSection = (sectionName: string) => {
     const element = document.getElementById(sectionName);
