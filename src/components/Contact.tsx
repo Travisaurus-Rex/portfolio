@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Send, Github, Linkedin, LoaderCircle } from 'lucid
 import { send } from '@emailjs/browser';
 import { motion, AnimatePresence, easeOut, easeIn } from "framer-motion";
 
-export function Contact() {
+export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
 

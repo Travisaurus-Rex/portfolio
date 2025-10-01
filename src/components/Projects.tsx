@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
 
-export function Projects() {
+export default function Projects() {
   const displayAdditonalProjects = true;
   const featuredProjects = projects.filter(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);

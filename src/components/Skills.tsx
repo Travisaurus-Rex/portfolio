@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export function Skills() {
+export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
 
   const skillCategories = [

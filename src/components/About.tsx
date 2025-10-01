@@ -1,80 +1,59 @@
-import { Code, Server, Database, Cloud } from 'lucide-react';
-
-export function About() {
-  const features = [
-    {
-      icon: Code,
-      title: 'Frontend Development',
-      description: 'Creating responsive and interactive user interfaces with React, Next.js, and modern CSS frameworks.'
-    },
-    {
-      icon: Server,
-      title: 'Backend Development',
-      description: 'Building robust APIs and server-side applications using Node.js, Python, and various frameworks.'
-    },
-    {
-      icon: Database,
-      title: 'Database Design',
-      description: 'Designing and optimizing database schemas for SQL and NoSQL databases including PostgreSQL and MongoDB.'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Deploying and scaling applications on AWS, Azure, and Google Cloud Platform with DevOps practices.'
-    }
-  ];
-
+// src/components/About.tsx
+export default function About() {
   return (
-    <section id="about" className="py-20 relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">
-            <span className="text-neon-cyan neon-glow">About</span> <span className="text-neon-pink">Me</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-pink mx-auto"></div>
-        </div>
+    <section id="about" className="py-20 section">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="neon-border border-neon-cyan/30 p-8 rounded-lg bg-card/50 backdrop-blur-sm">
-              <h3 className="text-2xl mb-4 text-neon-green">Hello, I&apos;m Travis Adams</h3>
-              <p className="text-foreground/80 leading-relaxed mb-4">
-                A full stack software engineer with a passion for building practical, user-focused digital solutions. Over the past several years, I&apos;ve honed my skills crafting scalable web and mobile apps using technologies like Angular, React, .NET, and Node.js, always aiming to bridge the gap between solid architecture and seamless user experiences.
-              </p>
-              <p className="text-foreground/80 leading-relaxed mb-4">
-                I bring extensive experience working with distributed teams, where I&apos;ve developed strong communication habits and the ability to deliver reliably in fully remote environments. With a proven track record of collaborating across time zones and shipping complex projects, I&apos;m equipped with the tools and mindset to succeed in modern, flexible workplaces.
-              </p>
-              <h3 className="mt-4 mb-2">Key Remote Worker Details:</h3>
-              <ul className="list-disc list-inside pl-2 space-y-2 text-foreground/80 leading-relaxed mb-4">
-                <li>U.S. citizen with a permanent U.S. mailing address</li>
-                <li>Experienced working fully remote with distributed teams</li>
-                <li>Available during flexible business hours to ensure seamless collaboration</li>
-                <li>Equipped with a reliable remote work setup and strong communication skills</li>
-              </ul>
+        {/* gradient underline (uses CSS variables set in globals.css) */}
+        <div
+          className="w-24 h-1 rounded mb-8"
+          style={{
+            background: "linear-gradient(90deg, var(--color-neon-blue), var(--color-neon-pink))",
+          }}
+        />
 
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-neon-green rounded-full animate-pulse-glow"></div>
-                <span className="text-neon-green">Available for new opportunities</span>
-              </div>
-            </div>
-          </div>
+        <div className="space-y-6 text-lg text-neutral-300 leading-relaxed">
+          <p>
+            I’m Travis Adams, a full stack software engineer with over six years
+            of experience building web and mobile applications. My work spans
+            modernizing large-scale systems, designing user-focused interfaces,
+            and delivering scalable backend services.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="neon-border border-neon-purple/30 p-6 rounded-lg bg-card/30 backdrop-blur-sm hover:border-neon-purple transition-all duration-300 group"
-              >
-                <feature.icon className="w-8 h-8 text-neon-purple mb-4 group-hover:text-neon-cyan transition-colors" />
-                <h4 className="mb-2 text-neon-cyan">{feature.title}</h4>
-                <p className="text-sm text-foreground/70 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+          <p>
+            I’m a U.S. citizen currently based in Indonesia, and I thrive in
+            remote-first environments. Over the years I’ve collaborated with
+            distributed teams across time zones, building a reputation for clear
+            communication, adaptability, and consistent delivery.
+          </p>
+
+          <p>
+            What excites me most is the opportunity to work with global teams on
+            products that balance technical rigor with a seamless user
+            experience. I enjoy tackling complex challenges while keeping a
+            strong focus on clarity, performance, and long-term maintainability.
+          </p>
+
+          <ul className="list-disc list-inside space-y-2 text-base text-neutral-400 mt-6">
+            <li>U.S. citizen with a permanent U.S. mailing address</li>
+            <li>Currently living in Indonesia with experience working across time zones</li>
+            <li>Flexible scheduling to overlap with U.S. and international teams</li>
+            <li>Reliable remote setup with strong communication skills</li>
+          </ul>
+
+          <div className="flex items-center space-x-3 pt-6">
+            <div
+              className="w-3 h-3 rounded-full animate-pulse"
+              style={{ background: "var(--color-neon-blue)" }}
+            />
+            <span style={{ color: "var(--color-neon-blue)" }} className="font-medium">
+              Open to new opportunities worldwide
+            </span>
           </div>
         </div>
       </div>
     </section>
   );
 }
+

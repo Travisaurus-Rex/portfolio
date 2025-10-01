@@ -1,27 +1,18 @@
-'use client';
+// src/app/page.tsx
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
-import { Header } from '../components/Header';
-import { Hero } from '../components/Hero';
-import { About } from '../components/About';
-import { Skills } from '../components/Skills';
-import { Projects } from '../components/Projects';
-import { Contact } from '../components/Contact';
-import { Footer } from '../components/Footer';
-
-export default function App() {
-
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <section id="about" className="section"><About /></section>
+      <section id="skills" className="section"><Skills /></section>
+      <section id="projects" className="section"><Projects /></section>
+      <section id="contact" className="section"><Contact /></section>
+    </>
   );
 }
+
+

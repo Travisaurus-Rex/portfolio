@@ -9,7 +9,7 @@ type HeaderProps = {
   hideLinks?: boolean
 }
 
-export function Header({ hideLinks = false}: HeaderProps) {
+export default function Header({ hideLinks = false}: HeaderProps) {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

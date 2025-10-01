@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown, Github } from 'lucide-react';
 
-export function Hero() {
+export default function Hero() {
   const [text, setText] = useState('');
   const fullText = 'Full Stack Software Engineer';
   
