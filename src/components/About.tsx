@@ -1,7 +1,7 @@
 // src/components/About.tsx
 export default function About() {
   return (
-    <section id="about" className="py-20 section">
+    <section id="about" className="min-h-screen py-20 section">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
 
