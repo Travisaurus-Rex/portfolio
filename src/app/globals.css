@@ -2,10 +2,10 @@
 
 /* Define your custom theme */
 @theme {
-  --color-dark-bg: #1b263b;
-  --color-primary: #fca311;
-  --color-secondary: #fb8500;
-  --color-tertiary: #8ecae6;
+  --color-dark-bg: #001219;
+  --color-primary: #ee9b00;
+  --color-secondary: #ae2012;
+  --color-tertiary: #ae2012;
   --color-text: #E5E7EB;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;

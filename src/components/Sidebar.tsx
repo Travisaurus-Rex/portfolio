@@ -31,7 +31,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop / large screens: fixed left column */}
-      <aside className="hidden lg:flex flex-none w-[30rem] sticky top-0 h-screen flex-col justify-between pl-20 pr-5 py-20 border-r border-neutral-800">
+      <aside className="hidden lg:flex flex-none w-[30rem] sticky top-0 h-screen flex-col justify-between px-10 py-20 border-r border-white">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-primary">Travis Adams</h1>
           <div className="text-xl lg:text-2xl text-foreground/80 h-8">
