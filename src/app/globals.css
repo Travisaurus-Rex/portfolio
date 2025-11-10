@@ -2,10 +2,10 @@
 
 /* ---- Core 4-color system ---- */
 @theme {
-  --color-primary:   #13005A;  /* main background / base */
-  --color-secondary: #940B92;  /* surface / section alt */
-  --color-accent:    #810CA8;  /* buttons, highlights, links */
-  --color-contrast:  #E95793;  /* high contrast elements, borders, highlights */
+  --color-primary:   #26355D;  /* main background / base */
+  --color-secondary: #F93827;  /* surface / section alt */
+  --color-accent:    #FF8F00;  /* buttons, highlights, links */
+  --color-contrast:  #FFDB00;  /* high contrast elements, borders, highlights */
 
   /* ---- Text colors ---- */
   --text-light: #F5EEDC;  /* text on dark backgrounds */

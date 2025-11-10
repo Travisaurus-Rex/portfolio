@@ -34,10 +34,10 @@ export default function Sidebar() {
           <div className="flex items-baseline gap-2 text-lg text-foreground/90">
             <span className="text-neon-green text-xl leading-none">&gt;</span>
             <span className="whitespace-nowrap font-medium">{text}</span>
-            <span className="animate-pulse text-neutral-400 text-xl leading-none">|</span>
+            <span className="animate-pulse text-xl leading-none">|</span>
           </div>
 
-          <p className="mt-3 text-sm text-neutral-400 max-w-[18rem] leading-snug">
+          <p className="mt-3 text-sm max-w-[18rem] leading-snug">
             Building modern, scalable web applications with clean architecture and
             intuitive user experiences.
           </p>

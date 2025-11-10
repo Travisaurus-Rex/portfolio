@@ -54,7 +54,7 @@ export default function Work() {
         {jobs.map((job, idx) => (
           <div key={idx} className="grid grid-cols-6 gap-6">
 
-            <div className="col-span-2 text-sm text-gray-400 font-mono uppercase tracking-wide">
+            <div className="col-span-2 text-sm font-mono uppercase tracking-wide">
               {job.range}
             </div>
 
@@ -76,7 +76,7 @@ export default function Work() {
                 )}
               </h3>
 
-              <ul className="list-disc list-inside space-y-1 text-gray-300">
+              <ul className="list-disc list-inside space-y-1">
                 {job.bullets.map((b, i) => (
                   <li key={i}>{b}</li>
                 ))}
@@ -86,7 +86,7 @@ export default function Work() {
                 {job.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded"
+                    className="text-xs bg-gray-800px-2 py-1 rounded"
                   >
                     {t}
                   </span>
