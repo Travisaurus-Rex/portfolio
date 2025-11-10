@@ -1,7 +1,7 @@
 'use client';
 
 import { FormEvent, useRef, useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, LoaderCircle } from 'lucide-react';
+import { Send, LoaderCircle } from 'lucide-react';
 import { send } from '@emailjs/browser';
 import { motion, AnimatePresence, easeOut, easeIn } from "framer-motion";
 
@@ -11,7 +11,6 @@ export default function Contact() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    console.log(formRef);
     if (!formRef.current) return;
     setStatus('loading');
 
@@ -36,154 +35,92 @@ export default function Contact() {
     }
   }
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'tadamsdeveloper@gmail.com',
-      href: 'mailto:tadamsdeveloper@gmail.com'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (314) 643-6932',
-      href: 'tel:+3146436932'
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Dallax, TX / Malang, Indonesia',
-      href: '#'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com/Travisaurus-Rex',
-      color: 'neon-cyan'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/travis-a-768637a2/',
-      color: 'neon-pink'
-    }
-  ];
-
   const fadeZoom = {
     initial: { opacity: 0, scale: 0.98 },
-    animate: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.18, ease: easeOut },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.9,
-      transition: { duration: 0.15, ease: easeIn },
-    },
+    animate: { opacity: 1, scale: 1, transition: { duration: 0.18, ease: easeOut } },
+    exit: { opacity: 0, scale: 0.9, transition: { duration: 0.15, ease: easeIn } },
   };
 
   return (
-    <div className="relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">
-            <span className="text-neon-cyan neon-glow">Get</span> <span className="text-neon-pink">In Touch</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-pink mx-auto"></div>
-          <p className="text-foreground/80 mt-6 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let&apos;s collaborate and create something amazing together.
+    <section id="contact" className="py-20 scroll-mt-24 section">
+      <div className="max-w-3xl mx-auto px-4">
+        <div className="text-left mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-lemon">Get In Touch</h2>
+          <p className="text-text-light/80">
+            Have a project idea or opportunity? Let’s build something great together.
           </p>
         </div>
 
-        <div className="flex flex-col">
-          <div className="border border-secondary p-8 rounded-lg bg-card/20 backdrop-blur-sm">
-            <AnimatePresence mode="wait">
-              {status !== "sent" ? (
-                <motion.div
-                  key="form"
-                  variants={fadeZoom}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                >
-                  <h3 className="text-2xl mb-6 text-neon-cyan neon-glow">Send a Message</h3>
-                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label htmlFor="name" className="block text-sm mb-2 text-foreground">
-                            Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="email" className="block text-sm mb-2 text-foreground">
-                            Email
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="message" className="block text-sm mb-2 text-foreground">
-                          Message
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          required
-                          rows={5}
-                          className="w-full px-4 py-3 rounded-lg bg-input border border-neon-cyan/30 text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
-                        ></textarea>
-                      </div>
-                      
-                      <button
-                        type="submit"
-                        className="w-full neon-border border-neon-pink text-neon-pink px-8 py-3 rounded-lg hover:bg-neon-pink/10 transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
-                      >
-                        { status == 'idle' &&
-                          <Send size={18} />
-                        }
-                        { status == 'loading' &&
-                          <LoaderCircle size={18} className="animate-spin" />
-                        }
-                        <span>Send Message</span>
-                      </button>
-                    </form>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="success"
-                  variants={fadeZoom}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  className="flex h-full justify-center flex-col items-center"
-                >
-                  <h2 className="text-4xl text-neon-cyan neon-glow">Email Sent</h2>
-                  <h3 className="text-2xl">Thank you for your message!</h3>
-                </motion.div>
-              )}
-            </AnimatePresence>
+        <div className="border border-sunset/30 bg-steel/30 rounded-lg p-8 backdrop-blur-sm">
+          <AnimatePresence mode="wait">
+            {status !== "sent" ? (
+              <motion.div key="form" variants={fadeZoom} initial="initial" animate="animate" exit="exit">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm mb-2 text-text-light/90">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 rounded-lg  border border-sunset/30 text-text-light placeholder:text-text-light/50 focus:border-sunset focus:ring-2 focus:ring-sunset/40 outline-none transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm mb-2 text-text-light/90">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 rounded-lg  border border-sunset/30 text-text-light placeholder:text-text-light/50 focus:border-sunset focus:ring-2 focus:ring-sunset/40 outline-none transition-all"
+                      />
+                    </div>
+                  </div>
 
-          </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm mb-2 text-text-light/90">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      required
+                      className="w-full px-4 py-3 rounded-lg  border border-sunset/30 text-text-light placeholder:text-text-light/50 focus:border-sunset focus:ring-2 focus:ring-sunset/40 outline-none transition-all resize-none"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full border border-lemon text-lemon px-8 py-3 rounded-lg hover:bg-lemon hover:text-navy transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
+                  >
+                    {status === 'loading' ? (
+                      <LoaderCircle size={18} className="animate-spin" />
+                    ) : (
+                      <Send size={18} />
+                    )}
+                    <span>Send Message</span>
+                  </button>
+                </form>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="success"
+                variants={fadeZoom}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="flex h-full justify-center flex-col items-center text-center py-12"
+              >
+                <h2 className="text-3xl text-lemon mb-2 font-semibold">Message Sent!</h2>
+                <p className="text-text-light/80 max-w-md">
+                  Thanks for reaching out — I’ll get back to you soon.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

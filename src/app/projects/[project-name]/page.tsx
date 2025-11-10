@@ -1,6 +1,6 @@
 'use client';
 
-import { Header } from '@/components/Header';
+import Header from '@/components/Header';
 import { ProjectHeader } from '@/components/ProjectHeader';
 import { projects } from '@/lib/data';
 import { useParams } from 'next/navigation';

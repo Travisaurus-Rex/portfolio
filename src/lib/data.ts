@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "@/models/project";
+
+export const projects: Project[] = [
     {
       title: 'Not by the Cover',
       description: {
@@ -7,7 +9,7 @@ export const projects = [
         howItWasBuilt: [''],
         keyFeatures: ['First paragraph', 'second paragraph']
       },
-      images: { mainDesktop: '', mainMobile: '', gallery: [] },
+      images: { mainDesktop: '', mainMobile: '', gallery: [], thumbnail: '' },
       tags: ['React', 'Node.js', 'GraphQL'],
       github: 'https://github.com/Travisaurus-Rex/not-by-the-cover',
       slug: '',
@@ -22,7 +24,7 @@ export const projects = [
         howItWasBuilt: [''],
         keyFeatures: ['First paragraph', 'second paragraph'],
       },
-      images: { mainDesktop: '', mainMobile: '', gallery: [] },
+      images: { mainDesktop: '', mainMobile: '', gallery: [], thumbnail: '' },
       tags: ['React Native', 'Expo', 'Socket.io', 'Supabase'],
       github: 'https://github.com/Travisaurus-Rex/shopping-list',
       slug: '',
@@ -51,7 +53,8 @@ export const projects = [
       images: { 
         mainDesktop: '/projects/omnioutdoorliving.com_.jpg', 
         mainMobile: '/projects/omnioutdoorliving.com_mobile.jpg', 
-        gallery: [] 
+        gallery: [], 
+        thumbnail: '' 
       },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],
       slug: 'omni-outdoor-living',
@@ -81,7 +84,7 @@ export const projects = [
       images: { 
         mainDesktop: '/projects/omnigarage.com_.jpg', 
         mainMobile: '/projects/omnigarage.com_mobile1.jpg', 
-        gallery: [] 
+        gallery: [], thumbnail: '' 
       },
       tags: ['Blazor', 'C#', '.NET', 'SQL Server', 'Stripe'],
       slug: 'omni-garage',
@@ -113,7 +116,8 @@ export const projects = [
       images: { 
         mainDesktop: '/projects/meyeronline_1.jpg', 
         mainMobile: '/projects/meyeronline_mobile1.png', 
-        gallery: [] 
+        gallery: [],
+        thumbnail: '',
       },
       tags: ['Angular', 'Ionic', 'C#', '.NET', 'SQL Server', 'Entity Framework'],
       slug: 'meyer-online',

@@ -2,7 +2,7 @@
 export default function Work() {
   const jobs = [
     {
-      title: "Software Engineer II",
+      title: "Senior Software Engineer",
       company: "CXtec",
       link: "https://www.cxtec.com/",
       range: "Mar 2024 – Apr 2025",
@@ -14,7 +14,7 @@ export default function Work() {
       tech: ["Angular", "React", ".NET", "TypeScript"],
     },
     {
-      title: "Front End Developer",
+      title: "Full Stack Developer",
       company: "Meyer Distributing",
       link: "https://www.meyerdistributing.com/",
       range: "Jan 2019 – Mar 2024",
@@ -26,7 +26,7 @@ export default function Work() {
       tech: ["Angular", "React Native", "TypeScript", "Ionic", ".NET"],
     },
     {
-      title: "Freelance Developer",
+      title: "Full Stack Developer",
       company: "Independent",
       range: "July 2016 – Jan 2019",
       bullets: [
@@ -48,17 +48,17 @@ export default function Work() {
   ];
 
   return (
-    <section id="work" className="max-w-3xl mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold mb-12">Work Experience</h2>
+    <section id="work" className="mx-auto px-4 py-16 section">
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
       <div className="space-y-12">
         {jobs.map((job, idx) => (
           <div key={idx} className="grid grid-cols-6 gap-6">
-            {/* Date */}
+
             <div className="col-span-2 text-sm text-gray-400 font-mono uppercase tracking-wide">
               {job.range}
             </div>
 
-            {/* Job Content */}
+
             <div className="col-span-4 space-y-4">
               <h3 className="font-semibold text-lg">
                 {job.title} ·{" "}
