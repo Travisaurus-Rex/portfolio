@@ -1,55 +1,45 @@
 @import "tailwindcss";
 
-/* ---- Core 4-color system ---- */
+/* Define your reusable theme */
 @theme {
-  --color-primary:   #26355D;  /* main background / base */
-  --color-secondary: #F93827;  /* surface / section alt */
-  --color-accent:    #FF8F00;  /* buttons, highlights, links */
-  --color-contrast:  #FFDB00;  /* high contrast elements, borders, highlights */
+  --color-primary:   #0A0F24;   /* main background */
+  --color-secondary: #151C3A;   /* section alt background */
+  --color-accent:    #FF2CDF;   /* buttons, highlights, links */
+  --color-contrast:  #00FFF0;   /* borders, high-contrast elements */
 
-  /* ---- Text colors ---- */
-  --text-light: #F5EEDC;  /* text on dark backgrounds */
-  --text-dark:  #1c1c1c;  /* text on light backgrounds */
+  /* Text colors */
+  --color-text-light: #E6E8F0;
+  --color-text-dark:  #1c1c1c;
 
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-/* ---- Base ---- */
+/* Base styles */
 @layer base {
   html, body {
-    background-color: var(--color-primary);
-    color: var(--text-light);
+    background-color: var(--color-primary) !important;
+    color: var(--color-text-light) !important;
     font-family: var(--font-sans);
     scroll-behavior: smooth;
   }
 }
 
-/* ---- Links ---- */
+/* Links */
 a {
-  color: var(--color-accent);
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: var(--color-contrast);
+  @apply text-[var(--color-accent)] hover:text-[var(--color-contrast)] transition-colors;
 }
 
-/* ---- Section Utilities ---- */
+/* Utilities for sections */
 .section {
   @apply max-w-4xl mx-auto px-6 py-16;
-
 }
 
-/* ---- Buttons ---- */
+/* Alternate section backgrounds */
+.section-alt {
+  background-color: var(--color-secondary);
+}
+
+/* Buttons */
 .btn {
-  background-color: var(--color-accent);
-  color: var(--text-dark);
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background-color: var(--color-contrast);
-  color: var(--text-dark);
+  @apply bg-[var(--color-accent)] hover:bg-[var(--color-contrast)] text-[var(--color-text-dark)] font-semibold px-6 py-3 rounded-lg transition;
 }

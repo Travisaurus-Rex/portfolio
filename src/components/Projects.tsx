@@ -10,7 +10,7 @@ export default function Projects() {
     >
         <h2 className="text-4xl md:text-5xl font-bold mb-8">Projects</h2>
 
-        <div className="space-y-16">
+        <div className="space-y-8">
           {projects.map((project, index) => (
             <div
               key={index}

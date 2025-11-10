@@ -25,7 +25,7 @@ export default function Sidebar() {
   return (
     <>
       {/* desktop sidebar */}
-      <aside className="hidden lg:flex flex-none w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-primary border-r border-neutral-800">
+      <aside className="hidden lg:flex flex-none w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
         <div className="text-left leading-tight">
           <h1 className="text-5xl font-bold text-accent mb-1 tracking-tight">
             Travis Adams
