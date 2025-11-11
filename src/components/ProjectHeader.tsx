@@ -41,7 +41,7 @@ export function ProjectHeader({ desktopImg, mobileImg, alt }: ProjectHeroProps) 
           )}
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-contrast)] to-transparent opacity-70" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-contrast)] to-transparent opacity-70" />
     </div>
   );
 }

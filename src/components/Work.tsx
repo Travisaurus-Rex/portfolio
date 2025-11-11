@@ -67,7 +67,7 @@ export default function Work() {
                     href={job.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="link hover:underline"
                   >
                     {job.company}
                   </a>

@@ -31,7 +31,7 @@ export const projects: Project[] = [
       backend: "https://github.com/Travisaurus-Rex/not-by-the-cover-api",
     },
     slug: "not-by-the-cover",
-    live: "",
+    live: "https://main.dw74p0jh6b26k.amplifyapp.com/",
   },
   {
     title: "ListMate",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     },
     images: {
       mainDesktop: "/projects/snipr_desktop.png",
-      mainMobile: "/projects/snipr-mobile.jpg",
+      mainMobile: "",
     },
     tags: ["Go", "Fiber", "React", "PostgreSQL", "Tailwind"],
     github: {

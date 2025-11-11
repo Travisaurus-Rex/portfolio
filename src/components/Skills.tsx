@@ -79,8 +79,8 @@ export default function Skills() {
               </h3>
             </div>
             <p className="leading-relaxed text-base">
-              With over six years of enterprise UI work in Angular (and some
-              React), I value component design, maintainable patterns, and
+              With over six years of enterprise UI work in Angular and
+              React, I value component design, maintainable patterns, and
               consistent architecture that scales across teams and products.
             </p>
           </div>

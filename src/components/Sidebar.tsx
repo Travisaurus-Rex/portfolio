@@ -3,11 +3,13 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export default function Sidebar() {
   const [active, setActive] = useState("");
   const [text, setText] = useState("");
   const fullText = "Full Stack Software Engineer";
+  const useLogo = false;
 
   useEffect(() => {
     let i = 0;
@@ -26,22 +28,27 @@ export default function Sidebar() {
     <>
       {/* desktop sidebar */}
       <aside className="hidden lg:flex flex-none w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
-        <div className="text-left leading-tight">
-          <h1 className="text-5xl font-bold text-accent mb-1 tracking-tight">
-            Travis Adams
-          </h1>
+        { useLogo &&
+          <Logo />
+        }
+        { !useLogo && 
+          <div className="text-left leading-tight">
+            <h1 className="text-5xl font-bold text-accent mb-1 tracking-tight">
+              Travis Adams
+            </h1>
 
-          <div className="flex items-baseline gap-2 text-lg text-foreground/90">
-            <span className="text-neon-green text-xl leading-none">&gt;</span>
-            <span className="whitespace-nowrap font-medium">{text}</span>
-            <span className="animate-pulse text-xl leading-none">|</span>
+            <div className="flex items-baseline gap-2 text-lg text-foreground/90">
+              <span className="text-neon-green text-xl leading-none">&gt;</span>
+              <span className="whitespace-nowrap font-medium">{text}</span>
+              <span className="animate-pulse text-xl leading-none">|</span>
+            </div>
+
+            <p className="mt-3 text-sm max-w-[18rem] leading-snug">
+              Building modern, scalable web applications with clean architecture and
+              intuitive user experiences.
+            </p>
           </div>
-
-          <p className="mt-3 text-sm max-w-[18rem] leading-snug">
-            Building modern, scalable web applications with clean architecture and
-            intuitive user experiences.
-          </p>
-        </div>
+        }
 
         <nav className="space-y-4 mt-16">
           {["about", "work", "skills", "projects", "contact"].map((id) => (
@@ -49,7 +56,7 @@ export default function Sidebar() {
               key={id}
               href={`#${id}`}
               onClick={() => setActive(id)}
-              className={`block text-lg transition-colors ${
+              className={`link block text-lg transition-colors ${
                 active === id
                   ? "text-[var(--color-neon-blue)]"
                   : "text-neutral-300 hover:text-[var(--color-neon-blue)]"
