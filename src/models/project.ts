@@ -3,12 +3,17 @@ export interface Project {
   description: Description
   images: Images
   tags: string[]
-  github: string
+  github?: GitHubLinks
   slug: string
   live: string
-  featured: boolean
   android?: string
   ios?: string
+}
+
+export interface GitHubLinks {
+  frontend?: string
+  backend?: string
+  monorepo?: string
 }
 
 export interface Description {
@@ -19,8 +24,7 @@ export interface Description {
 }
 
 export interface Images {
-  mainDesktop: string
-  mainMobile: string
-  gallery: any[]
-  thumbnail: string
+  mainDesktop?: string
+  mainMobile?: string
+  thumbnail?: string
 }

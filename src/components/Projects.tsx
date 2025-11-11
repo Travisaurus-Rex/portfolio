@@ -1,6 +1,6 @@
-import { ExternalLink, Github, Smartphone } from "lucide-react";
 import Image from "next/image";
 import { projects } from "@/lib/data";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -55,53 +55,7 @@ export default function Projects() {
 
 
                 <div className="flex flex-wrap items-center gap-6 text-sm mt-2">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center space-x-2 text-neon-cyan hover:text-neon-pink transition-colors"
-                    >
-                      <Github size={18} />
-                      <span>Code</span>
-                    </a>
-                  )}
-
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center space-x-2 text-neon-green hover:text-neon-yellow transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
-
-                  {project.android && (
-                    <a
-                      href={project.android}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center space-x-2 text-[#3ddc84] hover:text-neon-yellow transition-colors"
-                    >
-                      <Smartphone size={18} />
-                      <span>Android</span>
-                    </a>
-                  )}
-
-                  {project.ios && (
-                    <a
-                      href={project.ios}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center space-x-2 text-neutral-200 hover:text-neon-yellow transition-colors"
-                    >
-                      <Smartphone size={18} />
-                      <span>iOS</span>
-                    </a>
-                  )}
+                  <Link href={`/projects/${project.slug}`}>View More</Link>
                 </div>
               </div>
             </div>
