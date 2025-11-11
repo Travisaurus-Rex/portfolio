@@ -86,7 +86,7 @@ export default function Work() {
                 {job.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-gray-800px-2 py-1 rounded"
+                    className="px-3 py-1 text-xs border text-[var(--color-secondary)] py-1 rounded-full"
                   >
                     {t}
                   </span>

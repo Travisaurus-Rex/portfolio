@@ -115,7 +115,7 @@ export default function Skills() {
                 (tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 rounded-full bg-neon-purple/20 text-neon-purple border border-neon-purple/30 text-sm"
+                    className="px-4 py-2 rounded-full text-secondary border text-sm"
                   >
                     {tech}
                   </span>

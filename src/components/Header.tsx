@@ -17,7 +17,7 @@ export default function Header({ hideLinks = false }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-contrast)]/30 bg-[var(--color-primary)]/95 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-sidebar backdrop-blur-md">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-[var(--color-accent)] font-semibold text-xl tracking-wide">

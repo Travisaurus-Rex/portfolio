@@ -2,6 +2,96 @@ import { Project } from "@/models/project";
 
 export const projects: Project[] = [
   {
+    title: "Omni Outdoor Living",
+    description: {
+      short:
+        "A consumer-facing e-commerce platform for outdoor lifestyle products, built to bring Meyer Distributing’s massive inventory to retail users.",
+      about: [
+        "Omni Outdoor Living extends Meyer Distributing’s product ecosystem to direct-to-consumer audiences, providing a full-featured e-commerce experience for outdoor and RV gear.",
+        "The platform emphasizes performance, mobile-first design, and shared codebases across domains for maintainability.",
+      ],
+      howItWasBuilt: [
+        "Developed using Blazor and C# on the .NET framework, backed by SQL Server and Entity Framework for ORM. Stripe integration powers secure checkout.",
+        "Reusable architecture supports multiple branded sites (including Omni Garage) while maintaining separate theming and analytics.",
+      ],
+      keyFeatures: [
+        "Custom filtering system for large product catalogs",
+        "Responsive design optimized for all devices",
+        "Shared architecture with sibling sites to reduce duplication",
+        "Secure checkout and Stripe integration",
+      ],
+    },
+    images: {
+      mainDesktop: "/projects/omnioutdoorliving.com_.jpg",
+      mainMobile: "/projects/omnioutdoorliving.com_mobile.jpg",
+      thumbnail: "/projects/omnioutdoorliving_thumbnail.png"
+    },
+    tags: ["Blazor", "C#", ".NET", "SQL Server", "Stripe"],
+    slug: "omni-outdoor-living",
+    live: "https://omnioutdoorliving.com/",
+  },
+  {
+    title: "Omni Garage",
+    description: {
+      short:
+        "An e-commerce platform for automotive tools and accessories, built as a sibling site to Omni Outdoor Living with a shared architecture.",
+      about: [
+        "Omni Garage delivers a streamlined e-commerce experience focused on automotive tools and garage equipment. It shares backend systems with Omni Outdoor Living while maintaining its own brand identity and UX design.",
+        "Its architecture allows centralized inventory management and reporting across multiple retail sites, making it scalable and cost-efficient.",
+      ],
+      howItWasBuilt: [
+        "Built with Blazor and C# on a shared .NET backend and SQL Server database. The front end was customized to reflect a more industrial theme and user journey tailored for mechanics and DIYers.",
+        "Stripe integrations and modular components were reused across sibling platforms for faster iteration cycles.",
+      ],
+      keyFeatures: [
+        "Distinct branding and layout for automotive products",
+        "Shared backend with Omni Outdoor Living for maintainability",
+        "Stripe integration for secure payments and analytics",
+        "Optimized performance through shared caching and services",
+      ],
+    },
+    images: {
+      mainDesktop: "/projects/omnigarage.com_.jpg",
+      mainMobile: "/projects/omnigarage.com_mobile1.jpg",
+      thumbnail: "/projects/omnigarage_thumbnail.png"
+    },
+    tags: ["Blazor", "C#", ".NET", "SQL Server", "Stripe"],
+    slug: "omni-garage",
+    live: "https://omnigarage.com/",
+  },
+  {
+    title: "Meyer Online",
+    description: {
+      short:
+        "A B2B ordering platform for automotive dealers, connecting thousands of customers to Meyer Distributing’s live inventory network.",
+      about: [
+        "Meyer Online is Meyer Distributing’s central B2B portal, supporting complex search, live warehouse data, and mobile-first design. It replaced legacy ordering systems with a unified modern web platform.",
+        "The system provides access to real-time pricing, dealer-specific tools, and warehouse fulfillment visibility across hundreds of brands and product lines.",
+      ],
+      howItWasBuilt: [
+        "Developed using Angular and Ionic for a shared codebase across desktop and mobile, powered by a .NET backend and SQL Server database.",
+        "Barcode scanning, deep filtering, and warehouse-level tracking were implemented to optimize usability and reliability for dealers nationwide.",
+      ],
+      keyFeatures: [
+        "24/7 live inventory access across distribution centers",
+        "Dealer tools including returns, tracking, and ETA updates",
+        "Cross-platform support via Ionic",
+        "Advanced search and filtering with legacy system compatibility",
+      ],
+    },
+    images: {
+      mainDesktop: "/projects/meyeronline_1.jpg",
+      mainMobile: "/projects/meyeronline_mobile1.png",
+      thumbnail: "/projects/meyeronline_thumbnail.png"
+    },
+    tags: ["Angular", "Ionic", "C#", ".NET", "SQL Server"],
+    slug: "meyer-online",
+    live: "https://online.meyerdistributing.com/",
+    android:
+      "https://play.google.com/store/apps/details?id=com.meyerdistributing.online&hl=en",
+    ios: "https://apps.apple.com/us/app/meyer-online/id1487143055",
+  },
+  {
     title: "Not by the Cover",
     description: {
       short:
@@ -95,95 +185,5 @@ export const projects: Project[] = [
     },
     slug: "snipr",
     live: "",
-  },
-  {
-    title: "Omni Outdoor Living",
-    description: {
-      short:
-        "A consumer-facing e-commerce platform for outdoor lifestyle products, built to bring Meyer Distributing’s massive inventory to retail users.",
-      about: [
-        "Omni Outdoor Living extends Meyer Distributing’s product ecosystem to direct-to-consumer audiences, providing a full-featured e-commerce experience for outdoor and RV gear.",
-        "The platform emphasizes performance, mobile-first design, and shared codebases across domains for maintainability.",
-      ],
-      howItWasBuilt: [
-        "Developed using Blazor and C# on the .NET framework, backed by SQL Server and Entity Framework for ORM. Stripe integration powers secure checkout.",
-        "Reusable architecture supports multiple branded sites (including Omni Garage) while maintaining separate theming and analytics.",
-      ],
-      keyFeatures: [
-        "Custom filtering system for large product catalogs",
-        "Responsive design optimized for all devices",
-        "Shared architecture with sibling sites to reduce duplication",
-        "Secure checkout and Stripe integration",
-      ],
-    },
-    images: {
-      mainDesktop: "/projects/omnioutdoorliving.com_.jpg",
-      mainMobile: "/projects/omnioutdoorliving.com_mobile.jpg",
-      thumbnail: "/projects/omnioutdoorliving_thumbnail.png"
-    },
-    tags: ["Blazor", "C#", ".NET", "SQL Server", "Stripe"],
-    slug: "omni-outdoor-living",
-    live: "https://omnioutdoorliving.com/",
-  },
-  {
-    title: "Omni Garage",
-    description: {
-      short:
-        "An e-commerce platform for automotive tools and accessories, built as a sibling site to Omni Outdoor Living with a shared architecture.",
-      about: [
-        "Omni Garage delivers a streamlined e-commerce experience focused on automotive tools and garage equipment. It shares backend systems with Omni Outdoor Living while maintaining its own brand identity and UX design.",
-        "Its architecture allows centralized inventory management and reporting across multiple retail sites, making it scalable and cost-efficient.",
-      ],
-      howItWasBuilt: [
-        "Built with Blazor and C# on a shared .NET backend and SQL Server database. The front end was customized to reflect a more industrial theme and user journey tailored for mechanics and DIYers.",
-        "Stripe integrations and modular components were reused across sibling platforms for faster iteration cycles.",
-      ],
-      keyFeatures: [
-        "Distinct branding and layout for automotive products",
-        "Shared backend with Omni Outdoor Living for maintainability",
-        "Stripe integration for secure payments and analytics",
-        "Optimized performance through shared caching and services",
-      ],
-    },
-    images: {
-      mainDesktop: "/projects/omnigarage.com_.jpg",
-      mainMobile: "/projects/omnigarage.com_mobile1.jpg",
-      thumbnail: "/projects/omnigarage_thumbnail.png"
-    },
-    tags: ["Blazor", "C#", ".NET", "SQL Server", "Stripe"],
-    slug: "omni-garage",
-    live: "https://omnigarage.com/",
-  },
-  {
-    title: "Meyer Online",
-    description: {
-      short:
-        "A B2B ordering platform for automotive dealers, connecting thousands of customers to Meyer Distributing’s live inventory network.",
-      about: [
-        "Meyer Online is Meyer Distributing’s central B2B portal, supporting complex search, live warehouse data, and mobile-first design. It replaced legacy ordering systems with a unified modern web platform.",
-        "The system provides access to real-time pricing, dealer-specific tools, and warehouse fulfillment visibility across hundreds of brands and product lines.",
-      ],
-      howItWasBuilt: [
-        "Developed using Angular and Ionic for a shared codebase across desktop and mobile, powered by a .NET backend and SQL Server database.",
-        "Barcode scanning, deep filtering, and warehouse-level tracking were implemented to optimize usability and reliability for dealers nationwide.",
-      ],
-      keyFeatures: [
-        "24/7 live inventory access across distribution centers",
-        "Dealer tools including returns, tracking, and ETA updates",
-        "Cross-platform support via Ionic",
-        "Advanced search and filtering with legacy system compatibility",
-      ],
-    },
-    images: {
-      mainDesktop: "/projects/meyeronline_1.jpg",
-      mainMobile: "/projects/meyeronline_mobile1.png",
-      thumbnail: "/projects/meyeronline_thumbnail.png"
-    },
-    tags: ["Angular", "Ionic", "C#", ".NET", "SQL Server"],
-    slug: "meyer-online",
-    live: "https://online.meyerdistributing.com/",
-    android:
-      "https://play.google.com/store/apps/details?id=com.meyerdistributing.online&hl=en",
-    ios: "https://apps.apple.com/us/app/meyer-online/id1487143055",
   },
 ];

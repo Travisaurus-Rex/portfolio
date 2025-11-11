@@ -61,6 +61,19 @@ export default function ProjectPage() {
           </ul>
         </div>
 
+        {project.tags?.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 text-md rounded-full text-secondary border"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
         {/* Buttons */}
         <div className="mt-10 flex flex-wrap gap-4">
           {project.live && (

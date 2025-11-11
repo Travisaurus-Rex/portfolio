@@ -3,6 +3,18 @@ import { projects } from "@/lib/data";
 import Link from "next/link";
 
 export default function Projects() {
+
+  function makeColorCycler(colors: string[]): () => string {
+    let index = 0;
+    return function nextColor() {
+      const color = colors[index];
+      index = (index + 1) % colors.length;
+      return color;
+    };
+  }
+
+  const getNextColor = makeColorCycler(['secondary', 'accent', 'contrast']);
+
   return (
     <section
       id="projects"
@@ -14,9 +26,9 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start neon-border border-neon-cyan/20 rounded-lg p-6 bg-card/20 backdrop-blur-sm hover:border-neon-cyan/40 transition-all duration-300"
+              className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start rounded-lg p-6 bg-card/20 backdrop-blur-sm transition-all duration-300"
             >
-              <div className="relative w-full md:w-[200px] aspect-[4/3] rounded-md overflow-hidden bg-neutral-900/40">
+              <div className={`relative w-full md:w-[200px] aspect-[4/3] rounded-md overflow-hidden bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-${getNextColor()})]`}>
                 {project.images?.thumbnail ? (
                   <Image
                     src={project.images.thumbnail}
@@ -26,13 +38,13 @@ export default function Projects() {
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                   />
                 ) : (
-                  <div className="flex items-center justify-center w-full h-full text-neutral-600 text-sm">
-                    No image
+                  <div className="flex items-center justify-center w-full h-full text-light text-sm">
+                    No image yet :'(
                   </div>
                 )}
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-neon-cyan mb-2">
+                <h3 className="text-2xl font-semibold mb-2">
                   {project.title}
                 </h3>
 
@@ -45,7 +57,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-neon-purple/20 text-neon-purple border border-neon-purple/30"
+                        className="px-3 py-1 text-xs rounded-full text-secondary border"
                       >
                         {tag}
                       </span>

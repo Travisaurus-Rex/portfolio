@@ -2,14 +2,14 @@
 
 /* Define your reusable theme */
 @theme {
-  --color-primary:   #1B3C53;   /* main background */
-  --color-secondary: #473472;   /* section alt background */
-  --color-accent:    #FEB21A;   /* buttons, highlights, links */
-  --color-contrast:  #ED3F27;   /* borders, high-contrast elements */
-  --color-sidebar:   #1B3C53;
+  --color-primary:   #1A1A1D;   /* main background */
+  --color-secondary: #3DC2EC;   /* section alt background */
+  --color-accent:    #EB3678;   /* buttons, highlights, links */
+  --color-contrast:  #FFCC00;   /* borders, high-contrast elements */
+  --color-sidebar:   #222831;
 
   /* Text colors */
-  --color-text-light: #E6E8F0;
+  --color-text-light: #FFFBDE;
   --color-text-dark:  #1c1c1c;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
