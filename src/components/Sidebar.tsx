@@ -24,6 +24,31 @@ export default function Sidebar() {
     return () => clearTimeout(startTimer);
   }, []);
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]"); // assumes each section has an id matching your nav
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // triggers when half the section is visible
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+
   return (
     <>
       {/* desktop sidebar */}
@@ -56,29 +81,43 @@ export default function Sidebar() {
               key={id}
               href={`#${id}`}
               onClick={() => setActive(id)}
-              className={`link block text-lg transition-colors ${
-                active === id
-                  ? "text-[var(--color-neon-blue)]"
-                  : "text-neutral-300 hover:text-[var(--color-neon-blue)]"
-              }`}
+              className={`group relative flex items-center text-3xl font-thin transition-all duration-300
+                ${active === id
+                  ? "text-[var(--color-contrast)]"
+                  : "text-[var(--color-accent)] hover:text-[var(--color-contrast)]"
+                }`}
             >
-              {id[0].toUpperCase() + id.slice(1)}
+              {/* line */}
+              <span
+                className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-contrast)] transition-all duration-300
+                ${active === id ? "w-[1.25rem]" : "w-0 group-hover:w-[1.25rem]"}`}
+              />
+
+              {/* text */}
+              <span
+                className={`relative transition-transform duration-300 ${
+                  active === id ? "translate-x-6" : "group-hover:translate-x-6"
+                }`}
+              >
+                {id[0].toUpperCase() + id.slice(1)}
+              </span>
             </a>
           ))}
         </nav>
 
+
         <div className="flex items-center space-x-5 text-neutral-400 mt-12">
           <a
             href="https://github.com/Travisaurus-Rex"
-            className="text-2xl hover:text-white"
+            className="text-4xl text-accent hover:text-contrast transition-colors"
             target="_blank"
             rel="noreferrer"
           >
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
-            className="text-2xl hover:text-white"
+            href="https://www.linkedin.com/in/travis-a-768637a2/"
+            className="text-4xl text-accent hover:text-contrast transition-colors"
             target="_blank"
             rel="noreferrer"
           >
@@ -86,7 +125,7 @@ export default function Sidebar() {
           </a>
           <a
             href="mailto:tadamsdeveloper@gmail.com"
-            className="text-2xl hover:text-white"
+            className="text-4xl text-accent hover:text-contrast transition-colors"
           >
             <MdEmail />
           </a>

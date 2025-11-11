@@ -55,7 +55,7 @@ export default function Projects() {
 
 
                 <div className="flex flex-wrap items-center gap-6 text-sm mt-2">
-                  <Link href={`/projects/${project.slug}`} className="py-1 px-2 rounded-sm text-accent hover:bg-contrast hover:text-[var(--color-text-dark)] border border-1 border-[var(--color-accent)]">View More</Link>
+                  <Link href={`/projects/${project.slug}`} className="py-1 px-2 rounded-sm text-accent hover:bg-accent hover:text-[var(--color-text-dark)] border border-1 border-[var(--color-accent)]">View More</Link>
                 </div>
               </div>
             </div>

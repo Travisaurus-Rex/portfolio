@@ -27,8 +27,8 @@ export const projects: Project[] = [
     },
     tags: ["React", "Node.js", "GraphQL", "Tailwind"],
     github: {
-      frontend: "https://github.com/Travisaurus-Rex/not-by-the-cover",
-      backend: "https://github.com/Travisaurus-Rex/not-by-the-cover-api",
+      frontend: "https://github.com/Travisaurus-Rex/not-by-the-cover-frontend",
+      backend: "https://github.com/Travisaurus-Rex/not-by-the-cover",
     },
     slug: "not-by-the-cover",
     live: "https://main.dw74p0jh6b26k.amplifyapp.com/",
@@ -59,8 +59,7 @@ export const projects: Project[] = [
     },
     tags: ["React Native", "Expo", "Supabase", "Socket.io"],
     github: {
-      frontend: "https://github.com/Travisaurus-Rex/shopping-list",
-      backend: "https://github.com/Travisaurus-Rex/shopping-list-api",
+      monorepo: "https://github.com/Travisaurus-Rex/shopping-list",
     },
     slug: "listmate",
     live: "",
@@ -91,8 +90,8 @@ export const projects: Project[] = [
     },
     tags: ["Go", "Fiber", "React", "PostgreSQL", "Tailwind"],
     github: {
-      frontend: "https://github.com/Travisaurus-Rex/snipr",
-      backend: "https://github.com/Travisaurus-Rex/snipr-api",
+      frontend: "https://github.com/Travisaurus-Rex/snipr-react",
+      backend: "https://github.com/Travisaurus-Rex/snipr",
     },
     slug: "snipr",
     live: "",

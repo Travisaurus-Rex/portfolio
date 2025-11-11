@@ -67,17 +67,17 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.live}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
             >
               Visit Site
             </a>
           )}
 
-          {project.github && typeof project.github === "string" && (
+          {project.github && project.github.monorepo && (
             <a
               target="_blank"
-              href={project.github}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              href={project.github.monorepo}
+              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
             >
               GitHub
             </a>
@@ -89,7 +89,7 @@ export default function ProjectPage() {
                 <a
                   target="_blank"
                   href={project.github.frontend}
-                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
                 >
                   Frontend
                 </a>
@@ -98,7 +98,7 @@ export default function ProjectPage() {
                 <a
                   target="_blank"
                   href={project.github.backend}
-                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
                 >
                   Backend
                 </a>
@@ -110,7 +110,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.android}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
             >
               Play Store
             </a>
@@ -120,7 +120,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.ios}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-contrast)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
             >
               App Store
             </a>

@@ -2,11 +2,11 @@
 
 /* Define your reusable theme */
 @theme {
-  --color-primary:   #450693;   /* main background */
+  --color-primary:   #1B3C53;   /* main background */
   --color-secondary: #473472;   /* section alt background */
-  --color-accent:    #FFC400;   /* buttons, highlights, links */
-  --color-contrast:  #FAA533;   /* borders, high-contrast elements */
-  --color-sidebar:   #450693;
+  --color-accent:    #FEB21A;   /* buttons, highlights, links */
+  --color-contrast:  #ED3F27;   /* borders, high-contrast elements */
+  --color-sidebar:   #1B3C53;
 
   /* Text colors */
   --color-text-light: #E6E8F0;
