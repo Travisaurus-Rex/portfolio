@@ -39,7 +39,7 @@ export default function Projects() {
                   />
                 ) : (
                   <div className="flex items-center justify-center w-full h-full text-light text-sm">
-                    No image yet :'(
+                    No image yet :&apos;(
                   </div>
                 )}
               </div>

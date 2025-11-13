@@ -41,7 +41,7 @@ export default function Skills() {
         </p>
 
         <p>
-          Whether I’m optimizing API performance, refining service boundaries, or improving developer 
+          Whether I&apos;m optimizing API performance, refining service boundaries, or improving developer 
           workflows, my goal is to create backend systems that are fast, maintainable, and a pleasure 
           to work with.
         </p>
