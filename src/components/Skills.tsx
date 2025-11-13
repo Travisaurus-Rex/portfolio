@@ -37,7 +37,7 @@ export default function Skills() {
         <p>
           With a strong full-stack background in
           <span className="text-accent"> Angular</span> and 
-          <span className="text-accent"> .NET</span>, I've developed a solid understanding of architecture, dependency injection, and modular design; principles I now apply across both frontend and backend work.
+          <span className="text-accent"> .NET</span>, I&apos;ve developed a solid understanding of architecture, dependency injection, and modular design; principles I now apply across both frontend and backend work.
         </p>
 
         <p>
