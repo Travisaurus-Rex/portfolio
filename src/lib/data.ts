@@ -112,8 +112,8 @@ export const projects: Project[] = [
       ],
     },
     images: {
-      mainDesktop: "/projects/not-by-the-cover-desktop.jpg",
-      mainMobile: "/projects/not-by-the-cover-mobile.jpg",
+      mainDesktop: "",
+      mainMobile: "",
     },
     tags: ["React", "Node.js", "GraphQL", "Tailwind"],
     github: {
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     },
     slug: "not-by-the-cover",
     live: "https://main.dw74p0jh6b26k.amplifyapp.com/",
-  },
+  },/*
   {
     title: "ListMate",
     description: {
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     },
     images: {
       mainDesktop: "",
-      mainMobile: "/projects/listmate-mobile.jpg",
+      mainMobile: "",
     },
     tags: ["React Native", "Expo", "Supabase", "Socket.io"],
     github: {
@@ -175,7 +175,7 @@ export const projects: Project[] = [
       ],
     },
     images: {
-      mainDesktop: "/projects/snipr_desktop.png",
+      mainDesktop: "",
       mainMobile: "",
     },
     tags: ["Go", "Fiber", "React", "PostgreSQL", "Tailwind"],
@@ -185,5 +185,5 @@ export const projects: Project[] = [
     },
     slug: "snipr",
     live: "",
-  },
+  },*/
 ];

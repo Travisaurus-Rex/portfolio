@@ -12,11 +12,7 @@ export default function About() {
           focused, and human.
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-foreground/80">
-          I’m Travis Adams... a software engineer focused on building systems that
-          balance performance and clarity. My background is in Angular and .NET,
-          and lately I’ve been diving deep into backend development with Node.js
-          and Go -- creating tools and APIs that are fast, maintainable, and
-          genuinely enjoyable to use.
+          I’m Travis Adams, a backend-focused software engineer working with Node.js, TypeScript, NestJS, and Express. With a background in Angular and .NET, I care about building systems that are structured, scalable, and easy to reason about. I enjoy creating APIs and backend services that perform well and stay maintainable as they grow.
         </p>
       </div>
     </section>

@@ -7,11 +7,13 @@ export default function Work() {
       link: "https://www.cxtec.com/",
       range: "Mar 2024 – Apr 2025",
       bullets: [
-        "Built Angular and React interfaces supported by modular .NET APIs.",
-        "Led modernization efforts like the OrderFlow Rebuild project.",
-        "Collaborated with distributed teams to deliver enterprise-grade solutions.",
+        "Built and maintained backend services using Node.js, TypeScript, and .NET APIs to support internal and customer-facing workflows.",
+        "Developed Angular and React interfaces that integrated cleanly with modular backend endpoints.",
+        "Designed and integrated REST/GraphQL endpoints, improving data flow and performance across applications.",
+        "Modernized legacy systems through modular architecture, reusable services, and structured API contracts.",
+        "Collaborated with distributed teams to deliver reliable backend functionality for enterprise workflows."
       ],
-      tech: ["Angular", "React", ".NET", "TypeScript"],
+      tech: ["Node", "TypeScript", ".NET", "Angular", "React", "GraphQL"],
     },
     {
       title: "Full Stack Developer",
@@ -19,11 +21,12 @@ export default function Work() {
       link: "https://www.meyerdistributing.com/",
       range: "Jan 2019 – Mar 2024",
       bullets: [
-        "Owned full-stack development across web and mobile apps.",
-        "Created reusable components and mentored junior developers.",
-        "Improved onboarding and team efficiency with better documentation.",
+        "Built and maintained Node.js/TypeScript APIs powering logistics, ordering, and warehouse systems.",
+        "Implemented backend logic, data models, and integrations for Angular/Ionic apps used in daily operations.",
+        "Partnered with backend engineers to design scalable REST endpoints and improve SQL query performance.",
+        "Mentored developers on TypeScript patterns, reusable service design, and full-stack architecture."
       ],
-      tech: ["Angular", "React Native", "TypeScript", "Ionic", ".NET"],
+      tech: ["Node", "TypeScript", "Angular", "Ionic", "SQL Server", ".NET"],
     },
     {
       title: "Full Stack Developer",
@@ -33,7 +36,7 @@ export default function Work() {
         "Built client websites using WordPress and custom themes.",
         "Optimized SEO and site performance for small businesses.",
       ],
-      tech: ["WordPress", "SEO", "JavaScript"],
+      tech: ["WordPress", "SEO", "PHP", "JavaScript"],
     },
     {
       title: "Front End Developer Intern",

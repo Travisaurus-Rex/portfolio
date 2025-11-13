@@ -76,7 +76,7 @@ export default function Sidebar() {
         }
 
         <nav className="space-y-4 mt-16">
-          {["about", "work", "skills", "projects", "contact"].map((id) => (
+          {["about", "skills", "work", "projects", "contact"].map((id) => (
             <a
               key={id}
               href={`#${id}`}
