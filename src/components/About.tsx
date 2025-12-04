@@ -6,7 +6,7 @@ export default function About() {
       className="min-h-screen max-w-6xl! flex flex-col justify-center section"
     >
       <div className="text-center">
-        <h1 className="text-5xl md:text-8xl text-accent font-extrabold leading-[1.1] mb-12 text-balance">
+        <h1 className="text-5xl md:text-6xl lg:text-8xl text-accent font-extrabold leading-[1.1] mb-12 text-balance">
           I build software<br />
           that feels fast,<br />
           focused, and human.

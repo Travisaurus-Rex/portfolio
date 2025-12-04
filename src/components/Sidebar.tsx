@@ -1,9 +1,9 @@
 "use client";
 
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import { LinkShelf } from "./LinkShelf";
+import { DevName } from "./DevName";
 
 export default function Sidebar() {
   const [active, setActive] = useState("");
@@ -37,7 +37,7 @@ export default function Sidebar() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // triggers when half the section is visible
+        threshold: 0.5,
       }
     );
 
@@ -51,7 +51,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="hidden lg:flex flex-none w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
+      <aside className="hidden lg:flex lg:flex-none lg:w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
         { useLogo &&
           <Logo />
         }
@@ -103,36 +103,13 @@ export default function Sidebar() {
         </nav>
 
 
-        <div className="flex items-center space-x-5 text-neutral-400 mt-12">
-          <a
-            href="https://github.com/Travisaurus-Rex"
-            className="text-4xl text-accent hover:text-contrast transition-colors"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/travis-a-768637a2/"
-            className="text-4xl text-accent hover:text-contrast transition-colors"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="mailto:tadamsdeveloper@gmail.com"
-            className="text-4xl text-accent hover:text-contrast transition-colors"
-          >
-            <MdEmail />
-          </a>
-        </div>
+        <LinkShelf />
       </aside>
 
-      {/* mobile header */}
       <header className="lg:hidden sticky top-0 z-20 bg-sidebar backdrop-blur p-4 border-b border-neutral-800">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold text-white">TA</h1>
+          <DevName />
+          <LinkShelf />
         </div>
       </header>
     </>

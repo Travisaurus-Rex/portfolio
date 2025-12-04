@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { DevName } from "./DevName";
 
 type HeaderProps = {
   hideLinks?: boolean;
@@ -19,12 +20,8 @@ export default function Header({ hideLinks = false }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-sidebar backdrop-blur-md">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-[var(--color-accent)] font-semibold text-xl tracking-wide">
-          &lt;Travis/&gt;
-        </div>
+        <DevName />
 
-        {/* Desktop Navigation */}
         {!hideLinks && (
           <div className="hidden md:flex space-x-8">
             {["home", "about", "skills", "projects", "contact"].map((item) => (
@@ -40,7 +37,6 @@ export default function Header({ hideLinks = false }: HeaderProps) {
           </div>
         )}
 
-        {/* Mobile Toggle */}
         {!hideLinks && (
           <button
             className="md:hidden text-[var(--color-accent)] hover:text-[var(--color-contrast)] transition-colors"
@@ -50,7 +46,6 @@ export default function Header({ hideLinks = false }: HeaderProps) {
           </button>
         )}
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-[var(--color-primary)]/98 backdrop-blur-md border-b border-[var(--color-contrast)]/30 md:hidden">
             <div className="px-6 py-4 flex flex-col space-y-4">
