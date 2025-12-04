@@ -58,12 +58,12 @@ export default function Work() {
         {jobs.map((job, idx) => (
           <div key={idx} className="grid grid-cols-6 gap-6">
 
-            <div className="col-span-2 text-sm font-mono uppercase tracking-wide">
+            <div className="col-span-2 max-md:col-span-6 text-sm font-mono uppercase tracking-wide">
               {job.range}
             </div>
 
 
-            <div className="col-span-4 space-y-4">
+            <div className="col-span-4 max-md:col-span-6 space-y-4">
               <h3 className="font-semibold text-lg">
                 {job.title} ·{" "}
                 {job.link ? (
@@ -82,7 +82,7 @@ export default function Work() {
 
               <ul className="list-disc list-inside space-y-1">
                 {job.bullets.map((b, i) => (
-                  <li key={i} className="list-outside mb-3">{b}</li>
+                  <li key={i} className="list-outside mb-3 max-md:ml-6">{b}</li>
                 ))}
               </ul>
 

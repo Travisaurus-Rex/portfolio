@@ -51,7 +51,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* desktop sidebar */}
       <aside className="hidden lg:flex flex-none w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
         { useLogo &&
           <Logo />
@@ -87,13 +86,11 @@ export default function Sidebar() {
                   : "text-[var(--color-accent)] hover:text-[var(--color-contrast)]"
                 }`}
             >
-              {/* line */}
               <span
                 className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-contrast)] transition-all duration-300
                 ${active === id ? "w-[1.25rem]" : "w-0 group-hover:w-[1.25rem]"}`}
               />
 
-              {/* text */}
               <span
                 className={`relative transition-transform duration-300 ${
                   active === id ? "translate-x-6" : "group-hover:translate-x-6"
@@ -133,20 +130,9 @@ export default function Sidebar() {
       </aside>
 
       {/* mobile header */}
-      <header className="lg:hidden sticky top-0 z-20 bg-[rgba(10,10,15,0.9)] backdrop-blur p-4 border-b border-neutral-800">
+      <header className="lg:hidden sticky top-0 z-20 bg-sidebar backdrop-blur p-4 border-b border-neutral-800">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold text-white">Travis Adams</h1>
-          <nav className="hidden sm:flex space-x-4 text-sm text-neutral-300">
-            {["about", "skills", "projects", "contact"].map((id) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="hover:text-[var(--color-neon-blue)]"
-              >
-                {id[0].toUpperCase() + id.slice(1)}
-              </a>
-            ))}
-          </nav>
+          <h1 className="text-lg font-bold text-white">TA</h1>
         </div>
       </header>
     </>
