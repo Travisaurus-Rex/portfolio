@@ -7,13 +7,13 @@ export default function Work() {
       link: "https://www.cxtec.com/",
       range: "Mar 2024 – Apr 2025",
       bullets: [
-        "Built and maintained backend services using Node.js, TypeScript, and .NET APIs to support internal and customer-facing workflows.",
-        "Developed Angular and React interfaces that integrated cleanly with modular backend endpoints.",
-        "Designed and integrated REST/GraphQL endpoints, improving data flow and performance across applications.",
-        "Modernized legacy systems through modular architecture, reusable services, and structured API contracts.",
-        "Collaborated with distributed teams to deliver reliable backend functionality for enterprise workflows."
+        "Contributed to the modernization of CXtec’s enterprise ordering and operations platforms, improving long-term reliability, usability, and maintainability.",
+        "Delivered full-stack features across Angular and React applications, owning UI behavior, API integration, and backend logic used in daily workflows.",
+        "Improved backend services and control-plane integrations, strengthening reliability, performance, and observability across distributed systems.",
+        "Worked cross-functionally with design, operations, and platform teams to diagnose complex production issues and streamline mission-critical workflows.",
+        "Helped maintain architectural consistency across large, evolving codebases, ensuring scalable patterns for frontend, APIs, and infrastructure-adjacent systems."
       ],
-      tech: ["Node", "TypeScript", ".NET", "Angular", "React", "GraphQL"],
+      tech: ["Angular", "TypeScript", ".NET", "Node", "React", "GraphQL"],
     },
     {
       title: "Full Stack Developer",
@@ -21,12 +21,13 @@ export default function Work() {
       link: "https://www.meyerdistributing.com/",
       range: "Jan 2019 – Mar 2024",
       bullets: [
-        "Built and maintained Node.js/TypeScript APIs powering logistics, ordering, and warehouse systems.",
-        "Implemented backend logic, data models, and integrations for Angular/Ionic apps used in daily operations.",
-        "Partnered with backend engineers to design scalable REST endpoints and improve SQL query performance.",
-        "Mentored developers on TypeScript patterns, reusable service design, and full-stack architecture."
+        "Rebuilt the company’s full B2B e-commerce platform from the ground up, delivering a modern web + mobile experience that became the primary driver of company revenue.",
+        "Helped design and deliver a new B2C e-commerce experience, shipping multiple iterations and improving reliability, customer flows, and system performance.",
+        "Built internal operational tools used daily by 1,000+ employees, supporting essential business functions across logistics, inventory, ordering, and customer service.",
+        "Contributed to architecture and technical direction, designing scalable backend patterns and frontend experiences used across multiple high-traffic systems.",
+        "Mentored developers on maintainability, scalable backend patterns, debugging practices, and modern TypeScript development."
       ],
-      tech: ["Node", "TypeScript", "Angular", "Ionic", "SQL Server", ".NET"],
+      tech: ["Angular", "Ionic", "TypeScript", ".NET", "Node", "SQL Server",],
     },
     {
       title: "Full Stack Developer",
@@ -81,7 +82,7 @@ export default function Work() {
 
               <ul className="list-disc list-inside space-y-1">
                 {job.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
+                  <li key={i} className="list-outside mb-3">{b}</li>
                 ))}
               </ul>
 
