@@ -9,7 +9,7 @@ export default function Sidebar() {
   const [active, setActive] = useState("");
   const [text, setText] = useState("");
   const fullText = "Full Stack Software Engineer";
-  const useLogo = false;
+  const useLogo = true;
 
   useEffect(() => {
     let i = 0;
@@ -25,7 +25,7 @@ export default function Sidebar() {
   }, []);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]"); // assumes each section has an id matching your nav
+    const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -48,14 +48,11 @@ export default function Sidebar() {
     };
   }, []);
 
-
   return (
     <>
       <aside className="hidden lg:flex lg:flex-none lg:w-[22rem] sticky top-0 h-screen flex-col justify-between px-8 py-16 bg-sidebar border-r border-neutral-800">
-        { useLogo &&
-          <Logo />
-        }
-        { !useLogo && 
+        {useLogo && <Logo />}
+        {!useLogo && (
           <div className="text-left leading-tight">
             <h1 className="text-5xl font-bold text-accent mb-1 tracking-tight">
               Travis Adams
@@ -68,11 +65,11 @@ export default function Sidebar() {
             </div>
 
             <p className="mt-3 text-sm max-w-[18rem] leading-snug">
-              Building modern, scalable web applications with clean architecture and
-              intuitive user experiences.
+              Building modern, scalable web applications with clean architecture
+              and intuitive user experiences.
             </p>
           </div>
-        }
+        )}
 
         <nav className="space-y-4 mt-16">
           {["about", "skills", "work", "projects", "contact"].map((id) => (
@@ -81,14 +78,17 @@ export default function Sidebar() {
               href={`#${id}`}
               onClick={() => setActive(id)}
               className={`group relative flex items-center text-3xl font-thin transition-all duration-300
-                ${active === id
-                  ? "text-[var(--color-contrast)]"
-                  : "text-[var(--color-accent)] hover:text-[var(--color-contrast)]"
+                ${
+                  active === id
+                    ? "text-[var(--color-text-light)]"
+                    : "text-[var(--color-accent)] hover:text-[var(--color-text-light)]"
                 }`}
             >
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-contrast)] transition-all duration-300
-                ${active === id ? "w-[1.25rem]" : "w-0 group-hover:w-[1.25rem]"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-text-light)] transition-all duration-300
+                ${
+                  active === id ? "w-[1.25rem]" : "w-0 group-hover:w-[1.25rem]"
+                }`}
               />
 
               <span
@@ -101,7 +101,6 @@ export default function Sidebar() {
             </a>
           ))}
         </nav>
-
 
         <LinkShelf />
       </aside>
