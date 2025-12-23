@@ -31,7 +31,9 @@ export default function ProjectPage() {
 
       <section className="section space-y-16 text-[var(--color-text-light)]">
         {/* Title */}
-        <h1 className="text-6xl md:text-6xl font-bold">{project.title}</h1>
+        <h1 className="text-6xl md:text-6xl font-bold text-lg">
+          {project.title}
+        </h1>
 
         {/* About */}
         <div>
@@ -88,7 +90,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.live}
-              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
             >
               VISIT SITE
             </a>
@@ -98,7 +100,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.github.monorepo}
-              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
             >
               GITHUB
             </a>
@@ -110,7 +112,7 @@ export default function ProjectPage() {
                 <a
                   target="_blank"
                   href={project.github.frontend}
-                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
                 >
                   FRONTEND
                 </a>
@@ -119,7 +121,7 @@ export default function ProjectPage() {
                 <a
                   target="_blank"
                   href={project.github.backend}
-                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
                 >
                   BACKEND
                 </a>
@@ -131,7 +133,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.android}
-              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
             >
               GOOGLE PLAY
             </a>
@@ -141,7 +143,7 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.ios}
-              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold text-lg transition-all duration-300"
             >
               APPLE STORE
             </a>
