@@ -11,7 +11,11 @@ export default function ProjectPage() {
   const project = projects.find((p) => p.slug === _slug);
 
   if (!project)
-    return <div className="p-12 text-center text-[var(--color-text-light)]">Project not found</div>;
+    return (
+      <div className="p-12 text-center text-[var(--color-text-light)]">
+        Project not found
+      </div>
+    );
 
   return (
     <>
@@ -27,15 +31,16 @@ export default function ProjectPage() {
 
       <section className="section space-y-16 text-[var(--color-text-light)]">
         {/* Title */}
-        <h1 className="text-6xl md:text-6xl font-bold">
-          {project.title}
-        </h1>
+        <h1 className="text-6xl md:text-6xl font-bold">{project.title}</h1>
 
         {/* About */}
         <div>
           <h2 className="text-4xl font-semibold mb-4">About the Project</h2>
           {project.description.about.map((para, i) => (
-            <p key={i} className="text-lg leading-relaxed text-[var(--color-text-light)]/90 mb-6">
+            <p
+              key={i}
+              className="text-lg leading-relaxed text-[var(--color-text-light)]/90 mb-6"
+            >
               {para}
             </p>
           ))}
@@ -45,7 +50,10 @@ export default function ProjectPage() {
         <div>
           <h2 className="text-4xl font-semibold mb-4">How It Was Built</h2>
           {project.description.howItWasBuilt.map((para, i) => (
-            <p key={i} className="text-lg leading-relaxed text-[var(--color-text-light)]/90 mb-6">
+            <p
+              key={i}
+              className="text-lg leading-relaxed text-[var(--color-text-light)]/90 mb-6"
+            >
               {para}
             </p>
           ))}
@@ -80,9 +88,9 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.live}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
             >
-              Visit Site
+              VISIT SITE
             </a>
           )}
 
@@ -90,9 +98,9 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.github.monorepo}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
             >
-              GitHub
+              GITHUB
             </a>
           )}
 
@@ -102,18 +110,18 @@ export default function ProjectPage() {
                 <a
                   target="_blank"
                   href={project.github.frontend}
-                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
                 >
-                  Frontend
+                  FRONTEND
                 </a>
               )}
               {project.github.backend && (
                 <a
                   target="_blank"
                   href={project.github.backend}
-                  className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+                  className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
                 >
-                  Backend
+                  BACKEND
                 </a>
               )}
             </>
@@ -123,9 +131,9 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.android}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
             >
-              Play Store
+              GOOGLE PLAY
             </a>
           )}
 
@@ -133,13 +141,12 @@ export default function ProjectPage() {
             <a
               target="_blank"
               href={project.ios}
-              className="px-8 py-3 rounded-md border border-[var(--color-accent)] text-accent hover:bg-[var(--color-accent)] hover:text-[var(--color-text-dark)] transition-all duration-300"
+              className="px-8 py-3 rounded-md bg-accent text-text-dark hover:bg-[var(--color-contrast)] font-bold transition-all duration-300"
             >
-              App Store
+              APPLE STORE
             </a>
           )}
         </div>
-
       </section>
     </>
   );

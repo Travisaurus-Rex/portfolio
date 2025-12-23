@@ -35,17 +35,10 @@
   color: var(--color-contrast);
 }
 
-/* Utilities for sections */
 .section {
   @apply max-w-4xl mx-auto px-6 py-8;
 }
 
-/* Alternate section backgrounds */
-.section-alt {
-  background-color: var(--color-secondary);
-}
-
-/* Buttons */
 .btn {
   @apply bg-[var(--color-accent)] hover:bg-[var(--color-contrast)] text-[var(--color-text-dark)] font-semibold px-6 py-3 rounded-lg transition;
 }

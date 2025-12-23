@@ -77,15 +77,15 @@ export default function Sidebar() {
               key={id}
               href={`#${id}`}
               onClick={() => setActive(id)}
-              className={`group relative flex items-center text-3xl font-thin transition-all duration-300
+              className={`group relative flex items-center text-3xl font-medium transition-all duration-300
                 ${
                   active === id
-                    ? "text-[var(--color-text-light)]"
-                    : "text-[var(--color-accent)] hover:text-[var(--color-text-light)]"
+                    ? "text-[var(--color-contrast)]"
+                    : "text-[var(--color-accent)] hover:text-[var(--color-contrast)]"
                 }`}
             >
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-text-light)] transition-all duration-300
+                className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-[var(--color-contrast)] transition-all duration-300
                 ${
                   active === id ? "w-[1.25rem]" : "w-0 group-hover:w-[1.25rem]"
                 }`}
