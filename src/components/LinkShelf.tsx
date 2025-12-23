@@ -6,7 +6,7 @@ export function LinkShelf() {
     <div className="flex items-center justify-center space-x-5 text-neutral-400 lg:mt-12">
       <a
         href="https://github.com/Travisaurus-Rex"
-        className="text-4xl text-accent hover:text-contrast transition-colors"
+        className="text-2xl lg:text-4xl text-accent hover:text-contrast transition-colors"
         target="_blank"
         rel="noreferrer"
       >
@@ -14,7 +14,7 @@ export function LinkShelf() {
       </a>
       <a
         href="https://www.linkedin.com/in/travis-a-768637a2/"
-        className="text-4xl text-accent hover:text-contrast transition-colors"
+        className="text-2xl lg:text-4xl text-accent hover:text-contrast transition-colors"
         target="_blank"
         rel="noreferrer"
       >
@@ -22,7 +22,7 @@ export function LinkShelf() {
       </a>
       <a
         href="https://codepen.io/Travisaurus-Rex"
-        className="text-4xl text-accent hover:text-contrast transition-colors"
+        className="text-2xl lg:text-4xl text-accent hover:text-contrast transition-colors"
         target="_blank"
         rel="noreferrer"
       >
@@ -30,7 +30,7 @@ export function LinkShelf() {
       </a>
       <a
         href="mailto:tadamsdeveloper@gmail.com"
-        className="text-4xl text-accent hover:text-contrast transition-colors"
+        className="text-2xl lg:text-4xl text-accent hover:text-contrast transition-colors"
       >
         <MdEmail />
       </a>
