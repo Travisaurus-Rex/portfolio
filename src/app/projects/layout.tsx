@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Analytics } from "@/components/Analytics";
 
 export const metadata = {
   title: "Projects | Travis Adams",
@@ -13,6 +14,7 @@ export default function ProjectsLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--color-primary)] text-[var(--color-text-light)]">
+        <Analytics />
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
