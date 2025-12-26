@@ -14,7 +14,6 @@ export default function Contact() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    setStatus("loading");
 
     const url = process.env.NEXT_PUBLIC_RESEND_URL;
     if (!url) {
@@ -22,6 +21,7 @@ export default function Contact() {
       return;
     }
 
+    setStatus("loading");
     try {
       const res = await fetch(url, {
         method: "POST",
@@ -132,6 +132,16 @@ export default function Contact() {
                       className="w-full px-4 py-3 rounded-lg  border border-sunset/30 text-text-light placeholder:text-text-light/50 focus:border-sunset focus:ring-2 focus:ring-sunset/40 outline-none transition-all resize-none"
                     ></textarea>
                   </div>
+
+                  {status === "error" && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="text-sm text-red-400"
+                    >
+                      Something went wrong. Please try again later.
+                    </motion.p>
+                  )}
 
                   <button
                     type="submit"
