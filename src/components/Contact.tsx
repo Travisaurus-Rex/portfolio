@@ -21,8 +21,8 @@ export default function Contact() {
       return;
     }
 
-    setStatus("loading");
     try {
+      setStatus("loading");
       const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
