@@ -3,6 +3,19 @@ export default function Work() {
   const jobs = [
     {
       title: "Senior Software Engineer",
+      company: "CodedByTravis",
+      link: "https://www.codedbytravis.com/",
+      range: "June 2025 – Present",
+      bullets: [
+        "Architected multi-tenant ecommerce platform using NestJS and PostgreSQL, implementing tenant isolation, RBAC, and API rate limiting to support 50+ concurrent organizations with strict data segregation",
+        "Built real-time event system and WebSocket infrastructure enabling live updates across distributed clients, reducing data staleness and creating reusable SDK for third-party platform integrations",
+        "Designed RESTful APIs and database schemas for commerce and fitness applications, optimizing query performance with indexing strategies and caching layers that reduced average response time to <200ms",
+        "Established Docker-based deployment pipeline with GitHub Actions CI/CD, automating testing, building, and deployment workflows to reduce release cycles from manual processes to push-to-deploy",
+      ],
+      tech: ["React", "Next.js", "Node", "NestJS", "GoLang", "PostgreSQL"],
+    },
+    {
+      title: "Senior Software Engineer",
       company: "CXtec",
       link: "https://www.cxtec.com/",
       range: "Mar 2024 – Apr 2025",
