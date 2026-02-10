@@ -16,7 +16,5 @@ export function useYearsOfExperience() {
     totalTenureMs / (1000 * 60 * 60 * 24 * 365.25),
   );
 
-  console.log(yearsOfExperience);
-
   return yearsOfExperience;
 }
