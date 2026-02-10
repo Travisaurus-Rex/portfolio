@@ -49,8 +49,26 @@ export default function Skills() {
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           <div className="rounded-lg md:p-6 bg-card/20">
             <div className="flex items-center space-x-3 mb-4">
-              <Server className="text-neon-cyan w-6 h-6" />
-              <h3 className="text-xl font-semibold text-neon-cyan">Backend</h3>
+              <Layout className="text-neon-pink w-6 h-6" />
+              <h3 className="text-xl font-semibold text-neon-pink">Frontend</h3>
+            </div>
+            <p className="leading-relaxed text-base">
+              With a strong foundation in JavaScript and TypeScript, I&apos;ve
+              built dozens of production apps with
+              <span className="text-accent font-bold"> React</span>,
+              <span className="text-accent font-bold"> Next.js</span> and
+              <span className="text-accent font-bold"> Angular</span>, obsessing
+              over component architecture, state management, and performance so
+              things don&apos;t mysteriously catch fire in production. User
+              experience is non-negotiable. I&apos;ve tried ignoring it before.
+              It always comes back angry.
+            </p>
+          </div>
+
+          <div className="rounded-lg md:p-6 bg-card/20">
+            <div className="flex items-center space-x-3 mb-4">
+              <Server className="w-6 h-6" />
+              <h3 className="text-xl font-semibold">Backend</h3>
             </div>
             <p className="leading-relaxed text-base">
               I design and maintain backend services using
@@ -61,24 +79,6 @@ export default function Skills() {
               been building apps that need concurrency and worker pools using{" "}
               <span className="text-accent font-bold">Go</span> /{" "}
               <span className="text-accent font-bold"> GoLang</span>.
-            </p>
-          </div>
-
-          <div className="rounded-lg md:p-6 bg-card/20">
-            <div className="flex items-center space-x-3 mb-4">
-              <Layout className="text-neon-pink w-6 h-6" />
-              <h3 className="text-xl font-semibold text-neon-pink">Frontend</h3>
-            </div>
-            <p className="leading-relaxed text-base">
-              With a strong foundation in JavaScript and TypeScript, I&apos;ve
-              built dozens of productions apps with
-              <span className="text-accent font-bold"> React</span>,
-              <span className="text-accent font-bold"> Next.js</span> and
-              <span className="text-accent font-bold"> Angular</span>, obsessing
-              over component architecture, state management, and performance so
-              things don&apos;t mysteriously catch fire in production. User
-              experience is non-negotiable. I&apos;ve tried ignoring it before.
-              It always comes back angry.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function Skills() {
 
         <div className="mt-16">
           <div className="md:p-8 rounded-lg">
-            <h3 className="text-2xl mb-4 text-neon-cyan">Always Learning</h3>
+            <h3 className="text-2xl mb-4">Always Learning</h3>
             <p className="text-foreground/80 leading-relaxed text-base">
               I stay committed to continuous learning, largely because standing
               still is how you wake up outdated. I learn by shipping, breaking
