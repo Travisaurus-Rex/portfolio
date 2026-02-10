@@ -1,5 +1,5 @@
 export default function Work() {
-  const showTags = false;
+  const showTags = true;
   const jobs = [
     {
       title: "Senior Software Engineer",
@@ -40,7 +40,15 @@ export default function Work() {
         "Contributed to architecture and technical direction, designing scalable backend patterns and frontend experiences used across multiple high-traffic systems.",
         "Mentored developers on maintainability, scalable backend patterns, debugging practices, and modern TypeScript development.",
       ],
-      tech: ["Angular", "Ionic", "TypeScript", ".NET", "Node", "SQL Server"],
+      tech: [
+        "Angular",
+        "Ionic",
+        "Capacitor",
+        "TypeScript",
+        ".NET",
+        "Node",
+        "SQL Server",
+      ],
     },
     {
       title: "Full Stack Developer",

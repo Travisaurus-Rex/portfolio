@@ -12,8 +12,10 @@ export default function About() {
           About
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight text-balance">
-          I build scalable and reliable
+        <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-balance">
+          <span className="md:text-8xl">I build reliable </span>
+          <br />
+          and scalable
           <span className="text-accent"> ecommerce </span> applications and
           <span className="text-accent"> business</span> platforms that
           companies rely on.
