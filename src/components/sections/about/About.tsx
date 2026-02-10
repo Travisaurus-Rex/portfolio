@@ -14,7 +14,7 @@ export default function About() {
 
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight text-balance">
           I build scalable and reliable
-          <span className="text-accent"> ecommerce </span> aplications and
+          <span className="text-accent"> ecommerce </span> applications and
           <span className="text-accent"> business</span> platforms that
           companies rely on.
           <span className="text-accent font-bold px-1">*</span>
