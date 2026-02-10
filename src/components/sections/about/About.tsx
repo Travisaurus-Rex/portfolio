@@ -32,11 +32,11 @@ export default function About() {
           products grow and teams evolve.{" "}
         </p>
 
-        <p className="mt-8 text-xl font-bold">
+        <h6 className="mt-8 text-xl font-bold">
           <span className="text-accent font-bold text-2xl px-1">*</span>I also
           write in really big words sometimes but I promise, I&apos;m not
           screaming at you.
-        </p>
+        </h6>
       </div>
     </section>
   );

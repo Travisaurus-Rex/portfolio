@@ -1,12 +1,6 @@
 .logo {
   color: var(--logo-text);
   text-align: center;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -41,6 +35,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   white-space: nowrap;
+  font-family: var(--font-serif);
 }
 
 .logo-sub {

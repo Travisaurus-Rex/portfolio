@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=PT+Sans+Caption:wght@400;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -23,9 +25,8 @@
 
   --hamburger-bg: rgba(255, 255, 255, 0.75);
 
-  --font-sans:
-    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-serif: "DM Serif Text", serif;
+  --font-sans: "Funnel Display", sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -57,8 +58,22 @@
   body {
     background-color: var(--color-primary) !important;
     color: var(--color-text) !important;
-    font-family: var(--font-sans);
     scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+
+  div,
+  p {
+    font-family: var(--font-sans);
+    font-weight: 600;
   }
 }
 

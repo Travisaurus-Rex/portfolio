@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-serif);
 }
 
 .navbar-link {
