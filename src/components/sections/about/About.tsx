@@ -13,20 +13,21 @@ export default function About() {
         </div>
 
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight text-balance">
-          I build software that
-          <span className="text-accent"> works, </span> then
-          <span className="text-accent"> scales</span>, and then
-          <span className="text-accent"> works</span> some more.
+          I build scalable and reliable
+          <span className="text-accent"> ecommerce </span> aplications and
+          <span className="text-accent"> business</span> platforms that
+          companies rely on.
           <span className="text-accent font-bold px-1">*</span>
         </h1>
 
         <div className="mt-6 h-0.5 w-48 bg-[var(--color-text)]" />
 
         <p className="mt-8 text-xl leading-relaxed">
-          I&apos;m a senior full stack engineer with {yoe} years building
-          production systems for enterprise and consumer platforms. I work
-          across frontend, backend, databases, and infrastructure, focusing on
-          architecture that adapts as products grow and teams evolve.{" "}
+          I&apos;m a senior engineer with {yoe} years building business
+          production systems, sales platforms, ecommerce applications, and
+          customer-facing product software. I work across frontend, backend,
+          databases, and infrastructure, focusing on architecture that adapts as
+          products grow and teams evolve.{" "}
         </p>
 
         <p className="mt-8 text-xl font-bold">
