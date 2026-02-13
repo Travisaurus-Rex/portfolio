@@ -60,7 +60,9 @@ export default function Contact() {
     <section id="contact" className="py-20 scroll-mt-24 section">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-left mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">Get In Touch</h2>
+          <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-3">
+            Get In Touch
+          </h2>
           <p>
             Have a project idea or opportunity? Let’s build something great
             together.

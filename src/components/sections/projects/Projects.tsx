@@ -16,11 +16,11 @@ function getGradient(index: number) {
 }
 
 export default function Projects() {
-  const showTags = false;
+  const showTags = true;
   return (
     <section id="projects" className="projects">
       <div className="section">
-        <h2 className="text-4xl md:text-5xl font-bold">Projects</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold">Projects</h2>
       </div>
 
       <div className="bento-grid">
@@ -38,9 +38,6 @@ export default function Projects() {
             <h3 className="font-bold">{project.title}</h3>
 
             <p>{project.description.short}</p>
-            <button className="popout popout-btn self-start mt-auto">
-              View More
-            </button>
             {showTags && (
               <div className="tags">
                 {project.tags.map((tag) => (
@@ -49,6 +46,11 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+            )}
+            {!showTags && (
+              <button className="popout popout-btn self-start mt-auto">
+                View More
+              </button>
             )}
           </Link>
         ))}

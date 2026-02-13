@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section id="skills" className="min-h-screen py-20 section">
       <div className="px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6">
           Technical Skills
         </h2>
         <div className="space-y-6 text-lg leading-relaxed">

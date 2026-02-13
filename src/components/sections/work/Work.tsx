@@ -74,7 +74,9 @@ export default function Work() {
 
   return (
     <section id="work" className="mx-auto px-4 py-16 section">
-      <h2 className="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
+      <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4">
+        Work Experience
+      </h2>
       <div className="space-y-12">
         {jobs.map((job, idx) => (
           <div
