@@ -53,15 +53,16 @@ export default function Skills() {
               <h3 className="text-xl font-semibold text-neon-pink">Frontend</h3>
             </div>
             <p className="leading-relaxed text-base">
-              With a strong foundation in JavaScript and TypeScript, I&apos;ve
-              built dozens of production apps with
+              With a strong foundation in TypeScript, I&apos;ve built dozens of
+              production apps with
               <span className="text-accent font-bold"> React</span>,
               <span className="text-accent font-bold"> Next.js</span> and
               <span className="text-accent font-bold"> Angular</span>, obsessing
               over component architecture, state management, and performance so
-              things don&apos;t mysteriously catch fire in production. User
-              experience is non-negotiable. I&apos;ve tried ignoring it before.
-              It always comes back angry.
+              things don&apos;t mysteriously catch fire in production.{" "}
+              <span className="text-accent font-bold">User experience</span> is
+              non-negotiable. I&apos;ve tried ignoring it before. It always
+              comes back angry.
             </p>
           </div>
 
