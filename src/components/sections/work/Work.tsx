@@ -7,7 +7,7 @@ export default function Work() {
       link: "https://www.codedbytravis.com/",
       range: "June 2025 – Present",
       bullets: [
-        "Architected and built a multi-tenant ecommerce platforms from system design to deployment, implementing strict tenant isolation, role-based access control, and organization-level configuration across a shared infrastructure.",
+        "Architected and built multi-tenant ecommerce platforms from system design to deployment, implementing strict tenant isolation, role-based access control, and organization-level configuration across a shared infrastructure.",
         "Designed and integrated payment processing flows into the multi-tenant architecture, handling subscription management, transactional payments, and webhook-driven reconciliation across isolated tenant environments.",
         "Engineered a real-time application layer using WebSockets and event-driven patterns to synchronize live data across distributed clients with minimal latency.",
         "Built a reusable real-time SDK that allowed external systems and third-party clients to subscribe to live platform events securely.",
