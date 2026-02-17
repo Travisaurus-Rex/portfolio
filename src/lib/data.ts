@@ -27,10 +27,10 @@ export const projects: Project[] = [
         "Strongly typed data models with Prisma for reliability",
       ],
     },
-    images: {},
+    images: { mainDesktop: "/projects/move_mentor_thumbnail.png" },
     tags: ["React", "Next.js", "Prisma", "PostgreSQL", "Docker"],
     slug: "move-mentor",
-    live: "",
+    live: "https://move-mentor-topaz.vercel.app/",
     github: { monorepo: "https://github.com/Travisaurus-Rex/move-mentor" },
   },
   {
