@@ -10,7 +10,9 @@ import { usePageView, useTrackEvent } from "@/lib/analytics/hooks";
 
 export default function ProjectPage() {
   const params = useParams();
-  const _slug = params["project-name"];
+  const _slug = params?.["project-name"] as string | undefined;
+  if (!_slug) return null;
+
   const project = projects.find((p) => p.slug === _slug);
   const trackEvent = useTrackEvent();
   usePageView(project ? (_slug as string) : "project_not_found");

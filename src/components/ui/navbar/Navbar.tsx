@@ -13,7 +13,7 @@ export default function Navbar() {
         WORK
       </a>
       <a key="projects" href="#projects" className="navbar-link">
-        PROJECTS
+        CASE STUDIES
       </a>
       <a key="contact" href="#contact" className="navbar-link">
         CONTACT

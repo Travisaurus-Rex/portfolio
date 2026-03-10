@@ -2,6 +2,50 @@ import { Project } from "@/models/project";
 
 export const projects: Project[] = [
   {
+    title: "Bahasa Builder",
+    slug: "bahasa-builder",
+    live: "https://bahasa-builder.vercel.app/",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "AI",
+      "Language Learning",
+      "Spaced Repetition",
+    ],
+    github: {
+      monorepo: "https://github.com/Travisaurus-Rex/bahasa-builder",
+    },
+    description: {
+      short:
+        "Bahasa Builder is an AI-powered Indonesian learning platform that breaks words into their roots and affixes, helping English speakers understand how Indonesian vocabulary is constructed.",
+      about: [
+        "Bahasa Builder is a language learning platform built specifically for English speakers learning Indonesian. Instead of presenting vocabulary as isolated translations, the platform focuses on how Indonesian words are constructed from root forms and grammatical affixes.",
+        "The app acts as a morphology-aware dictionary that analyzes Indonesian words and reveals their root forms, derived variants, grammatical roles, and example usage.",
+        "Users can explore vocabulary naturally while building a personalized learning system through saved words and automatically generated flashcards.",
+      ],
+      howItWasBuilt: [
+        "The application is built with Next.js and TypeScript, allowing the frontend and backend to run in a unified full-stack environment.",
+        "MongoDB is used as the primary data store, with Mongoose handling schema definitions and data modeling for words, derived forms, and example sentences.",
+        "An AI agent analyzes Indonesian words to identify root forms, prefixes, suffixes, and grammatical roles, returning structured JSON that is stored in the database.",
+        "A cache-first dictionary API ensures that once a word has been analyzed, subsequent lookups are served instantly from the database rather than invoking the AI again.",
+        "The flashcard system implements the SM-2 spaced repetition algorithm to schedule vocabulary review sessions based on recall performance.",
+      ],
+      keyFeatures: [
+        "Morphology-aware Indonesian dictionary that explains root words and affix transformations",
+        "Automatic breakdown of verbs such as 'mengubah', 'berubah', and 'perubahan'",
+        "Spaced repetition flashcards generated directly from saved vocabulary",
+        "Example sentences with Indonesian text and English translations",
+        "Sentence decomposition tool that analyzes Indonesian text and links each word to its dictionary entry",
+        "User accounts for saving vocabulary and tracking learning progress",
+      ],
+    },
+    images: {
+      mainDesktop: "/projects/bahasabuilder.png",
+    },
+  },
+  {
     title: "Move Mentor",
     description: {
       short:

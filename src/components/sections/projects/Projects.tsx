@@ -16,15 +16,51 @@ function getGradient(index: number) {
 }
 
 export default function Projects() {
-  const showTags = true;
+  const featured = projects.slice(0, 2);
+  const rest = projects.slice(2);
+
   return (
     <section id="projects" className="projects">
       <div className="section">
-        <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold">Projects</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+          Case Studies
+        </h2>
       </div>
 
+      {/* FEATURED PROJECTS */}
+      <div className="featured-grid">
+        {featured.map((project, index) => (
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            className="card featured-card popout popout-noclick"
+          >
+            <div
+              className="accent"
+              style={{ background: getGradient(index) }}
+            />
+
+            <div className="featured-image">
+              <img src={project.images.mainDesktop} alt={project.title} />
+            </div>
+
+            <h3 className="font-bold">{project.title}</h3>
+            <p>{project.description.short}</p>
+
+            <div className="tags">
+              {project.tags.map((tag) => (
+                <span className="tag" key={tag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* NORMAL GRID */}
       <div className="bento-grid">
-        {projects.map((project, index) => (
+        {rest.map((project, index) => (
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
@@ -32,26 +68,19 @@ export default function Projects() {
           >
             <div
               className="accent"
-              style={{ background: getGradient(index) }}
+              style={{ background: getGradient(index + 2) }}
             />
 
             <h3 className="font-bold">{project.title}</h3>
-
             <p>{project.description.short}</p>
-            {showTags && (
-              <div className="tags">
-                {project.tags.map((tag) => (
-                  <span className="tag" key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-            {!showTags && (
-              <button className="popout popout-btn self-start mt-auto">
-                View More
-              </button>
-            )}
+
+            <div className="tags">
+              {project.tags.map((tag) => (
+                <span className="tag" key={tag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </Link>
         ))}
       </div>
