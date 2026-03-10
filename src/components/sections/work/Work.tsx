@@ -7,6 +7,7 @@ export default function Work() {
       link: "https://www.codedbytravis.com/",
       range: "June 2025 – Present",
       bullets: [
+        "Architected and built an AI-powered Indonesian morphology dictionary (Next.js, MongoDB, Mongoose) leveraging the Claude API with prompt-engineered structured output, multikey-indexed document retrieval, and LangChain-compatible RAG patterns for context-grounded word analysis and sentence decomposition.",
         "Architected and built multi-tenant ecommerce platforms from system design to deployment, implementing strict tenant isolation, role-based access control, and organization-level configuration across a shared infrastructure.",
         "Designed and integrated payment processing flows into the multi-tenant architecture, handling subscription management, transactional payments, and webhook-driven reconciliation across isolated tenant environments.",
         "Engineered a real-time application layer using WebSockets and event-driven patterns to synchronize live data across distributed clients with minimal latency.",
@@ -14,7 +15,7 @@ export default function Work() {
         "Modeled relational schemas and optimized high-frequency queries with indexing and caching strategies to maintain sub-200ms response times under concurrent load.",
         "Implemented containerized deployment and CI/CD automation pipelines, enabling predictable push-to-deploy releases and safer production rollouts.",
       ],
-      tech: ["React", "Next.js", "Node", "NestJS", "GoLang", "PostgreSQL"],
+      tech: ["React", "Next.js", "Node", "NestJS", "MongoDB", "PostgreSQL"],
     },
     {
       title: "Senior Software Engineer",
