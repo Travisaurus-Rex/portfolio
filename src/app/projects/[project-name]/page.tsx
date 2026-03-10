@@ -11,11 +11,11 @@ import { usePageView, useTrackEvent } from "@/lib/analytics/hooks";
 export default function ProjectPage() {
   const params = useParams();
   const _slug = params?.["project-name"] as string | undefined;
-  if (!_slug) return null;
 
   const project = projects.find((p) => p.slug === _slug);
+
   const trackEvent = useTrackEvent();
-  usePageView(project ? (_slug as string) : "project_not_found");
+  usePageView(project ? (_slug ?? "project_not_found") : "project_not_found");
 
   const handleOutboundClick = (url: string) => {
     trackEvent({
@@ -24,6 +24,8 @@ export default function ProjectPage() {
     });
   };
 
+  if (!_slug) return null;
+
   if (!project) {
     return (
       <div className="p-12 text-center text-[var(--color-text-light)]">
@@ -31,7 +33,6 @@ export default function ProjectPage() {
       </div>
     );
   }
-
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-sidebar border border-b-2 border-black">
