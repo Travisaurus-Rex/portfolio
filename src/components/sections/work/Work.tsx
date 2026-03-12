@@ -33,7 +33,7 @@ export default function Work() {
       tech: ["Angular", "TypeScript", ".NET", "Node", "React", "GraphQL"],
     },
     {
-      title: "Full Stack Developer",
+      title: "Front End Developer",
       company: "Meyer Distributing",
       link: "https://www.meyerdistributing.com/",
       range: "Jan 2019 – Mar 2024",
