@@ -51,7 +51,6 @@ export default function Work() {
         "Capacitor",
         "TypeScript",
         ".NET",
-        "Node",
         "SQL Server",
       ],
     },
