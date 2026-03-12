@@ -16,7 +16,7 @@ export default function About() {
           <span className="md:text-8xl">I build reliable </span>
           <br />
           and scalable <span className="text-accent">software</span> that powers
-          real-world products and operational systems.
+          real-world products and business operations.
           <span className="text-accent font-bold px-1">*</span>
         </h1>
 
