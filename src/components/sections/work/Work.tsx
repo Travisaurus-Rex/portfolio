@@ -15,7 +15,15 @@ export default function Work() {
         "Modeled relational schemas and optimized high-frequency queries with indexing and caching strategies to maintain sub-200ms response times under concurrent load.",
         "Implemented containerized deployment and CI/CD automation pipelines, enabling predictable push-to-deploy releases and safer production rollouts.",
       ],
-      tech: ["React", "Next.js", "Node", "NestJS", "MongoDB", "PostgreSQL"],
+      tech: [
+        "Angular",
+        "React",
+        "Next.js",
+        "Node",
+        "NestJS",
+        "MongoDB",
+        "PostgreSQL",
+      ],
     },
     {
       title: "Senior Software Engineer",

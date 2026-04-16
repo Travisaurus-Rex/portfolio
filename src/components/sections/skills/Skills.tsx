@@ -55,9 +55,9 @@ export default function Skills() {
             <p className="leading-relaxed text-base">
               With a strong foundation in TypeScript, I&apos;ve built dozens of
               production apps with
-              <span className="text-accent font-bold"> React</span>,
-              <span className="text-accent font-bold"> Next.js</span> and
-              <span className="text-accent font-bold"> Angular</span>, obsessing
+              <span className="text-accent font-bold"> Angular</span>,
+              <span className="text-accent font-bold"> Ionic</span> and
+              <span className="text-accent font-bold"> React</span>, obsessing
               over component architecture, state management, and performance so
               things don&apos;t mysteriously catch fire in production.{" "}
               <span className="text-accent font-bold">User experience</span> is
